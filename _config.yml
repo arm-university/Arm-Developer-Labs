@@ -1,7 +1,14 @@
 theme: jekyll-theme-cayman
-navbar-links:
-  Home: "index.md"
-  Undergraduate: "Undergraduate/"
-  Masters-Level: "Masters-Level/"
-  PhD Research: "PhD-Level/"
-  Design Contests: "Design-Contests/"
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Design Contests"
+    url: "/design-contests"
+  - title: "Undergraduate Level"
+    url: "/undergraduate-level"
+  - title: "Masters Level"
+    url: "/masters-level"
+  - title: "PhD Level"
+    url: "/phd-level"
+  - title: "License"
+    url: "/license"
