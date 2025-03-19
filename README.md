@@ -1,4 +1,4 @@
-# 🎓 Academic Projects Repository
+# 🎓 Arm Project Labs
 
 ![banner](./images/Learn%20on%20Arm_banner.png)
 
