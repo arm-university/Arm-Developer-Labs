@@ -4,7 +4,7 @@ tags: TeXt
 article_header:
   type: cover
   image:
-    src: /Educate_on_Arm_banner.png
+    src: ./images/Educate_on_Arm_banner.png
 ---
 
 # Academic Projects Repository
@@ -53,7 +53,7 @@ Project-Ideas
 2. (Optional) If you are unfamiliar with some of the tools used, take some of our foundational education courses.
 3. Let us know you've started by opening a discussion (see gif below). Someone may reach out if the project is complex. 
 
-<img class="image image--xl" src="./how-to-participate.gif"/>
+<img class="image image--xl" src="./images/how-to-participate.gif"/>
 
 ## How to submit your project
 
@@ -76,7 +76,7 @@ By sending this email, I confirm that you can use, modify, copy, and redistribut
 
 If you've been working on an Arm-based project or have a suggestion for a project or hackathon. Click on the discussion section of this repository, fill out the `template.md` file and open a discussion (see GIF below for instructions).
 
-<img class="image image--xl" src="./how-to-suggest-project.gif"/>
+<img class="image image--xl" src="./images/how-to-suggest-project.gif"/>
 
 Someone from Arm education will be in contact to discuss how we can support. 
 

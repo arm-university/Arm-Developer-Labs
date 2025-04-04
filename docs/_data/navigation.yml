@@ -7,18 +7,59 @@ header:
 
   - titles:
       # @start locale config
-      en      : &EN       Masters
+      en      : &EN       Master's
       # @end locale config
     url: /Masters.html
 
   - titles:
       # @start locale config
-      en      : &EN       Phd
+      en      : &EN       PhD
       # @end locale config
     url: /Phd.html
 
 undergraduate:
   - titles: Undergraduate
     children:
+      - title: Academic Trends Dashboard (INTERMEDIATE)
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: AMBA Simulator Framework (INTERMEDIATE)
+        url: /undergraduate/AMBA-Simulator-Framework-INTERMEDIATE.html
+      - title: Real Time Image Classification (CHALLENGING)
+        url: /undergraduate/Real-Time-Image-Classification-CHALLENGING.html
+      - title: Sentiment Analysis Dashboard (ACCESSIBLE)
+        url: /undergraduate/Sentiment-Analysis-Dashboard-ACCESSIBLE.html
+      - title: Smart Voice Assistant (DIFFICULT)
+        url: /undergraduate/Smart-Voice-Assistant-DIFFICULT.html
+      
+
+masters:
+  - titles: Master's
+    children:
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+
+phd:
+  - titles: PhD
+    children:
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
       - title: Academic Trends Dashboard INTERMEDIATE
         url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html

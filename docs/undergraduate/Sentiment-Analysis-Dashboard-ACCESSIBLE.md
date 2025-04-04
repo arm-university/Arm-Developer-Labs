@@ -1,6 +1,13 @@
+---
+layout: article
+title: Sentiment Analysis Dashboard
+sidebar:
+  nav: undergraduate
+---
+
 ## Create a Sentiment Analysis Dashboard for Keywords Based on the Semiconductor Industry
 
-![research_on_arm](../images/Research_on_arm_banner.png)
+<img class="image image--xl" src="../images/Educate_on_Arm_banner.png"/>
 
 ### Project Difficulty
 Intermediate
@@ -37,7 +44,7 @@ You are free to choose your own implementation details. The resouces below are e
 
 2. If your submission is approved, you will receive a recognised badge that you can list on your CV and shared on LinkedIn. A great way to stand out from the crowd! :mortar_board:
 
-![academic_badge](/images/ACA_badge.jpg)
+<img class="image image--xl" src="../images/ACA_badge.jpg"/>
 
 3. It's a great way to demonstrate your initiative and commitment to your field. 
 
