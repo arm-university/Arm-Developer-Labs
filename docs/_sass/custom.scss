@@ -1,7 +1,7 @@
 /* start custom scss snippet */
-.test svg {
-  height: 50px;
-  width: auto;
-  display: block;
+.header__brand svg {
+  height: 50px; /* Adjust the value as needed */
+  width: auto;  /* Maintains aspect ratio */
+  margin-right: 20px;
 }
 /* end custom scss snippet */
