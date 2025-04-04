@@ -1,11 +1,9 @@
 ---
 layout: article
-title: AMBA Simulator Framework
+title: AMBA Infrastructure Design and Simulation Framework
 sidebar:
   nav: undergraduate
 ---
-
-## AMBA Infrastructure Design and Simulation Framework
 
 <img class="image image--xl" src="./images/AMBA.avif"/>
 

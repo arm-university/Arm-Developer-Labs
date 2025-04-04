@@ -1,4 +1,9 @@
-# HLS Design Flow for Designing SoC with Hardware Accelerator (AS)
+---
+layout: article
+title: HLS Design Flow for Designing SoC with Hardware Accelerator (AS)
+sidebar:
+  nav: masters
+---
 
 ### Project Difficulty
 Intermediate
@@ -26,7 +31,7 @@ The project is estimated to take 12-16 weeks to complete, involving a team of 3-
 
 2. If your submission is approved, you will receive a recognised badge that you can list on your CV and shared on LinkedIn. A great way to stand out from the crowd! :mortar_board:
 
-![academic_badge](/images/ACA_badge.jpg)
+<img class="image image--xl" src="../images/ACA_badge.jpg"/>
 
 3. It's a great way to demonstrate your initiative and commitment to your field. 
 

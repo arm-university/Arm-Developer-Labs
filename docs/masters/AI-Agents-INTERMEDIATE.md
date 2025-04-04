@@ -1,6 +1,11 @@
-## AI-Powered Workflow Agent in a Sandboxed Environment
+---
+layout: article
+title: AI-Powered Workflow Agent in a Sandboxed Environment
+sidebar:
+  nav: masters
+---
 
-![learn_on_arm](../images/Research_on_arm_banner.png)
+<img class="image image--xl" src="../images/Educate_on_Arm_banner.png"/>
 
 ### Project Difficulty 🚀 
 

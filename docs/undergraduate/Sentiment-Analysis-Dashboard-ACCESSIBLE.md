@@ -1,11 +1,9 @@
 ---
 layout: article
-title: Sentiment Analysis Dashboard
+title: Create a Sentiment Analysis Dashboard for Keywords Based on the Semiconductor Industry
 sidebar:
   nav: undergraduate
 ---
-
-## Create a Sentiment Analysis Dashboard for Keywords Based on the Semiconductor Industry
 
 <img class="image image--xl" src="../images/Educate_on_Arm_banner.png"/>
 

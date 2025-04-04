@@ -1,4 +1,9 @@
-## Knowledge, Skills and Abilities (KSA) Curriculum Mapper
+---
+layout: article
+title: Knowledge, Skills and Abilities (KSA) Curriculum Mapper
+sidebar:
+  nav: masters
+---
 
 ### Project Difficulty
 
@@ -30,7 +35,7 @@ The project is estimated to take 4-6 months to complete, involving a team of 4-5
 
 2. If your submission is approved, you will receive a recognised badge that you can list on your CV and shared on LinkedIn. A great way to stand out from the crowd! :mortar_board:
 
-![academic_badge](/images/ACA_badge.jpg)
+<img class="image image--xl" src="../images/ACA_badge.jpg"/>
 
 3. It's a great way to demonstrate your initiative and commitment to your field. 
 

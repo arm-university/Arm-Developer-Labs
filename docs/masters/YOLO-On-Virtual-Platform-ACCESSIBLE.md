@@ -1,6 +1,11 @@
-# Document How to Run Yolo v8 on an ARM FVP as a Learning Path
+---
+layout: article
+title: Document How to Run Yolo v8 on an ARM FVP as a Learning Path
+sidebar:
+  nav: masters
+---
 
-![educate_on_arm](../images/Educate%20on%20Arm_banner.png)
+<img class="image image--xl" src="../images/Educate_on_Arm_banner.png"/>
 
 ### Project Difficulty
 Intermediate
@@ -29,7 +34,7 @@ The project is estimated to take 1 week to complete, involving a small team of 1
 
 2. If your submission is approved, you will receive a recognised badge that you can list on your CV and shared on LinkedIn. A great way to stand out from the crowd! :mortar_board:
 
-![academic_badge](/images/ACA_badge.jpg)
+<img class="image image--xl" src="../images/ACA_badge.jpg"/>
 
 3. It's a great way to demonstrate your initiative and commitment to your field. 
 

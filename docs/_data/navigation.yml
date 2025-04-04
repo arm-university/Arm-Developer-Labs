@@ -29,28 +29,27 @@ undergraduate:
       - title: Sentiment Analysis Dashboard (ACCESSIBLE)
         url: /undergraduate/Sentiment-Analysis-Dashboard-ACCESSIBLE.html
       - title: Smart Voice Assistant (DIFFICULT)
-        url: /undergraduate/Smart-Voice-Assistant-DIFFICULT.html
-      
+        url: /undergraduate/Smart-Voice-Assistant-DIFFICULT.html      
 
 masters:
   - titles: Master's
     children:
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: AI Agents (INTERMEDIATE)
+        url: /masters/AI-Agents-INTERMEDIATE.html
+      - title: Architecture Insight Dashboard (CHALLENGING)
+        url: /masters/Architecture-Insight-Dashboard-CHALLENGING.html
+      - title: HLS Flow (INTERMEDIATE)
+        url: /masters/HLS-Flow-INTERMEDIATE.html
+      - title: KSA Curriculum Mapper (ACCESSIBLE)
+        url: /masters/KSA-Curriculum-Mapper-ACCESSIBLE.html
+      - title: LLM Benchmark on Arm Server (ACCESSIBLE)
+        url: /masters/LLM-Benchmark-on-Arm-Server-ACCESSIBLE.html
+      - title: SpecINT2017 benchmarking on Arm64 (ACCESSIBLE)
+        url: /masters/SpecINT2017-benchmarking-on-Arm64-ACCESSIBLE.html
+      - title: Write A Learning Path (ACCESSIBLE)
+        url: /masters/Write-A-Learning-Path-ACCESSIBLE.html
+      - title: YOLO On Virtual Platform (ACCESSIBLE)
+        url: /masters/YOLO-On-Virtual-Platform-ACCESSIBLE.html
 
 phd:
   - titles: PhD
