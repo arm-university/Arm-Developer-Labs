@@ -16,3 +16,9 @@ header:
       en      : &EN       Phd
       # @end locale config
     url: /Phd.html
+
+undergraduate:
+  - titles: Undergraduate
+    children:
+      - title: Academic Trends Dashboard INTERMEDIATE
+        url: /undergraduate
