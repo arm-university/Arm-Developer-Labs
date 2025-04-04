@@ -7,6 +7,8 @@ article_header:
     src: /Educate_on_Arm_banner.png
 ---
 
+# Academic Projects Repository
+
 Welcome to our collection of projects designed for students and academics in computer science, electronics, and related disciplines. This repository offers a diverse range of innovative projects aimed at enhancing learning and research. We encourage academic institutions to explore and contribute to this growing repository, fostering collaboration and knowledge sharing. Whether you're looking to develop new skills, conduct research, or collaborate on cutting-edge technology, our collection provides valuable resources and opportunities for growth. Join us in advancing education and innovation in these dynamic fields.
 
 Our project collection caters to all academic levels, from undergraduates to postdoctoral researchers. It includes diverse university projects, from simple computer vision applications to custom silicon tape-outs with industry partners. This variety ensures relevant and challenging projects for everyone, helping you develop practical skills, engage in cutting-edge research, and collaborate with academic and industry experts.
@@ -51,7 +53,7 @@ Project-Ideas
 2. (Optional) If you are unfamiliar with some of the tools used, take some of our foundational education courses.
 3. Let us know you've started by opening a discussion (see gif below). Someone may reach out if the project is complex. 
 
-<img class="image image--lg" src="../images/how-to-participate.gif"/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zaRozkrcix0?si=hapHmGSGxZZOlqiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## How to submit your project
 
@@ -74,7 +76,7 @@ By sending this email, I confirm that you can use, modify, copy, and redistribut
 
 If you've been working on an Arm-based project or have a suggestion for a project or hackathon. Click on the discussion section of this repository, fill out the `template.md` file and open a discussion (see GIF below for instructions).
 
-<img class="image image--lg" src="../images/how-to-suggest-project.gif"/>
+<img class="image image--lg" src="./how-to-suggest-project.gif"/>
 
 Someone from Arm education will be in contact to discuss how we can support. 
 
