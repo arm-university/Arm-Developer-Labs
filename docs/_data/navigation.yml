@@ -3,19 +3,19 @@ header:
       # @start locale config
       en      : &EN       Undergraduate
       # @end locale config
-    url: /Undergraduate.html
+    url: undergraduate/Undergraduate.html
 
   - titles:
       # @start locale config
       en      : &EN       Master's
       # @end locale config
-    url: /Masters.html
+    url: masters/Masters.html
 
   - titles:
       # @start locale config
       en      : &EN       PhD
       # @end locale config
-    url: /Phd.html
+    url: phd/Phd.html
 
 undergraduate:
   - titles: Undergraduate
@@ -54,11 +54,11 @@ masters:
 phd:
   - titles: PhD
     children:
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
-      - title: Academic Trends Dashboard INTERMEDIATE
-        url: /undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
+      - title: Bioinformatic Pipeline Analysis (INTERMEDIATE)
+        url: /phd/Bioinformatic-Pipeline-Analysis-INTERMEDIATE.html
+      - title: Custom Accelerator (INTERMEDIATE)
+        url: /phd/Custom-Accelerator-INTERMEDIATE.html
+      - title: FPGA Accellerator with DDR (CHALLENGING)
+        url: /phd/FPGA-Accellerator-with-DDR-CHALLENGING.html
+      - title: HPC Algorithm (INTERMEDIATE)
+        url: /phd/HPC-Algorithm-INTERMEDIATE.html

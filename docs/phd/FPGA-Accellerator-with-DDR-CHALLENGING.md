@@ -1,5 +1,11 @@
-# Linux Capable SoC FPGA Prototyping Platform with DDR Memory 
-![supporting image]()
+---
+layout: article
+title: Linux Capable SoC FPGA Prototyping Platform with DDR Memory 
+sidebar:
+  nav: phd
+---
+
+<img class="image image--xl" src="../images/Educate_on_Arm_banner.png"/>
 
 ### Project Difficulty
 Challenging

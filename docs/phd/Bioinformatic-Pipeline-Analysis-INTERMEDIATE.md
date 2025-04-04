@@ -1,6 +1,11 @@
-## Benchmarking Bioconda Packages for Arm64 in Bioinformatics Pipelines
+---
+layout: article
+title: Benchmarking Bioconda Packages for Arm64 in Bioinformatics Pipelines
+sidebar:
+  nav: phd
+---
 
-![research_on_arm](../images/Research_on_arm_banner.png)
+<img class="image image--xl" src="../images/Educate_on_Arm_banner.png"/>
 
 ### Project Difficulty
 
@@ -57,7 +62,7 @@ AWS Graviton documentation
 
 2. If your submission is approved, you will receive a recognised badge that you can list on your CV and shared on LinkedIn. A great way to stand out from the crowd! :mortar_board:
 
-![academic_badge](/images/ACA_badge.jpg)
+<img class="image image--xl" src="../images/ACA_badge.jpg"/>
 
 3. Problem-Solving Experience: Opportunity to debug and optimize bioinformatics software for emerging computing architectures.
 
