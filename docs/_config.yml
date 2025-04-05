@@ -22,7 +22,7 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : Arm Projects Labs
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  Arn Projects Labs
 
 
 ## => Language and Timezone
