@@ -4,7 +4,7 @@ tags: TeXt
 article_header:
   type: cover
   image:
-    src: ./images/Educate_on_Arm_banner.png
+    src: ./images/Research_on_arm_banner.png
 ---
 
 # Academic Projects Repository
