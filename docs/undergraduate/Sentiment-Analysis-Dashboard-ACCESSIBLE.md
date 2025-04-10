@@ -5,7 +5,7 @@ sidebar:
   nav: undergraduate
 ---
 
-<img class="image image--xl" src="../images/Educate_on_Arm_banner.png"/>
+<img class="image image--xl" src="../images/Research_on_Arm_banner.png"/>
 
 ### Project Difficulty
 Intermediate
