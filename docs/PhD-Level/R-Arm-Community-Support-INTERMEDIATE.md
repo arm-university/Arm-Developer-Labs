@@ -5,7 +5,7 @@ title: Improving R Support for the Windows on Arm Community
 sidebar:
   nav: phd
 ---
-<img class="image image--xl" src="../images/Learn%20on%20Arm_banner.png"/>
+<img class="image image--xl" src="../images/Learn_on_Arm_banner.png"/>
 
 ### Project Difficulty  
 Challenging

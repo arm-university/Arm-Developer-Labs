@@ -1,5 +1,5 @@
 # Improving R Support for the Windows on Arm Community 
-![learn_on_arm](../images/Learn%20on%20Arm_banner.png)
+![learn_on_arm](../images/Learn_on_Arm_banner.png)
 
 ### Project Difficulty  
 Challenging

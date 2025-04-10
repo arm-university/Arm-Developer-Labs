@@ -8,7 +8,7 @@ article_header:
 ---
 # Academic Projects Repository
 
-<img class="image image--xl" src="./images/Research_on_Arm_banner.png"/>
+<img class="image image--xl" src="./images/Research_on_arm_banner.png"/>
 
 Welcome to our collection of projects designed for students and academics in computer science, electronics, and related disciplines. This repository offers a diverse range of innovative projects aimed at enhancing learning and research. We encourage academic institutions to explore and contribute to this growing repository, fostering collaboration and knowledge sharing. Whether you're looking to develop new skills, conduct research, or collaborate on cutting-edge technology, our collection provides valuable resources and opportunities for growth. Join us in advancing education and innovation in these dynamic fields.
 
