@@ -29,6 +29,8 @@ undergraduate:
     url: /Undergraduate-Level/Sentiment-Analysis-Dashboard-ACCESSIBLE.html
   - title: Smart-Voice-Assistant-DIFFICULT
     url: /Undergraduate-Level/Smart-Voice-Assistant-DIFFICULT.html
+  - title: Write-A-Learning-Path-ACCESSIBLE
+    url: /Undergraduate-Level/Write-A-Learning-Path-ACCESSIBLE.html
 masters:
 - titles: Master's
   children:
@@ -42,6 +44,8 @@ masters:
     url: /Masters-Level/Arduino-IDE-Windows-on-Arm.html
   - title: LLM-Benchmark-on-Arm-Server-ACCESSIBLE
     url: /Masters-Level/LLM-Benchmark-on-Arm-Server-ACCESSIBLE.html
+  - title: SpecINT2017-benchmarking-on-Arm64-ACCESSIBLE
+    url: /Masters-Level/SpecINT2017-benchmarking-on-Arm64-ACCESSIBLE.html
 phd:
 - titles: PhD
   children:
@@ -53,3 +57,5 @@ phd:
     url: /PhD-Level/Haskell-Compiler-Windows-on-Arm.html
   - title: HPC-Algorithm-INTERMEDIATE
     url: /PhD-Level/HPC-Algorithm-INTERMEDIATE.html
+  - title: R-Arm-Community-Support-INTERMEDIATE
+    url: /PhD-Level/R-Arm-Community-Support-INTERMEDIATE.html

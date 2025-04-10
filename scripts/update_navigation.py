@@ -27,7 +27,7 @@ def process_yml(pathlist, level: str):
         path_in_str = str(path)[7:].replace(".md", ".html")
         
         if any(map(lambda sub: sub in path_in_str, ("undergraduate.html", "masters.html", "phd.html"))):
-            break
+            continue
 
         title = path_in_str.rsplit('/')[-1].replace(".html", "")
         yam_tab[level][0]['children'].append({'title': title, 'url': path_in_str})

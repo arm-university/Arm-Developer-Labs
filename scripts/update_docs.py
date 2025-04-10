@@ -72,7 +72,7 @@ def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> st
         if source_path.is_file():
             shutil.copy2(source_path, target_folder)
         else:
-            print(f"Warning: {source_path} does not exist!")
+            print(f"Warning: {source_path} does not exist in {doc_path}!")
 
     replacement = r'<img class="image image--xl" src="\1"/>'
     return re.sub(pattern, replacement, md_text)
