@@ -55,14 +55,17 @@ def clean() :
 
 def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> str:
     pattern = r'!\[[^\]]*\]\(([^)]+)\)'
-    matches = re.findall(pattern, md_text)
-
     docs_dir_path = Path(docs_dir)
+    
+    def replace(match):
+        img_path = match.group(1)
+        
+        if doc_path.resolve() == Path("../README.md").resolve() and img_path == "./images/Research_on_arm_banner.png":
+            return ""
+        
+        source_path = (doc_path.parent / img_path).resolve()
 
-    for match in matches:
-        source_path = (doc_path.parent / match).resolve()
-
-        if match.startswith("../images"):
+        if img_path.startswith("../images"):
             target_folder = (docs_dir_path.parent / "images").resolve()
         else:
             target_folder = (docs_dir_path / "images").resolve()
@@ -73,9 +76,10 @@ def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> st
             shutil.copy2(source_path, target_folder)
         else:
             print(f"Warning: {source_path} does not exist in {doc_path}!")
+        
+        return f'<img class="image image--xl" src="{img_path}"/>'
 
-    replacement = r'<img class="image image--xl" src="\1"/>'
-    return re.sub(pattern, replacement, md_text)
+    return re.sub(pattern, replace, md_text)
 
 def convert_md_videos_to_html(md_text: str) -> str:
     pattern = re.compile(

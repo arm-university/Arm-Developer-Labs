@@ -1,16 +1,15 @@
 /* start custom scss snippet */
-.brand_logo svg {
-    display: block;
-    height: auto;
-    width: 100px;
-    margin-right: 20px;
-  }
+.crop_image--cover {
+  width: 100%;
+  height: 74vh;
+  object-fit: cover;
+}
 
 .scroll-container {
   position: relative;
-  height: 15vh;
+  height: 13vh;
   overflow: hidden;
-  background-color: #7B61FF;
+  background-color: #D3D3D3;
 }
 
 .carousel-primary,
@@ -37,7 +36,7 @@
 
 .carousel-primary img,
 .carousel-secondary img {
-  height: 60px;
+  height: 10vh;
   width: auto;
   margin-left: 5px;
 }
