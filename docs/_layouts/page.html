@@ -172,6 +172,20 @@ layout: base
               {%- include snippets/get-nav-url.html path=page.article_header.image.src -%}
               {%- assign _header_image_src = __return -%}
               <img class="article__header--cover" src="{{ _header_image_src }}" />
+              <div class="scroll-container">
+                <div class="carousel-primary">
+                  <img src="../partner_logos/R_logo.svg.png" alt="R"/>
+                  <img src="../partner_logos/Linaro.png" alt="Linaro"/>
+                  <img src="../partner_logos/ArduinoCommunityLogo_SVG.svg" alt="Arduino Community"/>
+                  <img src="../partner_logos/mathworks-logo-full-color-rgb.svg" alt="mathworks"/>
+                </div>
+                <div class="carousel-primary carousel-secondary">
+                  <img src="../partner_logos/R_logo.svg.png" alt="R"/>
+                  <img src="../partner_logos/Linaro.png" alt="Linaro"/>
+                  <img src="../partner_logos/ArduinoCommunityLogo_SVG.svg" alt="Arduino Community"/>
+                  <img src="../partner_logos/mathworks-logo-full-color-rgb.svg" alt="mathworks"/>
+                </div>
+              </div>
             {%- endif -%}
           {%- endif -%}
 

@@ -5,4 +5,44 @@
     width: 100px;
     margin-right: 20px;
   }
+
+.scroll-container {
+  height: 100vh;
+}
+
+.carousel-primary,
+.carousel-secondary {
+  top: 26%;
+  left: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.carousel-primary img {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.carousel-primary {
+  display: flex;
+  justify-content: space-around;
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+.carousel-secondary {
+  animation: scroll-horizontal 20s linear infinite;
+  animation-delay: 10s;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -100%
+  }
+}
 /* end custom scss snippet */
