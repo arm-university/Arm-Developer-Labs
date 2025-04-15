@@ -7,22 +7,20 @@
   }
 
 .scroll-container {
-  height: 10vh;
+  position: relative;
+  height: 30vh;
+  overflow: hidden;
 }
 
 .carousel-primary,
 .carousel-secondary {
-  top: 26%;
-  left: 100%;
-  width: 100%;
-  overflow: hidden;
   position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  width: 100%;
   white-space: nowrap;
-}
-
-.carousel-primary img {
-  width: 300px;
-  margin-left: 10px;
+  overflow: hidden;
 }
 
 .carousel-primary {
@@ -34,6 +32,13 @@
 .carousel-secondary {
   animation: scroll-horizontal 20s linear infinite;
   animation-delay: 10s;
+}
+
+.carousel-primary img,
+.carousel-secondary img {
+  height: 30px;
+  width: auto;
+  margin-left: 10px;
 }
 
 @keyframes scroll-horizontal {
