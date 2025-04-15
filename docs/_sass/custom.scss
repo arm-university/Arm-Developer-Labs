@@ -19,26 +19,42 @@
   background-color: #D3D3D3;
 }
 
-.marquee {
-  display: flex;
-  align-items: center;      /* Vertically center the logos */
-  white-space: nowrap;      /* Keep logos on one line */
-  /* The container's width will naturally fit the logos, and duplicating them means there’s always something visible */
-  animation: marquee-scroll 20s linear infinite;
+.carousel-primary,
+.carousel-secondary {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.marquee img {
+.carousel-primary {
+  display: flex;
+  justify-content: space-around;
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+.carousel-secondary {
+  animation: scroll-horizontal 20s linear infinite;
+  animation-delay: 10s;
+}
+
+.carousel-primary img,
+.carousel-secondary img {
   height: 10vh;
   width: auto;
-  margin: 0 5px;  /* Adjust horizontal spacing as needed */
+  margin-left: 5px;
 }
 
-@keyframes marquee-scroll {
+@keyframes scroll-horizontal {
   0% {
-    transform: translateX(0);
+    left: 100%;
   }
+
   100% {
-    transform: translateX(-50%);
+    left: -100%
   }
 }
 /* end custom scss snippet */
