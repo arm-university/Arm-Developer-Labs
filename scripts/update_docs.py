@@ -52,7 +52,6 @@ def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> st
     docs_dir_path = Path(docs_dir)
     
     def replace(match):
-        print(match)
         img_path = match.group(1)
 
         if doc_path.resolve() == Path("../README.md").resolve() and img_path == "./images/Research_on_arm_banner.png":
@@ -60,11 +59,7 @@ def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> st
         
         source_path = (doc_path.parent / img_path).resolve()
 
-        if img_path.startswith("../images"):
-            target_folder = (docs_dir_path.parent / "images").resolve()
-        else:
-            target_folder = (docs_dir_path / "images").resolve()
-
+        target_folder = (docs_dir_path / "images").resolve()
         target_folder.mkdir(parents=True, exist_ok=True)
         
         if source_path.is_file():
@@ -73,7 +68,6 @@ def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> st
             print(f"Warning: {source_path} does not exist in {doc_path}!")
         
         new_img_path = f"./images/{Path(img_path).name}"
-        print(new_img_path)
         return f'<img class="image image--xl" src="{new_img_path}"/>'
 
     return re.sub(pattern, replace, md_text)
