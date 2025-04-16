@@ -13,11 +13,11 @@ projects_masters_pathlist = Path(projects_masters_dir).rglob('*.md')
 research_pathlist = [Path("../Research/research.md")]
 research_phd_pathlist = Path(research_phd_dir).rglob('*.md')
 
-docs_projects_dir = "../docs/projects"
-docs_undergraudate_dir = "../docs/projects/Undergraduate"
-docs_masters_dir = "../docs/projects/Masters"
-docs_research_dir = "../docs/research"
-docs_phd_dir = "../docs/research/PhD"
+docs_projects_dir = "../docs/Projects"
+docs_undergraudate_dir = "../docs/Projects/Undergraduate"
+docs_masters_dir = "../docs/Projects/Masters"
+docs_research_dir = "../docs/Research"
+docs_phd_dir = "../docs/Research/PhD"
 docs_img_dir = "../docs/images"
 
 contents_frontmatter = """---
@@ -39,7 +39,7 @@ article_header:
 """
 
 def clean() :
-    clean_lst = [docs_projects_dir,docs_undergraudate_dir, docs_masters_dir, docs_research_dir, docs_phd_dir, docs_img_dir]
+    clean_lst = [docs_projects_dir,docs_undergraudate_dir, docs_masters_dir, docs_research_dir, docs_phd_dir]
     for dirpath in clean_lst:
         if os.path.exists(dirpath) and os.path.isdir(dirpath):
             shutil.rmtree(dirpath)

@@ -6,7 +6,7 @@ article_header:
   image:
     src: ./images/Research_on_arm_banner.png
 ---
-# Academic Projects Repository
+# Arm Developer Labs
 
 
 
