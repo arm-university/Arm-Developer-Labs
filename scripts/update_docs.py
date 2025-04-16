@@ -73,15 +73,13 @@ def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> st
     return re.sub(pattern, replace, md_text)
 
 def convert_md_videos_to_html(md_text: str) -> str:
-    pattern = re.compile(
-        r'\[\s*<img[^>]*src="https:\/\/img\.youtube\.com\/vi\/zaRozkrcix0\/0\.jpg"[^>]*>\s*\]\(https:\/\/www\.youtube\.com\/watch\?v=zaRozkrcix0\)'
-    )
+    pattern = "[![Arm-CMU collaboration](https://img.youtube.com/vi/zaRozkrcix0/0.jpg)](https://www.youtube.com/watch?v=zaRozkrcix0)"
+    replacement = '<iframe width="560" height="315" src="https://www.youtube.com/embed/zaRozkrcix0?si=eRZirXrv5300fnBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+    
+    if pattern in md_text:
+        replaced_md = md_text.replace(pattern, replacement)
 
-    replacement = (
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/zaRozkrcix0?si=eRZirXrv5300fnBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-    )
-
-    return re.sub(pattern, replacement, md_text)
+    return replaced_md
 
 def format_content(pathlist, academic_level, docs_path):
     for path in pathlist:
@@ -115,13 +113,11 @@ def format_index():
     src = "../README.md"
     docs_path = "../docs"
     with open(src, 'r', encoding='utf-8') as f:
-        formatted_content = index_frontmatter + f.read()
-        converted_content = convert_md_videos_to_html(
-            convert_md_images_to_html(
-                formatted_content,
-                Path(src),
-                docs_path
-            )
+        formatted_content = convert_md_videos_to_html(index_frontmatter + f.read())
+        converted_content = convert_md_images_to_html(
+            formatted_content,
+            Path(src),
+            docs_path
         )
         out_file = os.path.join(docs_path, "index.md")
         with open(out_file, 'w', encoding='utf-8') as out_f:
