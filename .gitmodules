@@ -4,3 +4,9 @@
 [submodule "Masters-Level/Previous-Submissions/example-papers"]
 	path = Masters-Level/Previous-Submissions/example-papers
 	url = https://github.com/egkoppel/example-papers
+[submodule "Projects/Previous_Submissions/ElectroNinjaRefined"]
+	path = Projects/Previous_Submissions/ElectroNinjaRefined
+	url = https://github.com/BillLeoutsakosvl346/ElectroNinjaRefined.git
+[submodule "Projects/Previous_Submissions/example-papers"]
+	path = Projects/Previous_Submissions/example-papers
+	url = https://github.com/egkoppel/example-papers.git
