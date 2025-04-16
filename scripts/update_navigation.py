@@ -20,7 +20,6 @@ def process_yml(pathlist, level: str, tab: str):
     partial_content = ''.join(lines[12:])
 
     yam_tab = yaml.safe_load(partial_content)
-    print(yam_tab)
     
     if tab == 'research':
         yam_tab[tab][0]['children'].clear()
