@@ -1,63 +1,58 @@
 header:
   - titles:
       # @start locale config
-      en      : &EN       Undergraduate
+      en      : &EN       Projects
       # @end locale config
-    url: Undergraduate-Level/undergraduate.html
+    url: Projects/projects.html
 
   - titles:
       # @start locale config
-      en      : &EN       Master's
+      en      : &EN       Research
       # @end locale config
-    url: Masters-Level/masters.html
-
-  - titles:
-      # @start locale config
-      en      : &EN       PhD
-      # @end locale config
-    url: PhD-Level/phd.html
-undergraduate:
+    url: Research/research.html
+projects:
 - titles: Undergraduate
   children:
   - title: Academic-Trends-Dashboard-INTERMEDIATE
-    url: /Undergraduate-Level/Academic-Trends-Dashboard-INTERMEDIATE.html
+    url: Projects/Undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
   - title: AMBA-Simulator-Framework-INTERMEDIATE
-    url: /Undergraduate-Level/AMBA-Simulator-Framework-INTERMEDIATE.html
+    url: Projects/Undergraduate/AMBA-Simulator-Framework-INTERMEDIATE.html
   - title: Radar-Signal-Processing-Cortex-A
-    url: /Undergraduate-Level/Radar-Signal-Processing-Cortex-A.html
+    url: Projects/Undergraduate/Radar-Signal-Processing-Cortex-A.html
   - title: Real-Time-Image-Classification-CHALLENGING
-    url: /Undergraduate-Level/Real-Time-Image-Classification-CHALLENGING.html
+    url: Projects/Undergraduate/Real-Time-Image-Classification-CHALLENGING.html
   - title: Sentiment-Analysis-Dashboard-ACCESSIBLE
-    url: /Undergraduate-Level/Sentiment-Analysis-Dashboard-ACCESSIBLE.html
+    url: Projects/Undergraduate/Sentiment-Analysis-Dashboard-ACCESSIBLE.html
   - title: Smart-Voice-Assistant-DIFFICULT
-    url: /Undergraduate-Level/Smart-Voice-Assistant-DIFFICULT.html
+    url: Projects/Undergraduate/Smart-Voice-Assistant-DIFFICULT.html
   - title: Write-A-Learning-Path-ACCESSIBLE
-    url: /Undergraduate-Level/Write-A-Learning-Path-ACCESSIBLE.html
-masters:
+    url: Projects/Undergraduate/Write-A-Learning-Path-ACCESSIBLE.html
 - titles: Master's
   children:
   - title: AI-Agents-INTERMEDIATE
-    url: /Masters-Level/AI-Agents-INTERMEDIATE.html
+    url: Projects/Masters/AI-Agents-INTERMEDIATE.html
   - title: AI-Powered-Porting-Tool-CHALLENGING
-    url: /Masters-Level/AI-Powered-Porting-Tool-CHALLENGING.html
+    url: Projects/Masters/AI-Powered-Porting-Tool-CHALLENGING.html
   - title: Architecture-Insight-Dashboard-CHALLENGING
-    url: /Masters-Level/Architecture-Insight-Dashboard-CHALLENGING.html
+    url: Projects/Masters/Architecture-Insight-Dashboard-CHALLENGING.html
   - title: Arduino-IDE-Windows-on-Arm
-    url: /Masters-Level/Arduino-IDE-Windows-on-Arm.html
+    url: Projects/Masters/Arduino-IDE-Windows-on-Arm.html
   - title: LLM-Benchmark-on-Arm-Server-ACCESSIBLE
-    url: /Masters-Level/LLM-Benchmark-on-Arm-Server-ACCESSIBLE.html
+    url: Projects/Masters/LLM-Benchmark-on-Arm-Server-ACCESSIBLE.html
+  - title: README
+    url: Projects/Masters/README.html
   - title: SpecINT2017-benchmarking-on-Arm64-ACCESSIBLE
-    url: /Masters-Level/SpecINT2017-benchmarking-on-Arm64-ACCESSIBLE.html
-phd:
-- titles: PhD
+    url: Projects/Masters/SpecINT2017-benchmarking-on-Arm64-ACCESSIBLE.html
+research:
+- titles: Phd
   children:
   - title: Bioinformatic-Pipeline-Analysis-INTERMEDIATE
-    url: /PhD-Level/Bioinformatic-Pipeline-Analysis-INTERMEDIATE.html
+    url: Research/PhD/Bioinformatic-Pipeline-Analysis-INTERMEDIATE.html
   - title: FPGA-Accellerator-with-DDR-CHALLENGING
-    url: /PhD-Level/FPGA-Accellerator-with-DDR-CHALLENGING.html
+    url: Research/PhD/FPGA-Accellerator-with-DDR-CHALLENGING.html
   - title: Haskell-Compiler-Windows-on-Arm
-    url: /PhD-Level/Haskell-Compiler-Windows-on-Arm.html
+    url: Research/PhD/Haskell-Compiler-Windows-on-Arm.html
   - title: HPC-Algorithm-INTERMEDIATE
-    url: /PhD-Level/HPC-Algorithm-INTERMEDIATE.html
+    url: Research/PhD/HPC-Algorithm-INTERMEDIATE.html
   - title: R-Arm-Community-Support-INTERMEDIATE
-    url: /PhD-Level/R-Arm-Community-Support-INTERMEDIATE.html
+    url: Research/PhD/R-Arm-Community-Support-INTERMEDIATE.html

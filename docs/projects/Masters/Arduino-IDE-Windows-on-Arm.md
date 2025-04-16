@@ -1,6 +1,12 @@
-# Porting and Optimizing Arduino IDE for Windows on Arm  
+---
+layout: article
+title: Porting and Optimizing Arduino IDE for Windows on Arm  
 
-![learn_on_arm](../../images/Learn_on_Arm_banner.png)
+sidebar:
+  nav: projects
+---
+
+<img class="image image--xl" src="../../images/Learn_on_Arm_banner.png"/>
 
 ### Project Difficulty  
 Challenging

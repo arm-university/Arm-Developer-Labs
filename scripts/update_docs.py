@@ -3,17 +3,21 @@ import re
 import shutil
 from pathlib import Path
 
-undergraudate_dir = "../Undergraduate-Level"
-masters_dir = "../Masters-Level"
-phd_dir = "../PhD-Level"
+projects_undergraduate_dir = "../Projects/Undergraduate"
+projects_masters_dir = "../Projects/Masters"
+research_phd_dir = "../Research/PhD"
 
-undergraduate_pathlist = Path(undergraudate_dir).rglob('*.md')
-masters_pathlist = Path(masters_dir).rglob('*.md')
-phd_pathlist = Path(phd_dir).rglob('*.md')
+projects_pathlist = [Path("../Projects/projects.md")]
+projects_undergraduate_pathlist = Path(projects_undergraduate_dir).rglob('*.md')
+projects_masters_pathlist = Path(projects_masters_dir).rglob('*.md')
+research_pathlist = [Path("../Research/research.md")]
+research_phd_pathlist = Path(research_phd_dir).rglob('*.md')
 
-docs_undergraudate_dir = "../docs/Undergraduate-Level"
-docs_masters_dir = "../docs/Masters-Level"
-docs_phd_dir = "../docs/PhD-Level"
+docs_projects_dir = "../docs/projects"
+docs_undergraudate_dir = "../docs/projects/Undergraduate"
+docs_masters_dir = "../docs/projects/Masters"
+docs_research_dir = "../docs/research"
+docs_phd_dir = "../docs/research/PhD"
 docs_img_dir = "../docs/images"
 
 contents_frontmatter = """---
@@ -22,16 +26,6 @@ title: {title}
 sidebar:
   nav: {level}
 ---
-"""
-
-tabs_frontmatter = """---
-layout: article
-title: Page - Sidebar
-sidebar:
-  nav: {level}
----
-
-test
 """
 
 index_frontmatter = """---
@@ -45,7 +39,7 @@ article_header:
 """
 
 def clean() :
-    clean_lst = [docs_undergraudate_dir, docs_masters_dir, docs_phd_dir, docs_img_dir]
+    clean_lst = [docs_projects_dir,docs_undergraudate_dir, docs_masters_dir, docs_research_dir, docs_phd_dir, docs_img_dir]
     for dirpath in clean_lst:
         if os.path.exists(dirpath) and os.path.isdir(dirpath):
             shutil.rmtree(dirpath)
@@ -119,11 +113,6 @@ def format_content(pathlist, academic_level, docs_path):
             out_file = os.path.join(docs_path, path.name)
             with open(out_file, 'w', encoding='utf-8') as out_f:
                 out_f.write(converted_content)
-    
-    tab_file = os.path.join(docs_path, academic_level + ".md")
-    tabs_content = tabs_frontmatter.format(level=academic_level)
-    with open(tab_file, 'w', encoding='utf-8') as f:
-        f.write(tabs_content)
         
 def format_index():
     src = "../README.md"
@@ -144,9 +133,11 @@ def format_index():
 def main():
     clean()
     format_index()
-    format_content(undergraduate_pathlist, "undergraduate", docs_undergraudate_dir)
-    format_content(masters_pathlist, "masters", docs_masters_dir)
-    format_content(phd_pathlist, "phd", docs_phd_dir)
+    format_content(projects_pathlist, "projects", docs_projects_dir)
+    format_content(projects_undergraduate_pathlist, "projects", docs_undergraudate_dir)
+    format_content(projects_masters_pathlist, "projects", docs_masters_dir)
+    format_content(research_pathlist, "research", docs_research_dir)
+    format_content(research_phd_pathlist, "research", docs_phd_dir)
     
 if __name__ == "__main__":
     main()

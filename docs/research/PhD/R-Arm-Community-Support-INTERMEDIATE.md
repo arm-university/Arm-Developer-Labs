@@ -1,5 +1,11 @@
-# Improving R Support for the Windows on Arm Community 
-![learn_on_arm](../../images/Learn_on_Arm_banner.png)
+---
+layout: article
+title: Improving R Support for the Windows on Arm Community 
+
+sidebar:
+  nav: research
+---
+<img class="image image--xl" src="../../images/Learn_on_Arm_banner.png"/>
 
 ### Project Difficulty  
 Challenging

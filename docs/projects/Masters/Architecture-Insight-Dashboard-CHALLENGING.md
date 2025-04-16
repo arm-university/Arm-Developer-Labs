@@ -1,5 +1,11 @@
-# Develop an Arm Architecture Insight Dashboard
-![supporting image](./images/can-i-use.jpg)
+---
+layout: article
+title: Develop an Arm Architecture Insight Dashboard
+
+sidebar:
+  nav: projects
+---
+<img class="image image--xl" src="./images/can-i-use.jpg"/>
 
 ### Project Difficulty
 Intermediate
@@ -42,7 +48,7 @@ You are free to explore your own implementation. The skills below are examples.
 
 2. If your submission is approved, you will receive a recognised badge that you can list on your CV and shared on LinkedIn. A great way to stand out from the crowd! :mortar_board:
 
-![academic_badge](../../images/ACA_badge.jpg)
+<img class="image image--xl" src="../../images/ACA_badge.jpg"/>
 
 3. It's a great way to demonstrate your initiative and commitment to your field. 
 

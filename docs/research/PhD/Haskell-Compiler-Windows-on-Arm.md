@@ -1,5 +1,11 @@
-# Adding Windows on Arm Support to the Glasgow Haskell Compiler (GHC)
-![learn_on_arm](../../images/Learn_on_Arm_banner.png)
+---
+layout: article
+title: Adding Windows on Arm Support to the Glasgow Haskell Compiler (GHC)
+
+sidebar:
+  nav: research
+---
+<img class="image image--xl" src="../../images/Learn_on_Arm_banner.png"/>
 
 ### Project Difficulty
 Challenging

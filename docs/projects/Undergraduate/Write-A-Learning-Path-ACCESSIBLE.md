@@ -1,6 +1,12 @@
-# Write an Educational Tutorial (Learning Path) of your Choice
+---
+layout: article
+title: Write an Educational Tutorial (Learning Path) of your Choice
 
-![teach_on_arm](../../images/Educate_on_Arm_banner.png)
+sidebar:
+  nav: projects
+---
+
+<img class="image image--xl" src="../../images/Educate_on_Arm_banner.png"/>
 
 ### Project Difficulty
 Accessible
@@ -25,7 +31,7 @@ This exciting opportunity invites master students to create and submit a compreh
 
 2. If your submission is approved, you will receive a recognised badge that you can list on your CV and shared on LinkedIn. A great way to stand out from the crowd! :mortar_board:
 
-![academic_badge](../../images/ACA_badge.jpg)
+<img class="image image--xl" src="../../images/ACA_badge.jpg"/>
 
 3. It's a great way to demonstrate your initiative and commitment to your field. 
 
