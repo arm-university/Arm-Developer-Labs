@@ -11,7 +11,7 @@ header:
       # @end locale config
     url: Research/research.html
 projects:
-- titles: Undergraduate
+- title: Undergraduate
   children:
   - title: Academic-Trends-Dashboard-INTERMEDIATE
     url: /Projects/Undergraduate/Academic-Trends-Dashboard-INTERMEDIATE.html
@@ -27,7 +27,7 @@ projects:
     url: /Projects/Undergraduate/Smart-Voice-Assistant-DIFFICULT.html
   - title: Write-A-Learning-Path-ACCESSIBLE
     url: /Projects/Undergraduate/Write-A-Learning-Path-ACCESSIBLE.html
-- titles: Master's
+- title: Master's
   children:
   - title: AI-Agents-INTERMEDIATE
     url: /Projects/Masters/AI-Agents-INTERMEDIATE.html
@@ -42,7 +42,7 @@ projects:
   - title: SpecINT2017-benchmarking-on-Arm64-ACCESSIBLE
     url: /Projects/Masters/SpecINT2017-benchmarking-on-Arm64-ACCESSIBLE.html
 research:
-- titles: Phd
+- title: Phd
   children:
   - title: Bioinformatic-Pipeline-Analysis-INTERMEDIATE
     url: /Research/PhD/Bioinformatic-Pipeline-Analysis-INTERMEDIATE.html
