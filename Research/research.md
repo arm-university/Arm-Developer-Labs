@@ -1,6 +1,6 @@
 # Research that Matters
 
-![research](../../images/Research_on_arm_banner.png)
+![research](../images/Research_on_arm_banner.png)
 
 Welcome to our **Research Themes** page, where academic innovation meets real-world impact. This space highlights research areas that are not only industrially relevant to **Arm** and the broader **software ecosystem**, but also critical to shaping the **future of technology and employability** in this space.
 
