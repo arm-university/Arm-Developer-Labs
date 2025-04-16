@@ -6,7 +6,7 @@ sidebar:
   nav: projects
 ---
 
-<img class="image image--xl" src="../../images/Educate_on_Arm_banner.png"/>
+<img class="image image--xl" src="./images/Educate_on_Arm_banner.png"/>
 
 ### Project Difficulty
 Accessible

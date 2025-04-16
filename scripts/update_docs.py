@@ -52,8 +52,9 @@ def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> st
     docs_dir_path = Path(docs_dir)
     
     def replace(match):
+        print(match)
         img_path = match.group(1)
-        
+
         if doc_path.resolve() == Path("../README.md").resolve() and img_path == "./images/Research_on_arm_banner.png":
             return ""
         
@@ -71,7 +72,9 @@ def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> st
         else:
             print(f"Warning: {source_path} does not exist in {doc_path}!")
         
-        return f'<img class="image image--xl" src="{img_path}"/>'
+        new_img_path = f"./images/{Path(img_path).name}"
+        print(new_img_path)
+        return f'<img class="image image--xl" src="{new_img_path}"/>'
 
     return re.sub(pattern, replace, md_text)
 

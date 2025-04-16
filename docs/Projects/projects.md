@@ -4,7 +4,7 @@ title:
 sidebar:
   nav: projects
 ---
-<img class="image image--xl" src="../images/Research_on_arm_banner.png"/>
+<img class="image image--xl" src="./images/Research_on_arm_banner.png"/>
 
 ## Arm-based Design Contests!
 
