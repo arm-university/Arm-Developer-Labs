@@ -25,7 +25,7 @@ def process_yml(pathlist, level: str, tab: str):
         yam_tab[tab][0]['children'].clear()
         
         for path in pathlist:
-            path_in_str = str(path)[3:].replace(".md", ".html")
+            path_in_str = str(path)[2:].replace(".md", ".html")
             title = path_in_str.rsplit('/')[-1].replace(".html", "")
             yam_tab[tab][0]['children'].append({'title': title, 'url': path_in_str})
         
@@ -39,7 +39,7 @@ def process_yml(pathlist, level: str, tab: str):
             yam_tab[tab][0]['children'].clear()
         
             for path in pathlist:
-                path_in_str = str(path)[3:].replace(".md", ".html")
+                path_in_str = str(path)[2:].replace(".md", ".html")
                 title = path_in_str.rsplit('/')[-1].replace(".html", "")
                 yam_tab[tab][0]['children'].append({'title': title, 'url': path_in_str})
             
@@ -52,7 +52,7 @@ def process_yml(pathlist, level: str, tab: str):
             yam_tab[tab][1]['children'].clear()
         
             for path in pathlist:
-                path_in_str = str(path)[3:].replace(".md", ".html")
+                path_in_str = str(path)[2:].replace(".md", ".html")
                 title = path_in_str.rsplit('/')[-1].replace(".html", "")
                 yam_tab[tab][1]['children'].append({'title': title, 'url': path_in_str})
             
