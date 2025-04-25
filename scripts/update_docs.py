@@ -3,8 +3,8 @@ import re
 import shutil
 from pathlib import Path
 
-projects_undergraduate_dir = "../Projects/Undergraduate"
-projects_masters_dir = "../Projects/Masters"
+projects_undergraduate_dir = "../Projects/Accessible"
+projects_masters_dir = "../Projects/Advanced"
 research_phd_dir = "../Research/PhD"
 extended_projects_dir = "../Research/Extended-Team-Projects"
 
@@ -16,8 +16,8 @@ research_phd_pathlist = Path(research_phd_dir).rglob('*.md')
 research_extended_project_pathlist = Path(extended_projects_dir).rglob('*.md')
 
 docs_projects_dir = "../docs/Projects"
-docs_undergraudate_dir = "../docs/Projects/Undergraduate"
-docs_masters_dir = "../docs/Projects/Masters"
+docs_undergraudate_dir = "../docs/Projects/Accessible"
+docs_masters_dir = "../docs/Projects/Advanced"
 docs_research_dir = "../docs/Research"
 docs_phd_dir = "../docs/Research/PhD"
 docs_extended_project_dir = "../docs/Research/Extended-Team-Projects"

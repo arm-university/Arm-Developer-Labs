@@ -25,8 +25,8 @@ The following infographic details the directory structure and where to find exam
 ```bash
 Project-Ideas
 ├── Projects                # Design Contests and Hackathons
-│   └── Masters             # Masters Projects (e.g., MEng, MSc)
-│   └── Undergraduate       # From 1st to final year undergraduate
+│   └── Accessible          # Undergraduate level Projects
+│   └── Advanced            # Masters level Projects
 ├── Research                
 │   └── PhD                 # PhD Projects (e.g., UK CDT PhD)            
 ├── README.md
