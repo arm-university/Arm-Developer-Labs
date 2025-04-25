@@ -74,6 +74,11 @@ Cloud compute resources (Arm-based AWS, GCP, or Azure)
 
 API access to target workflow tools
 
+### Previous Submissions
+1. AI to Solve Maths Example Sheets at University of Cambridge. (Finley Stirk, Eliyahu Gluschove-Koppel and Ronak De) - https://github.com/egkoppel/example-papers
+
+2. AI that interprets user requests, generates circuit descriptions, creates LTSpice ASC code, and iteratively refines circuit designs using a combination of GPT-based language models, a vision analysis module, and LTSpice simulation. (Gijeong Lee, Bill Leoutsakos) - https://github.com/BillLeoutsakosvl346/ElectroNinjaRefined
+
 ### Resources 📚 
 
 [Arm Learning paths](learn.arm.com)
