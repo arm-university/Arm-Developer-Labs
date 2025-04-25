@@ -14,6 +14,8 @@ Welcome to our collection of projects designed for students and academics in com
 
 Our project collection caters to all academic levels, from undergraduates to postdoctoral researchers. It includes diverse university projects, from simple computer vision applications to custom silicon tape-outs with industry partners. This variety ensures relevant and challenging projects for everyone, helping you develop practical skills, engage in cutting-edge research, and collaborate with academic and industry experts.
 
+[Developer Labs Website](https://arm-university.github.io/Arm-Developer-Labs/)
+
 ## Why Participate?
 
 1. Standout projects could be internally referred for relevant positions at Arm! :page_with_curl:
