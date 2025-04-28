@@ -75,12 +75,18 @@ def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> st
 
     return re.sub(pattern, replace, md_text)
 
-def convert_md_videos_to_html(md_text: str) -> str:
-    pattern = "[![Arm-CMU collaboration](https://img.youtube.com/vi/zaRozkrcix0/0.jpg)](https://www.youtube.com/watch?v=zaRozkrcix0)"
-    replacement = '<iframe width="560" height="315" src="https://www.youtube.com/embed/zaRozkrcix0?si=eRZirXrv5300fnBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-    
-    if pattern in md_text:
-        replaced_md = md_text.replace(pattern, replacement)
+def convert_md(md_text: str) -> str:
+    pattern_link = "[Developer Labs Website](https://arm-university.github.io/Arm-Developer-Labs/)"
+    replacement_link = "[Developer Labs Website](https://github.com/arm-university/Arm-Developer-Labs)"
+    pattern_youtube = "[![Arm-CMU collaboration](https://img.youtube.com/vi/zaRozkrcix0/0.jpg)](https://www.youtube.com/watch?v=zaRozkrcix0)"
+    replacement_youtube = '<iframe width="560" height="315" src="https://www.youtube.com/embed/zaRozkrcix0?si=eRZirXrv5300fnBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+
+    replaced_md = md_text
+
+    if pattern_youtube in replaced_md:
+        replaced_md = replaced_md.replace(pattern_youtube, replacement_youtube)
+    if pattern_link in replaced_md:
+        replaced_md = replaced_md.replace(pattern_link, replacement_link)
 
     return replaced_md
 
@@ -116,7 +122,7 @@ def format_index():
     src = "../README.md"
     docs_path = "../docs"
     with open(src, 'r', encoding='utf-8') as f:
-        formatted_content = convert_md_videos_to_html(index_frontmatter + f.read())
+        formatted_content = convert_md(index_frontmatter + f.read())
         converted_content = convert_md_images_to_html(
             formatted_content,
             Path(src),
