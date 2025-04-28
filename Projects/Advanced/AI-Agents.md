@@ -16,6 +16,11 @@ Electrical and Computer Engineering Students
 
 This project focuses on developing an AI-powered agent that automates repetitive and complex workflow tasks in a specific domain, such as software development, project management, or cloud operations. The AI agent will be deployed in a sandboxed environment to ensure safety, prevent unintended consequences, and provide controlled automation with strict oversight.
 
+### Previous Submissions
+1. [AI to Solve Maths Example Sheets at University of Cambridge. (Finley Stirk, Eliyahu Gluschove-Koppel and Ronak De)](https://github.com/egkoppel/example-papers)
+
+2. [AI that interprets user requests, generates circuit descriptions, creates LTSpice ASC code, and iteratively refines circuit designs using a combination of GPT-based language models, a vision analysis module, and LTSpice simulation. (Gijeong Lee, Bill Leoutsakos)](https://github.com/BillLeoutsakosvl346/ElectroNinjaRefined)
+
 ## Key Objectives 🔍 
 
 Task Identification & Domain Selection: Choose a workflow domain (e.g., DevOps, educational content moderation, research assistance) that benefits from automation while avoiding sensitive applications like finance.
@@ -74,10 +79,6 @@ Cloud compute resources (Arm-based AWS, GCP, or Azure)
 
 API access to target workflow tools
 
-### Previous Submissions
-1. AI to Solve Maths Example Sheets at University of Cambridge. (Finley Stirk, Eliyahu Gluschove-Koppel and Ronak De) - https://github.com/egkoppel/example-papers
-
-2. AI that interprets user requests, generates circuit descriptions, creates LTSpice ASC code, and iteratively refines circuit designs using a combination of GPT-based language models, a vision analysis module, and LTSpice simulation. (Gijeong Lee, Bill Leoutsakos) - https://github.com/BillLeoutsakosvl346/ElectroNinjaRefined
 
 ### Resources 📚 
 
