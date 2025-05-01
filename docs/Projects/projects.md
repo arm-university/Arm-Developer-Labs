@@ -12,68 +12,58 @@ Welcome to the ultimate hub for design contests and hackathons centered around A
 
 Explore our extensive archive of past design contests, where participants have tackled real-world problems and created groundbreaking solutions. From IoT innovations to AI-driven applications, these contests highlight the versatility and power of Arm technologies. Each contest page provides detailed information on the projects, winners, and the impact they've made.
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Design Contests</title>
-</head>
-<body>
-  <table>
-    <thead>
-      <tr>
-        <th>Design Contest</th>
-        <th>Status</th>
-        <th>More Information</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="active">
-        <td>6th Championship Branch Prediction Contest with North Carolina State University</td>
-        <td>Active</td>
-        <td>
-          <a href="https://ericrotenberg.wordpress.ncsu.edu/cbp2025/#CBP2025framework" target="_blank">Link</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Texas A&M Hackathon</td>
-        <td>Not Active</td>
-        <td>
-          <a href="https://community.arm.com/arm-ambassadors/b/blog/posts/arm-at-tamuhack-2025" target="_blank">Link</a>
-        </td>
-      </tr>
-            <tr class="active">
-        <td>India Innovator Challenge 2025</td>
-        <td>Active</td>
-        <td>
-          <a>Coming Soon</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Texas A&M Hackathon</td>
-        <td>Not Active</td>
-        <td>
-          <a href="https://community.arm.com/arm-ambassadors/b/blog/posts/arm-at-tamuhack-2025" target="_blank">Link</a>
-        </td>
-      <tr>
-        <td>Teratec HPC Hackathon 2025</td>
-        <td>Not Active</td>
-        <td>
-          <a href="https://teratec.eu/activites/Hackathon.html" target="_blank">Link</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Arm Inventors Challenge 2024</td>
-        <td>Not Active</td>
-        <td>
-          <a href="https://community.arm.com/events/the-inventors-challenge-2024/" target="_blank">Link</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</body>
-</html>
-
+<table>
+  <thead>
+    <tr>
+      <th>Design Contest</th>
+      <th>Status</th>
+      <th>More Information</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="active">
+      <td>6th Championship Branch Prediction Contest with North Carolina State University</td>
+      <td>Active</td>
+      <td>
+        <a href="https://ericrotenberg.wordpress.ncsu.edu/cbp2025/#CBP2025framework" target="_blank">Link</a>
+      </td>
+    </tr>
+    <tr>
+      <td>Texas A&M Hackathon</td>
+      <td>Not Active</td>
+      <td>
+        <a href="https://community.arm.com/arm-ambassadors/b/blog/posts/arm-at-tamuhack-2025" target="_blank">Link</a>
+      </td>
+    </tr>
+          <tr class="active">
+      <td>India Innovator Challenge 2025</td>
+      <td>Active</td>
+      <td>
+        <a>Coming Soon</a>
+      </td>
+    </tr>
+    <tr>
+      <td>Texas A&M Hackathon</td>
+      <td>Not Active</td>
+      <td>
+        <a href="https://community.arm.com/arm-ambassadors/b/blog/posts/arm-at-tamuhack-2025" target="_blank">Link</a>
+      </td>
+    <tr>
+      <td>Teratec HPC Hackathon 2025</td>
+      <td>Not Active</td>
+      <td>
+        <a href="https://teratec.eu/activites/Hackathon.html" target="_blank">Link</a>
+      </td>
+    </tr>
+    <tr>
+      <td>Arm Inventors Challenge 2024</td>
+      <td>Not Active</td>
+      <td>
+        <a href="https://community.arm.com/events/the-inventors-challenge-2024/" target="_blank">Link</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
 
