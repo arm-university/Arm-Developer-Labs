@@ -1,7 +1,6 @@
 ---
 layout: article
-title: End-to-End Computer Vision System for Functional Safety 
-
+title: "End-to-End Computer Vision System for Functional Safety"
 sidebar:
   nav: research
 ---

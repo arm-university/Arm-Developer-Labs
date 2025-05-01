@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Adding Windows on Arm Support to the Glasgow Haskell Compiler (GHC)
-
+title: "Adding Windows on Arm Support to the Glasgow Haskell Compiler (GHC)"
 sidebar:
   nav: research
 ---

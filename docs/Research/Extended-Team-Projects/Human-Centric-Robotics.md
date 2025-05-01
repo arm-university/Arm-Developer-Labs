@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Human-Centric Robotics – Urban Deployment & Socioeconomic Modelling
-
+title: "Human-Centric Robotics – Urban Deployment & Socioeconomic Modelling"
 sidebar:
   nav: research
 ---

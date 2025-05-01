@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Optimise Performance of an Algorithm Used in High-Performance Compute Using Scalable Vector Extensions (SVE / SVE2) 
-
+title: "Optimise Performance of an Algorithm Used in High-Performance Compute Using Scalable Vector Extensions (SVE / SVE2)"
 sidebar:
   nav: research
 ---

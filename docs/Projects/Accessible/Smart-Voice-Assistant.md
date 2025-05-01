@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Smart Voice Assistant Using TinyML on Cortex-M55
-
+title: "Smart Voice Assistant Using TinyML on Cortex-M55"
 sidebar:
   nav: projects
 ---

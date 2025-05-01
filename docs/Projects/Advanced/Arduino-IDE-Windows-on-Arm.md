@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Porting and Optimizing Arduino IDE for Windows on Arm  
-
+title: "Porting and Optimizing Arduino IDE for Windows on Arm"
 sidebar:
   nav: projects
 ---

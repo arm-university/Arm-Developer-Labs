@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Benchmarking Bioconda Packages for Arm64 in Bioinformatics Pipelines
-
+title: "Benchmarking Bioconda Packages for Arm64 in Bioinformatics Pipelines"
 sidebar:
   nav: research
 ---

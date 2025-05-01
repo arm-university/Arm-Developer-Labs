@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Create a Sentiment Analysis Dashboard for Keywords Based on the Semiconductor Industry
-
+title: "Create a Sentiment Analysis Dashboard for Keywords Based on the Semiconductor Industry"
 sidebar:
   nav: projects
 ---

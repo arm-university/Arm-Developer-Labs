@@ -1,7 +1,6 @@
 ---
 layout: article
-title: AI-Powered Workflow Agent in a Sandboxed Environment
-
+title: "AI-Powered Workflow Agent in a Sandboxed Environment"
 sidebar:
   nav: projects
 ---

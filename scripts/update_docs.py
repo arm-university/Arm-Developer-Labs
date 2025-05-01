@@ -25,7 +25,7 @@ docs_img_dir = "../docs/images"
 
 contents_frontmatter = """---
 layout: article
-title: {title}
+title: "{title}"
 sidebar:
   nav: {level}
 ---
@@ -98,7 +98,7 @@ def format_content(pathlist, academic_level, docs_path):
             continue
         
         with open(path_in_str, 'r', encoding='utf-8') as f:
-            content_title = f.readline()[2:]
+            content_title = f.readline()[2:].replace("\n", " ").strip()
             content_level = academic_level
             content = f.read()
             

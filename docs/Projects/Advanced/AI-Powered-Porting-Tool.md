@@ -1,7 +1,6 @@
 ---
 layout: article
-title: AI-Powered Package Porting Tool for the Arm Architectures
-
+title: "AI-Powered Package Porting Tool for the Arm Architectures"
 sidebar:
   nav: projects
 ---

@@ -13,47 +13,47 @@ header:
 projects:
 - title: Accessible
   children:
-  - title: Smart-Voice-Assistant
-    url: /Projects/Accessible/Smart-Voice-Assistant.html
-  - title: Sentiment-Analysis-Dashboard
-    url: /Projects/Accessible/Sentiment-Analysis-Dashboard.html
-  - title: Write-A-Learning-Path
-    url: /Projects/Accessible/Write-A-Learning-Path.html
-  - title: AMBA-Simulator-Framework
-    url: /Projects/Accessible/AMBA-Simulator-Framework.html
   - title: Academic-Trends-Dashboard
     url: /Projects/Accessible/Academic-Trends-Dashboard.html
-  - title: Real-Time-Image-Classification
-    url: /Projects/Accessible/Real-Time-Image-Classification.html
+  - title: AMBA-Simulator-Framework
+    url: /Projects/Accessible/AMBA-Simulator-Framework.html
   - title: Processor-in-the-Loop-Automotive
     url: /Projects/Accessible/Processor-in-the-Loop-Automotive.html
+  - title: Real-Time-Image-Classification
+    url: /Projects/Accessible/Real-Time-Image-Classification.html
+  - title: Sentiment-Analysis-Dashboard
+    url: /Projects/Accessible/Sentiment-Analysis-Dashboard.html
+  - title: Smart-Voice-Assistant
+    url: /Projects/Accessible/Smart-Voice-Assistant.html
+  - title: Write-A-Learning-Path
+    url: /Projects/Accessible/Write-A-Learning-Path.html
 - title: Advanced
   children:
+  - title: AI-Agents
+    url: /Projects/Advanced/AI-Agents.html
   - title: AI-Powered-Porting-Tool
     url: /Projects/Advanced/AI-Powered-Porting-Tool.html
   - title: Architecture-Insight-Dashboard
     url: /Projects/Advanced/Architecture-Insight-Dashboard.html
+  - title: Arduino-IDE-Windows-on-Arm
+    url: /Projects/Advanced/Arduino-IDE-Windows-on-Arm.html
   - title: LLM-Benchmark-on-Arm-Server
     url: /Projects/Advanced/LLM-Benchmark-on-Arm-Server.html
   - title: SpecINT2017-benchmarking-on-Arm64
     url: /Projects/Advanced/SpecINT2017-benchmarking-on-Arm64.html
-  - title: AI-Agents
-    url: /Projects/Advanced/AI-Agents.html
-  - title: Arduino-IDE-Windows-on-Arm
-    url: /Projects/Advanced/Arduino-IDE-Windows-on-Arm.html
 research:
 - title: PhD
   children:
-  - title: HPC-Algorithm
-    url: /Research/PhD/HPC-Algorithm.html
   - title: Bioinformatic-Pipeline-Analysis
     url: /Research/PhD/Bioinformatic-Pipeline-Analysis.html
-  - title: R-Arm-Community-Support
-    url: /Research/PhD/R-Arm-Community-Support.html
   - title: FPGA-Accellerator-with-DDR
     url: /Research/PhD/FPGA-Accellerator-with-DDR.html
   - title: Haskell-Compiler-Windows-on-Arm
     url: /Research/PhD/Haskell-Compiler-Windows-on-Arm.html
+  - title: HPC-Algorithm
+    url: /Research/PhD/HPC-Algorithm.html
+  - title: R-Arm-Community-Support
+    url: /Research/PhD/R-Arm-Community-Support.html
 - title: Extended Team Projects
   children:
   - title: Compliance-Ready-Smart-Camera-System

@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Design a Dashboard that Tracks the Progression of Academic Papers on Computer Science Over Time
-
+title: "Design a Dashboard that Tracks the Progression of Academic Papers on Computer Science Over Time"
 sidebar:
   nav: projects
 ---

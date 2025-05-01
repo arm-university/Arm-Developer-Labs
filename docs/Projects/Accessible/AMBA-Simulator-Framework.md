@@ -1,7 +1,6 @@
 ---
 layout: article
-title: AMBA Infrastructure Design and Simulation Framework
-
+title: "AMBA Infrastructure Design and Simulation Framework"
 sidebar:
   nav: projects
 ---

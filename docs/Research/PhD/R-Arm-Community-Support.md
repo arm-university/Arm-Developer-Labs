@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Improving R Support for the Windows on Arm Community 
-
+title: "Improving R Support for the Windows on Arm Community"
 sidebar:
   nav: research
 ---

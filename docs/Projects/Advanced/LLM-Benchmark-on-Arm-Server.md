@@ -1,7 +1,6 @@
 ---
 layout: article
-title: LLM Benchmark for Arm Server 
-
+title: "LLM Benchmark for Arm Server"
 sidebar:
   nav: projects
 ---

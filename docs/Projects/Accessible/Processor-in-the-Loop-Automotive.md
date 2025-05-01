@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Processor-in-the-Loop for an Automotive Control System
-
+title: "Processor-in-the-Loop for an Automotive Control System"
 sidebar:
   nav: projects
 ---

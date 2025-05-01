@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Linux Capable SoC FPGA Prototyping Platform with DDR Memory 
-
+title: "Linux Capable SoC FPGA Prototyping Platform with DDR Memory"
 sidebar:
   nav: research
 ---

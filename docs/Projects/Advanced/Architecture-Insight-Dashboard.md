@@ -1,7 +1,6 @@
 ---
 layout: article
-title: Develop an Arm Architecture Insight Dashboard
-
+title: "Develop an Arm Architecture Insight Dashboard"
 sidebar:
   nav: projects
 ---

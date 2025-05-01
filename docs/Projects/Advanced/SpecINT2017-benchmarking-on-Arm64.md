@@ -1,7 +1,6 @@
 ---
 layout: article
-title: SpecINT2017 Benchmarking on Arm64: Evaluating Compiler and Workload Performance
-
+title: "SpecINT2017 Benchmarking on Arm64: Evaluating Compiler and Workload Performance"
 sidebar:
   nav: projects
 ---
