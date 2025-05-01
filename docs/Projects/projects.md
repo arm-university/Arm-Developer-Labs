@@ -29,25 +29,19 @@ Explore our extensive archive of past design contests, where participants have t
       </td>
     </tr>
     <tr>
-      <td>Texas A&M Hackathon</td>
+      <td>Texas A&amp;M Hackathon</td>
       <td>Not Active</td>
       <td>
         <a href="https://community.arm.com/arm-ambassadors/b/blog/posts/arm-at-tamuhack-2025" target="_blank">Link</a>
       </td>
     </tr>
-          <tr class="active">
+    <tr class="active">
       <td>India Innovator Challenge 2025</td>
       <td>Active</td>
       <td>
         <a>Coming Soon</a>
       </td>
     </tr>
-    <tr>
-      <td>Texas A&M Hackathon</td>
-      <td>Not Active</td>
-      <td>
-        <a href="https://community.arm.com/arm-ambassadors/b/blog/posts/arm-at-tamuhack-2025" target="_blank">Link</a>
-      </td>
     <tr>
       <td>Teratec HPC Hackathon 2025</td>
       <td>Not Active</td>
@@ -65,8 +59,4 @@ Explore our extensive archive of past design contests, where participants have t
   </tbody>
 </table>
 
-
-
-
-
-**Looking to promote your own hackathon?** Our platform offers a seamless way to reach a global audience of passionate developers and tech enthusiasts. Simply submit your event details via email to education@arm.com, and we'll help you spread the word through our network. Leverage our resources to attract top talent, secure sponsorships, and ensure your hackathon is a resounding success.
+<p><strong>Looking to promote your own hackathon?</strong> Our platform offers a seamless way to reach a global audience of passionate developers and tech enthusiasts. Simply submit your event details via email to <a href="mailto:education@arm.com">education@arm.com</a>, and we'll help you spread the word through our network. Leverage our resources to attract top talent, secure sponsorships, and ensure your hackathon is a resounding success.</p>
