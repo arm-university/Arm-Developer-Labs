@@ -173,17 +173,11 @@ layout: base
               {%- assign _header_image_src = __return -%}
               <img class="crop_image--cover" src="{{ _header_image_src }}" />
               <div class="scroll-container">
-                <div class="carousel-primary">
+                <div class="carousel">
                   <img src="partner_logos/R_logo.png" alt="R"/>
                   <img src="partner_logos/Linaro.png" alt="Linaro"/>
                   <img src="partner_logos/ArduinoCommunityLogo_SVG.svg" alt="Arduino Community"/>
-                  <img src="partner_logos/mathworks-logo-full-color-rgb.svg" alt="mathworks"/>
-                </div>
-                <div class="carousel-primary carousel-secondary">
-                  <img src="partner_logos/R_logo.png" alt="R"/>
-                  <img src="partner_logos/Linaro.png" alt="Linaro"/>
-                  <img src="partner_logos/ArduinoCommunityLogo_SVG.svg" alt="Arduino Community"/>
-                  <img src="partner_logos/mathworks-logo-full-color-rgb.svg" alt="mathworks"/>
+                  <img src="partner_logos/mathworks-logo-full-color-rgb.svg" alt="MathWorks"/>
                 </div>
               </div>
             {%- endif -%}
@@ -279,6 +273,11 @@ layout: base
   {%- include scripts/aside/affix.js -%}
 </script>
 {%- endif -%}
+
+<script>
+  const carousel = document.querySelector('.carousel');
+  carousel.innerHTML += carousel.innerHTML; // clone the logos once
+</script>
 
 {%- include markdown-enhancements.html -%}
 {%- include pageview.html -%}
