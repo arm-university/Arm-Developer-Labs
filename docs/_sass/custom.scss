@@ -17,13 +17,15 @@
   height: 14vh;
   overflow: hidden;
   background-color: #D3D3D3;
+  white-space: nowrap;
 }
 
 .carousel-primary,
 .carousel-secondary {
   position: absolute;
+  display: flex;
   top: 50%;
-  left: 100%;
+  /*left: 100%;*/
   transform: translateY(-50%);
   width: 100%;
   white-space: nowrap;
@@ -31,14 +33,15 @@
 }
 
 .carousel-primary {
-  display: flex;
-  justify-content: space-around;
+  /*display: flex;
+  justify-content: space-around;*/
   animation: scroll-horizontal 20s linear infinite;
 }
 
 .carousel-secondary {
   animation: scroll-horizontal 20s linear infinite;
   animation-delay: 10s;
+  left: 100%;
 }
 
 .carousel-primary img,
@@ -50,11 +53,11 @@
 
 @keyframes scroll-horizontal {
   0% {
-    left: 0%;
+    transform: translateX(0%);
   }
 
   100% {
-    left: -100%
+    transform: translateX(-100%);
   }
 }
 
