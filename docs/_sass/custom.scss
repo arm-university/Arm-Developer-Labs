@@ -22,11 +22,8 @@
 .carousel {
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  animation: scroll-horizontal 20s linear infinite;
   white-space: nowrap;
+  animation: scroll-horizontal 40s linear infinite;
 }
 
 .carousel img {

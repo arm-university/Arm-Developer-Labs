@@ -276,8 +276,25 @@ layout: base
 
 <script>
   const carousel = document.querySelector('.carousel');
-  carousel.innerHTML += carousel.innerHTML; // clone the logos once
+  const scrollContainer = document.querySelector('.scroll-container');
+
+  // Wait for images to load (important for width calculation)
+  window.addEventListener('load', () => {
+    const containerWidth = scrollContainer.offsetWidth;
+    const contentWidth = carousel.scrollWidth;
+
+    // Keep cloning until the total width is at least 2× container (safe buffer)
+    let totalWidth = contentWidth;
+    while (totalWidth < containerWidth * 2) {
+      const clone = carousel.cloneNode(true);
+      clone.classList.add('clone'); // Optional: for debugging
+      carousel.append(...clone.children);
+      totalWidth = carousel.scrollWidth;
+    }
+  });
 </script>
+
+
 
 {%- include markdown-enhancements.html -%}
 {%- include pageview.html -%}
