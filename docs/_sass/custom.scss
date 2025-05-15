@@ -20,8 +20,12 @@
 }
 
 .carousel {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   display: flex;
-  align-items: center;
+  justify-content: space-around; /* matches original layout */
   white-space: nowrap;
   animation: scroll-horizontal 40s linear infinite;
 }
@@ -29,7 +33,7 @@
 .carousel img {
   height: 10vh;
   width: auto;
-  margin-right: 30px;
+  margin-left: 5px; /* exactly like original */
   flex-shrink: 0;
 }
 
