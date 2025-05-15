@@ -21,14 +21,15 @@
 
 .carousel {
   position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  top: 0;                   
+  height: 100%;             
   display: flex;
-  justify-content: space-around; /* matches original layout */
+  align-items: center;    
+  justify-content: flex-start;
   white-space: nowrap;
   animation: scroll-horizontal 40s linear infinite;
 }
+
 
 .carousel img {
   height: 10vh;
