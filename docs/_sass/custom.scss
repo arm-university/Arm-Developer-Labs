@@ -8,15 +8,17 @@
 
 .crop_image--cover {
   width: 100%;
-  height: 74vh;
+  height: 72vh;
   object-fit: cover;
 }
 
+
 .scroll-container {
   position: relative;
-  height: 14vh;
+  height: 13vh;
   overflow: hidden;
   background-color: #D3D3D3;
+  margin-bottom: 2rem;
 }
 
 .carousel {
@@ -32,9 +34,9 @@
 
 
 .carousel img {
-  height: 10vh;
+  height: 9vh;
   width: auto;
-  margin-left: 30px; 
+  margin-left: 50px; 
   flex-shrink: 0;
 }
 
