@@ -14,6 +14,15 @@ Responsible AI is increasingly a critical component of ethical software developm
 
 The assistant will be integrated into a DevOps workflow of your choice (e.g., CI/CD pipeline or feature planning review system) to aid software teams in surfacing unintended second-order effects of new product features. Participants will implement this assistant using Llama3 or other available models, write their own curated system prompt and introduce yellow teaming into the software development lifecycle. For example, projects can produce product design documents, handle sprint retrospectives, or support Git-based code reviews.
 
+Key Objectives of Your Project
+- Collect Real-World Applications: Gather detailed accounts of AI projects developed using Yellow Teaming principles on Arm-based systems.
+- Showcase Responsible AI Practices: Highlight how developers anticipate and address potential societal and ethical impacts of their AI solutions.
+Promote Arm-Based AI Development: Demonstrate the capabilities and advantages of deploying AI applications on Arm architectures, such as AWS Graviton processors.
+- Yellow Teaming Implementation: A detailed account of how Yellow Teaming was applied, including identification of potential positive outcomes and their unintended consequences.
+- Strategies employed to mitigate negative impacts.
+- Tools and prompts used to facilitate Yellow Teaming analysis.
+
+
 ## Hardware, Software and Skills Required
 
 - **Hardware**:
