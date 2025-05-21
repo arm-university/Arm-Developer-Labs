@@ -83,7 +83,7 @@ layout: base
 
 
         <div class="page__content">
-        {%- if _article_header_type == 'overlay' or _article_header_type == 'cover' -%}
+        {%- if _article_header_type == 'overlay' or _article_header_type == 'cover' or _article_header_type == 'main_cover'-%}
 
           {%- if _article_header_type == 'overlay' -%}
 
@@ -181,7 +181,6 @@ layout: base
                 </div>
               </div>
             {%- endif -%}
-          {%- endif -%}
           {%- elsif _article_header_type == 'cover' -%}
             {%- if page.article_header.image.src -%}
               {%- include snippets/get-nav-url.html path=page.article_header.image.src -%}
