@@ -2,8 +2,6 @@
 title: "Welcome to Developer Labs Projects"
 ---
 
-![research](../images/Research_on_arm_banner.png)
-
 Welcome to the hub for industry relevant projects centered around Arm technologies! Whether you're a seasoned developer or a newcomer eager to dive into the world of Arm, you'll find a wealth of opportunities to challenge yourself and showcase your skills. Use the left-hand navigation bar to find a challenge that matches your skills and interests.
 
 If you're interested in quick, intensive challenges in the style of hackathons. Take a look at our collection below:
