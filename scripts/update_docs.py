@@ -33,7 +33,7 @@ index_frontmatter = """---
 title: Academic Projects Repository
 tags: TeXt
 article_header:
-  type: cover
+  type: main_cover
   image:
     src: ./images/DeveloperLabs_Header.png
 ---
@@ -56,6 +56,12 @@ def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> st
         img_path = match.group(1)
 
         if doc_path.resolve() == Path("../README.md").resolve() and img_path == "./images/DeveloperLabs_Header.png":
+            return ""
+        
+        elif doc_path.resolve() == Path("../Projects/projects.md").resolve() and img_path == "../images/Research_on_arm_banner.png":
+            return ""
+        
+        elif doc_path.resolve() == Path("../Research/research.md").resolve() and img_path == "../images/Research_on_arm_banner.png":
             return ""
         
         source_path = (doc_path.parent / img_path).resolve()
@@ -88,28 +94,34 @@ def convert_md(md_text: str) -> str:
 
     return replaced_md
 
-from pathlib import Path
-import os
-import frontmatter
-
 def format_content(pathlist, academic_level, docs_path):
     for path in pathlist:
         path = Path(path)
+
         if path.name == "README.md":
             continue
 
         raw_text = path.read_text(encoding="utf-8")
         post = frontmatter.loads(raw_text)
         body = post.content
+    
+        if path.name in ["projects.md", "research.md"]:
 
-        content_title = post.metadata.get("title")
-
-        formatted_frontmatter = contents_frontmatter.format(
-            title=content_title,
-            level=academic_level,
-        )
-        formatted_content = formatted_frontmatter + body
-
+            post.metadata["article_header"] = {
+                "type": "cover",
+                "image": {
+                    "src": "/images/Research_on_arm_banner.png",
+                },
+            }
+            print(post.metadata)
+        
+        post.metadata["layout"] = "article"
+        post.metadata["sidebar"] = {
+            "nav": academic_level,
+        }
+        
+        formatted_content = frontmatter.dumps(post)
+        
         converted_content = convert_md_images_to_html(
             formatted_content,
             path,

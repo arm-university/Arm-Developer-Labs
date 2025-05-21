@@ -1,9 +1,13 @@
 ---
 layout: article
-title: "Improving R Support for the Windows on Arm Community"
 sidebar:
   nav: research
+subjects:
+- Migration to Arm
+- Libraries
+title: Improving R Support for the Windows on Arm Community
 ---
+
 <img class="image image--xl" src="./images/Learn_on_Arm_banner.png"/>
 
 

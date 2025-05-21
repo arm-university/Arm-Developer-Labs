@@ -1,9 +1,13 @@
 ---
 layout: article
-title: "Processor-in-the-Loop for an Automotive Control System"
 sidebar:
   nav: projects
+subjects:
+- Embedded Linux
+- RTOS Fundamentals
+title: Processor-in-the-Loop for an Automotive Control System
 ---
+
 <img class="image image--xl" src="./images/mathworks.png"/>
 
 ## Description

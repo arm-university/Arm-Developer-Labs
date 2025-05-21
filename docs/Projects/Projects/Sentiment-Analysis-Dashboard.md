@@ -1,9 +1,14 @@
 ---
 layout: article
-title: "Create a Sentiment Analysis Dashboard for Keywords Based on the Semiconductor Industry"
 sidebar:
   nav: projects
+subjects:
+- ML
+- Web
+title: Create a Sentiment Analysis Dashboard for Keywords Based on the Semiconductor
+  Industry
 ---
+
 <img class="image image--xl" src="./images/Research_on_arm_banner.png"/>
 
 

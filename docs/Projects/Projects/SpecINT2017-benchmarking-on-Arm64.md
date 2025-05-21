@@ -1,9 +1,13 @@
 ---
 layout: article
-title: "SpecINT2017 Benchmarking on Arm64: Evaluating Compiler and Workload Performance"
 sidebar:
   nav: projects
+subjects:
+- Performance and Architecture
+- Migration to Arm
+title: 'SpecINT2017 Benchmarking on Arm64: Evaluating Compiler and Workload Performance'
 ---
+
 <img class="image image--xl" src="./images/Research_on_arm_banner.png"/>
 
 

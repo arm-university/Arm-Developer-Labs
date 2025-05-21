@@ -2,7 +2,7 @@
 title: Academic Projects Repository
 tags: TeXt
 article_header:
-  type: cover
+  type: main_cover
   image:
     src: ./images/DeveloperLabs_Header.png
 ---

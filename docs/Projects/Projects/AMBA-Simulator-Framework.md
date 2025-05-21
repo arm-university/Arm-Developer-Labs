@@ -1,9 +1,13 @@
 ---
 layout: article
-title: "AMBA Infrastructure Design and Simulation Framework"
 sidebar:
   nav: projects
+subjects:
+- Virtual Hardware
+- Performance and Architecture
+title: AMBA Infrastructure Design and Simulation Framework
 ---
+
 <img class="image image--xl" src="./images/AMBA.avif"/>
 
 ## Audience

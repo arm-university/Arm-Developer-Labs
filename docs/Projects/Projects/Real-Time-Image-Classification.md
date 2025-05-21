@@ -1,9 +1,13 @@
 ---
 layout: article
-title: "Running Real-Time Image Classification on Arm Cortex-M with CMSIS-NN"
 sidebar:
   nav: projects
+subjects:
+- ML
+- Performance and Architecture
+title: Running Real-Time Image Classification on Arm Cortex-M with CMSIS-NN
 ---
+
 <img class="image image--xl" src="./images/computer_vision.jpg"/>
 
 

@@ -1,9 +1,13 @@
 ---
 layout: article
-title: "Smart Voice Assistant Using TinyML on Cortex-M55"
 sidebar:
   nav: projects
+subjects:
+- ML
+- Embedded Linux
+title: Smart Voice Assistant Using TinyML on Cortex-M55
 ---
+
 <img class="image image--xl" src="./images/Educate_on_Arm_banner.png"/>
 
 

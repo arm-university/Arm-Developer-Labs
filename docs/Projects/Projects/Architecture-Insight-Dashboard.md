@@ -1,9 +1,13 @@
 ---
 layout: article
-title: "Develop an Arm Architecture Insight Dashboard"
 sidebar:
   nav: projects
+subjects:
+- Performance and Architecture
+- Web
+title: Develop an Arm Architecture Insight Dashboard
 ---
+
 <img class="image image--xl" src="./images/can-i-use.jpg"/>
 
 

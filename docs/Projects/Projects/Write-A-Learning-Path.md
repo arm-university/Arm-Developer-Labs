@@ -1,9 +1,13 @@
 ---
 layout: article
-title: "Write an Educational Tutorial (Learning Path) of your Choice"
 sidebar:
   nav: projects
+subjects:
+- Libraries
+- Web
+title: Write an Educational Tutorial (Learning Path) of your Choice
 ---
+
 <img class="image image--xl" src="./images/Educate_on_Arm_banner.png"/>
 
 

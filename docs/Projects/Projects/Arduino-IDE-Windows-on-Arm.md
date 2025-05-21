@@ -1,9 +1,13 @@
 ---
 layout: article
-title: "Porting and Optimizing Arduino IDE for Windows on Arm"
 sidebar:
   nav: projects
+subjects:
+- Migration to Arm
+- Libraries
+title: Porting and Optimizing Arduino IDE for Windows on Arm
 ---
+
 <img class="image image--xl" src="./images/Learn_on_Arm_banner.png"/>
 
 
