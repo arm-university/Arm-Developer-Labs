@@ -27,14 +27,14 @@ The following infographic details the directory structure and where to find exam
 
 ```bash
 Project-Ideas
-├── Projects                # Design Contests and Hackathons
-│   └── Accessible          # Undergraduate level Projects
-│   └── Advanced            # Masters level Projects
+├── Projects                            # Design Contests and Hackathons
+│   └── Projects                        # Projects with different levels
 ├── Research                
-│   └── PhD                 # PhD Projects (e.g., UK CDT PhD)            
+│   └── Extended-Team-Projects          # Team Research Projects 
+│   └── Short-term-Research-Projects    # Short Research Projects           
 ├── README.md
-├── images                  # Images
-└── template.md             # Template to suggest a project
+├── images                              # Images
+└── template.md                         # Template to suggest a project
 ```
 ## Previous Examples
 

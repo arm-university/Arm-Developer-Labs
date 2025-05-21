@@ -3,6 +3,10 @@ layout: article
 title: "Research that Matters"
 sidebar:
   nav: research
+article_header:
+  type: cover
+  image:
+    src: images/Research_on_arm_banner.png
 ---
 <img class="image image--xl" src="./images/Research_on_arm_banner.png"/>
 
