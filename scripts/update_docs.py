@@ -5,7 +5,7 @@ from pathlib import Path
 import frontmatter
 
 projects_dir = "../Projects/Projects"
-research_phd_dir = "../Research/PhD"
+research_phd_dir = "../Research/Short-term-Research-Projects"
 extended_projects_dir = "../Research/Extended-Team-Projects"
 
 projects_pathlist = [Path("../Projects/projects.md")]
@@ -17,7 +17,7 @@ research_extended_project_pathlist = Path(extended_projects_dir).rglob('*.md')
 docs_projects_dir = "../docs/Projects"
 docs_projects_projects_dir = "../docs/Projects/Projects"
 docs_research_dir = "../docs/Research"
-docs_phd_dir = "../docs/Research/PhD"
+docs_phd_dir = "../docs/Research/Short-term-Research-Projects"
 docs_extended_project_dir = "../docs/Research/Extended-Team-Projects"
 docs_img_dir = "../docs/images"
 

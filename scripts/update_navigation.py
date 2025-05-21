@@ -4,7 +4,7 @@ import yaml
 import frontmatter
 
 projects_dir = "../Projects/Projects"
-research_dir = "../Research/PhD"
+research_dir = "../Research/Short-term-Research-Projects"
 extended_projects_dir = "../Research/Extended-Team-Projects"
 
 projects_undergraduate_pathlist = Path(projects_dir).rglob('*.md')
@@ -23,7 +23,7 @@ def process_yml(pathlist, level: str, tab: str):
     yam_tab = yaml.safe_load(partial_content)
     
     if tab == 'research':
-        if level == 'phd':
+        if level == 'short-term-research-projects':
             yam_tab[tab][0]['children'].clear()
             
             for path in pathlist:
@@ -72,5 +72,5 @@ def process_yml(pathlist, level: str, tab: str):
         
 if __name__ == "__main__":
     process_yml(projects_undergraduate_pathlist, 'projects', 'projects')
-    process_yml(research_phd_pathlist, 'phd', 'research')
+    process_yml(research_phd_pathlist, 'short-term-research-projects', 'research')
     process_yml(research_extended_project_pathlist, 'extended-team-project', 'research')
