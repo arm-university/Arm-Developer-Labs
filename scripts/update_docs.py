@@ -58,9 +58,6 @@ def convert_md_images_to_html(md_text: str, doc_path: Path, docs_dir: str) -> st
         if doc_path.resolve() == Path("../README.md").resolve() and img_path == "./images/DeveloperLabs_Header.png":
             return ""
         
-        elif doc_path.resolve() == Path("../Projects/projects.md").resolve() and img_path == "../images/Research_on_arm_banner.png":
-            return ""
-        
         elif doc_path.resolve() == Path("../Research/research.md").resolve() and img_path == "../images/Research_on_arm_banner.png":
             return ""
         
@@ -105,7 +102,7 @@ def format_content(pathlist, academic_level, docs_path):
         post = frontmatter.loads(raw_text)
         body = post.content
     
-        if path.name in ["projects.md", "research.md"]:
+        if path.name in ["research.md"]:
 
             post.metadata["article_header"] = {
                 "type": "cover",
@@ -113,7 +110,6 @@ def format_content(pathlist, academic_level, docs_path):
                     "src": "/images/Research_on_arm_banner.png",
                 },
             }
-            print(post.metadata)
         
         post.metadata["layout"] = "article"
         post.metadata["sidebar"] = {
