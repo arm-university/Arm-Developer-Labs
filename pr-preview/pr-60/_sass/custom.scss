@@ -1,0 +1,141 @@
+/* start custom scss snippet */
+.brand_logo svg {
+    display: block;
+    height: auto;
+    width: 325px;
+    margin-right: 20px;
+}
+
+.crop_image--cover {
+  width: 100%;
+  height: 72vh;
+  object-fit: cover;
+}
+
+
+.scroll-container {
+  position: relative;
+  height: 13vh;
+  overflow: hidden;
+  background-color: #D3D3D3;
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  position: absolute;
+  top: 0;                   
+  height: 100%;             
+  display: flex;
+  align-items: center;    
+  justify-content: flex-start;
+  white-space: nowrap;
+  animation: scroll-horizontal 40s linear infinite;
+}
+
+
+.carousel img {
+  height: 9vh;
+  width: auto;
+  margin-left: 50px; 
+  flex-shrink: 0;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.github-button__img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+/* ─── Sidebar Tag Filters ─────────────────────────────────────────────────── */
+.sidebar-subjects.collapsed {
+  display: none;
+}
+.sidebar-subjects {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border-color,#ddd);
+  font-size: .8rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.sidebar-subjects strong {
+  display: block;
+  margin-bottom: .25rem;
+  font-size: .8rem;
+  text-transform: uppercase;
+  color: var(--text-muted,#666);
+}
+.sidebar-subjects label {
+  display: flex;
+  align-items: center;
+  margin: .25rem 0;
+}
+.sidebar-subjects .subject-filter {
+  margin-right: .4ch;
+  accent-color: var(--primary-color,#3182ce);
+}
+/* ─── Sidebar TOC Navigator ───────────────────────────────────────────────── */
+.sidebar-toc .toc--navigator {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-toc .toc-h1 {
+  margin: 0rem 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-muted, #666);
+  font-weight: 600;
+}
+.sidebar-toc .toc-h2 {
+  margin: 0.25rem 0;
+  padding-left: 0.75rem;
+  transition: opacity 0.2s ease, max-height 0.2s ease;
+  overflow: hidden;
+}
+.sidebar-toc .toc-h2 a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-color, #333);
+  font-size: 0.95rem;
+}
+.sidebar-toc .toc-h2.active a {
+  font-weight: 600;
+  color: var(--primary-color, #3182ce);
+}
+.sidebar-toc .toc-h2[style*="display: none"] {
+  opacity: 0;
+  max-height: 0;
+}
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: .85rem;
+  color: var(--text-muted,#666);
+  user-select: none;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+.filter-toggle .chevron {
+  display: inline-block;
+  width: .6em;
+  height: .6em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform .2s ease;
+  margin-right: .5ch;
+}
+.filter-toggle .chevron.rotated {
+  transform: rotate(45deg);
+}
+/* end custom scss snippet */
