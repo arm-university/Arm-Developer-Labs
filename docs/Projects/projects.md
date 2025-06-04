@@ -5,8 +5,6 @@ article_header:
   type: cover
 layout: article
 filter: project
-sidebar:
-  nav: projects
 title: 'Find industry relevant challenges on Arm '
 ---
 

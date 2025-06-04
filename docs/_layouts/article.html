@@ -13,12 +13,15 @@ type: article
 
   <div class="article__content" itemprop="articleBody">
     {{ content }}
+
     {%- if page.filter == "project" -%}
+      <!-- Checkbox filters -->
       <div class="subjects">
+        {%- assign nav_group = site.data.navigation["projects"] -%}
+
         <div class="filter">
           <strong>Platform:</strong>
           {%- assign platforms = "" | split: "" -%}
-          {%- assign nav_group = site.data.navigation[page.sidebar.nav] -%}
           {%- for grp in nav_group -%}
             {%- for item in grp.children -%}
               {%- for p in item.platform -%}
@@ -30,17 +33,19 @@ type: article
           {%- endfor -%}
           {%- for platform in platforms -%}
             <label>
-              <input type="checkbox"
-                    class="filter-checkbox"
-                    data-category="platform"
-                    value="{{ platform }}"
-                    onchange="filterProjects()">
+              <input
+                type="checkbox"
+                class="filter-checkbox"
+                data-category="platform"
+                value="{{ platform }}"
+                onchange="filterProjects()"
+              >
               {{ platform }}
             </label>
           {%- endfor -%}
         </div>
+
         <div class="filter">
-          <!-- Subject -->
           <strong>Subject:</strong>
           {%- assign subjects = "" | split: "" -%}
           {%- for grp in nav_group -%}
@@ -54,17 +59,19 @@ type: article
           {%- endfor -%}
           {%- for subject in subjects -%}
             <label>
-              <input type="checkbox"
-                    class="filter-checkbox"
-                    data-category="subject"
-                    value="{{ subject }}"
-                    onchange="filterProjects()">
+              <input
+                type="checkbox"
+                class="filter-checkbox"
+                data-category="subject"
+                value="{{ subject }}"
+                onchange="filterProjects()"
+              >
               {{ subject }}
             </label>
           {%- endfor -%}
         </div>
+
         <div class="filter">
-          <!-- SW/HW -->
           <strong>SW/HW:</strong>
           {%- assign swhw_items = "" | split: "" -%}
           {%- for grp in nav_group -%}
@@ -76,21 +83,21 @@ type: article
               {%- endfor -%}
             {%- endfor -%}
           {%- endfor -%}
-        </div>
-        <div class="filter">
           {%- for tag in swhw_items -%}
             <label>
-              <input type="checkbox"
-                    class="filter-checkbox"
-                    data-category="sw-hw"
-                    value="{{ tag }}"
-                    onchange="filterProjects()">
+              <input
+                type="checkbox"
+                class="filter-checkbox"
+                data-category="sw-hw"
+                value="{{ tag }}"
+                onchange="filterProjects()"
+              >
               {{ tag }}
             </label>
           {%- endfor -%}
         </div>
+
         <div class="filter">
-          <!-- Support Level -->
           <strong>Support Level:</strong>
           {%- assign levels = "" | split: "" -%}
           {%- for grp in nav_group -%}
@@ -104,83 +111,63 @@ type: article
           {%- endfor -%}
           {%- for lvl in levels -%}
             <label>
-              <input type="checkbox"
-                    class="filter-checkbox"
-                    data-category="support-level"
-                    value="{{ lvl }}"
-                    onchange="filterProjects()">
+              <input
+                type="checkbox"
+                class="filter-checkbox"
+                data-category="support-level"
+                value="{{ lvl }}"
+                onchange="filterProjects()"
+              >
               {{ lvl }}
             </label>
           {%- endfor -%}
         </div>
       </div>
+
+      <!-- Project list (pulled from site.data.navigation["projects"]) -->
       <div class="project-results">
-        <div class="project-list">
-          {%- assign _sidebar_nav = site.data.navigation[page.sidebar.nav] -%}
+        <ul class="project-list">
+          {%- assign _sidebar_nav = site.data.navigation["projects"] -%}
           {%- for _item in _sidebar_nav -%}
             {%- if _item.children -%}
               {%- for _child in _item.children -%}
-
-                {%- assign platform_classes = "" -%}
-                {%- for p in _child.platform -%}
-                  {%- assign platform_classes = platform_classes | append: " platform-" | append: p -%}
-                {%- endfor -%}
-
-                {%- assign subject_classes = "" -%}
-                {%- for s in _child.subjects -%}
-                  {%- assign subject_classes = subject_classes | append: " subject-" | append: s -%}
-                {%- endfor -%}
-
-                {%- assign swhw_classes = "" -%}
-                {%- for tag in _child["sw-hw"] -%}
-                  {%- assign swhw_classes = swhw_classes | append: " sw-hw-" | append: tag -%}
-                {%- endfor -%}
-
-                {%- assign support_classes = "" -%}
-                {%- for lvl in _child["support-level"] -%}
-                  {%- assign support_classes = support_classes | append: " support-" | append: lvl -%}
-                {%- endfor -%}
-
                 {%- include snippets/get-nav-url.html path=_child.url -%}
                 {%- assign _nav_url = __return -%}
 
-                <li class="project-item"
+                <li
+                  class="project-item"
                   data-platforms='{{ _child.platform | jsonify }}'
                   data-subjects='{{ _child.subjects | jsonify }}'
                   data-swhw='{{ _child["sw-hw"] | jsonify }}'
-                  data-support-level='{{ _child["support-level"] | jsonify }}'>
+                  data-support-level='{{ _child["support-level"] | jsonify }}'
+                >
                   <a href="{{ _nav_url }}">{{ _child.title }}</a>
                 </li>
               {%- endfor -%}
             {%- endif -%}
           {%- endfor -%}
-        </div>
+        </ul>
       </div>
+
       <script>
         function filterProjects() {
           const checks = Array.from(document.querySelectorAll('.filter-checkbox:checked'));
-          // If no checkboxes are checked, show ALL project-items:
           if (checks.length === 0) {
             document.querySelectorAll('.project-item').forEach(el => el.style.display = '');
             return;
           }
-
-          // Build an array of active filters:
           const activeFilters = checks.map(cb => ({
             cat: cb.dataset.category,
             val: cb.value
           }));
-
-          // Loop over every <li class="project-item …"> and read its data-attributes:
           document.querySelectorAll('.project-item').forEach(li => {
             const plats   = JSON.parse(li.dataset.platforms    || '[]');
             const subs    = JSON.parse(li.dataset.subjects     || '[]');
             const swhws   = JSON.parse(li.dataset.swhw         || '[]');
             const levels  = JSON.parse(li.dataset.supportLevel || '[]');
 
-            // Every active filter must be present in the corresponding array:
             const ok = activeFilters.every(f => {
-              switch(f.cat) {
+              switch (f.cat) {
                 case 'platform':      return plats.includes(f.val);
                 case 'subject':       return subs.includes(f.val);
                 case 'sw-hw':         return swhws.includes(f.val);
@@ -196,16 +183,15 @@ type: article
     {%- endif -%}
   </div>
 
-
-
   {%- if _sharing -%}
-    <section class="article__sharing d-print-none">{%- include sharing.html -%}</section>
+    <section class="article__sharing d-print-none">
+      {%- include sharing.html -%}
+    </section>
   {%- endif -%}
 
   <div class="d-print-none">
     {%- include article-footer.html -%}
   </div>
-
 </div>
 
 <script>
