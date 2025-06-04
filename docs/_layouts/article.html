@@ -11,7 +11,118 @@ type: article
 <div class="layout--article">
   {%- include article/top/custom.html -%}
 
-  <div class="article__content" itemprop="articleBody">{{ content }}</div>
+  <div class="article__content" itemprop="articleBody">
+    {{ content }}
+    <div class="project-filters">
+
+    <div class="filter-toggle" onclick="toggleFilters()">
+      <span class="chevron"></span>
+      <span class="label">Filter Projects</span>
+    </div>
+
+    <div class="sidebar-subjects collapsed">
+      <strong>Platform:</strong>
+      {%- assign platforms = "" | split: "" -%}
+      {%- for proj in site.projects -%}
+        {%- for p in proj.platform -%}
+          {%- unless platforms contains p -%}
+            {%- assign platforms = platforms | push: p -%}
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- endfor -%}
+      {%- for platform in platforms -%}
+        <label>
+          <input type="checkbox"
+                 class="filter-checkbox"
+                 data-category="platform"
+                 value="{{ platform }}"
+                 onchange="filterProjects()">
+          {{ platform }}
+        </label>
+      {%- endfor -%}
+
+      <strong>Subject:</strong>
+      {%- assign subjects = "" | split: "" -%}
+      {%- for proj in site.projects -%}
+        {%- for s in proj.subjects -%}
+          {%- unless subjects contains s -%}
+            {%- assign subjects = subjects | push: s -%}
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- endfor -%}
+      {%- for subject in subjects -%}
+        <label>
+          <input type="checkbox"
+                 class="filter-checkbox"
+                 data-category="subject"
+                 value="{{ subject }}"
+                 onchange="filterProjects()">
+          {{ subject }}
+        </label>
+      {%- endfor -%}
+
+      <strong>SW/HW:</strong>
+      {%- assign swhw_items = "" | split: "" -%}
+      {%- for proj in site.projects -%}
+        {%- for tag in proj["sw-hw"] -%}
+          {%- unless swhw_items contains tag -%}
+            {%- assign swhw_items = swhw_items | push: tag -%}
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- endfor -%}
+      {%- for tag in swhw_items -%}
+        <label>
+          <input type="checkbox"
+                 class="filter-checkbox"
+                 data-category="sw-hw"
+                 value="{{ tag }}"
+                 onchange="filterProjects()">
+          {{ tag }}
+        </label>
+      {%- endfor -%}
+
+      <strong>Support Level:</strong>
+      {%- assign levels = "" | split: "" -%}
+      {%- for proj in site.projects -%}
+        {%- for lvl in proj["support-level"] -%}
+          {%- unless levels contains lvl -%}
+            {%- assign levels = levels | push: lvl -%}
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- endfor -%}
+      {%- for lvl in levels -%}
+        <label>
+          <input type="checkbox"
+                 class="filter-checkbox"
+                 data-category="support-level"
+                 value="{{ lvl }}"
+                 onchange="filterProjects()">
+          {{ lvl }}
+        </label>
+      {%- endfor -%}
+
+    </div>
+
+    <div class="projects-list">
+      <ul>
+        {%- for proj in site.projects -%}
+          <li class="project-item"
+              data-platforms='{{ proj.platform | jsonify }}'
+              data-subjects='{{ proj.subjects | jsonify }}'
+              data-sw-hw='{{ proj["sw-hw"] | jsonify }}'
+              data-support-level='{{ proj["support-level"] | jsonify }}'>
+            <a href="{{ proj.url | relative_url }}">
+              {{ proj.title }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  
+
 
   {%- if _sharing -%}
     <section class="article__sharing d-print-none">{%- include sharing.html -%}</section>
@@ -19,11 +130,68 @@ type: article
 
   <div class="d-print-none">
     {%- include article-footer.html -%}
-    {%- include article-section-navigator.html -%}
   </div>
 
 </div>
 
 <script>
   {%- include scripts/article.js -%}
+
+  // Toggle expand/collapse of the filters container
+  function toggleFilters() {
+    const box = document.querySelector('.sidebar-subjects');
+    const chevron = document.querySelector('.filter-toggle .chevron');
+    box.classList.toggle('collapsed');
+    chevron.classList.toggle('rotated');
+  }
+
+  // Main filtering function, applied to each project <li>
+  function filterProjects() {
+    // Gather all checked checkboxes
+    const checks = Array.from(document.querySelectorAll('.filter-checkbox:checked'));
+    const projectItems = document.querySelectorAll('.project-item');
+
+    if (checks.length === 0) {
+      // If no filters selected, show all projects
+      projectItems.forEach(li => li.style.display = '');
+      return;
+    }
+
+    // Build array of active filters: { cat: 'platform', val: 'Linux' }, etc.
+    const activeFilters = checks.map(cb => ({
+      cat: cb.dataset.category,
+      val: cb.value
+    }));
+
+    projectItems.forEach(li => {
+      // Parse the JSON-encoded attributes back into arrays
+      const plats   = JSON.parse(li.dataset.platforms    || '[]');
+      const subs    = JSON.parse(li.dataset.subjects     || '[]');
+      const swhws   = JSON.parse(li.dataset.swHw         || '[]'); 
+      // Note: dataset.swHw maps from data-sw-hw; JS normalizes hyphens by capitalizing the next letter
+      const levels  = JSON.parse(li.dataset.supportLevel || '[]');
+
+      // Check that every active filter is satisfied:
+      //  - For category 'platform', proj.platforms must include that value
+      //  - For 'subject', subs, etc.
+      const ok = activeFilters.every(f => {
+        switch(f.cat) {
+          case 'platform':      return plats.includes(f.val);
+          case 'subject':       return subs.includes(f.val);
+          case 'sw-hw':         return swhws.includes(f.val);
+          case 'support-level': return levels.includes(f.val);
+          default:              return true;
+        }
+      });
+
+      li.style.display = ok ? '' : 'none';
+    });
+  }
+
+  // Ensure dataset.sw-hw becomes dataset.swHw in JavaScript:
+  document.querySelectorAll('.project-item').forEach(li => {
+    if (li.hasAttribute('data-sw-hw')) {
+      li.setAttribute('data-swHw', li.getAttribute('data-sw-hw'));
+    }
+  });
 </script>
