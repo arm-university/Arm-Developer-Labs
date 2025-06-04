@@ -55,12 +55,41 @@
   height: 1.5em;
 }
 
+/* ─── Filter Container ───────────────────────────────────────────────────── */
 .subjects {
-  padding: 1rem 1rem;
-  border-bottom: 3px solid var(--border-color,#7336f7);
+  padding: 1rem;
+  border-bottom: 3px solid #7336f7;
   border-radius: 25px;
   max-height: 300px;
   overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+/* Each individual filter group (Platform, Subject, SW/HW, Support Level) */
+.subjects .filter {
+  margin-bottom: 1rem;
+}
+
+.subjects .filter strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #444;
+  font-weight: 600;
+}
+
+.subjects .filter label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.subjects .filter input[type="checkbox"] {
+  margin-right: 0.6ch;
+  accent-color: #7336f7;
 }
 
 /* ─── Sidebar Tag Filters ─────────────────────────────────────────────────── */
