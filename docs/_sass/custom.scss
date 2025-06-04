@@ -92,6 +92,68 @@
   accent-color: #7336f7;
 }
 
+/* Container for filtered projects */
+.project-results {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Unordered list of project items */
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Individual project entry */
+.project-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  flex: 1 1 calc(33.333% - 1rem);
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* When hidden by filtering */
+.project-item[style*="display: none"] {
+  display: none !important;
+}
+
+/* Hover effect */
+.project-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+/* Link inside each project item */
+.project-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .project-item {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+@media (max-width: 500px) {
+  .project-item {
+    flex: 1 1 100%;
+  }
+}
+
+
 /* ─── Sidebar Tag Filters ─────────────────────────────────────────────────── */
 .sidebar-subjects.collapsed {
   display: none;
