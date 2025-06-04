@@ -144,7 +144,11 @@ type: article
                 {%- include snippets/get-nav-url.html path=_child.url -%}
                 {%- assign _nav_url = __return -%}
 
-                <li class="project-item{{ platform_classes }}{{ subject_classes }}{{ swhw_classes }}{{ support_classes }}">
+                <li class="project-item"
+                  data-platforms='{{ _child.platform | jsonify }}'
+                  data-subjects='{{ _child.subjects | jsonify }}'
+                  data-swhw='{{ _child["sw-hw"] | jsonify }}'
+                  data-support-level='{{ _child["support-level"] | jsonify }}'>
                   <a href="{{ _nav_url }}">{{ _child.title }}</a>
                 </li>
               {%- endfor -%}
@@ -168,11 +172,11 @@ type: article
           }));
 
           // Loop over every <li class="project-item …"> and read its data-attributes:
-          document.querySelectorAll('.project-item').forEach(el => {
-            const plats   = JSON.parse(el.getAttribute('data-platforms')    || '[]');
-            const subs    = JSON.parse(el.getAttribute('data-subjects')     || '[]');
-            const swhws   = JSON.parse(el.getAttribute('data-swhw')         || '[]');
-            const levels  = JSON.parse(el.getAttribute('data-support-level') || '[]');
+          document.querySelectorAll('.project-item').forEach(li => {
+            const plats   = JSON.parse(li.dataset.platforms    || '[]');
+            const subs    = JSON.parse(li.dataset.subjects     || '[]');
+            const swhws   = JSON.parse(li.dataset.swhw         || '[]');
+            const levels  = JSON.parse(li.dataset.supportLevel || '[]');
 
             // Every active filter must be present in the corresponding array:
             const ok = activeFilters.every(f => {
@@ -185,7 +189,7 @@ type: article
               }
             });
 
-            el.style.display = ok ? '' : 'none';
+            li.style.display = ok ? '' : 'none';
           });
         }
       </script>
