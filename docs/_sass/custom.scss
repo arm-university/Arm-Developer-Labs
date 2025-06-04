@@ -111,17 +111,18 @@ h2.project-group-title {
 }
 
 /* Unordered list of project items */
-.project-list {
+ul.project-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  
 }
 
 /* Individual project entry */
-.project-item {
+li.project-item {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 6px;
