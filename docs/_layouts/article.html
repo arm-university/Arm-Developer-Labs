@@ -14,10 +14,143 @@ type: article
   <div class="article__content" itemprop="articleBody">
     {{ content }}
     {%- if page.filter == "project" -%}
-      <p>
-        hello, this is feature
-      </p>
+      <div class="subjects">
+        <strong>Platform:</strong>
+        {%- assign platforms = "" | split: "" -%}
+        {%- assign nav_group = site.data.navigation[page.sidebar.nav] -%}
+        {%- for grp in nav_group -%}
+          {%- for item in grp.children -%}
+            {%- for p in item.platform -%}
+              {%- unless platforms contains p -%}
+                {%- assign platforms = platforms | push: p -%}
+              {%- endunless -%}
+            {%- endfor -%}
+          {%- endfor -%}
+        {%- endfor -%}
+        {%- for platform in platforms -%}
+          <label>
+            <input type="checkbox"
+                  class="filter-checkbox"
+                  data-category="platform"
+                  value="{{ platform }}"
+                  onchange="filterTOC()">
+            {{ platform }}
+          </label>
+        {%- endfor -%}
+
+        <!-- Subject -->
+        <strong>Subject:</strong>
+        {%- assign subjects = "" | split: "" -%}
+        {%- for grp in nav_group -%}
+          {%- for item in grp.children -%}
+            {%- for s in item.subjects -%}
+              {%- unless subjects contains s -%}
+                {%- assign subjects = subjects | push: s -%}
+              {%- endunless -%}
+            {%- endfor -%}
+          {%- endfor -%}
+        {%- endfor -%}
+        {%- for subject in subjects -%}
+          <label>
+            <input type="checkbox"
+                  class="filter-checkbox"
+                  data-category="subject"
+                  value="{{ subject }}"
+                  onchange="filterTOC()">
+            {{ subject }}
+          </label>
+        {%- endfor -%}
+
+        <!-- SW/HW -->
+        <strong>SW/HW:</strong>
+        {%- assign swhw_items = "" | split: "" -%}
+        {%- for grp in nav_group -%}
+          {%- for item in grp.children -%}
+            {%- for tag in item["sw-hw"] -%}
+              {%- unless swhw_items contains tag -%}
+                {%- assign swhw_items = swhw_items | push: tag -%}
+              {%- endunless -%}
+            {%- endfor -%}
+          {%- endfor -%}
+        {%- endfor -%}
+        {%- for tag in swhw_items -%}
+          <label>
+            <input type="checkbox"
+                  class="filter-checkbox"
+                  data-category="sw-hw"
+                  value="{{ tag }}"
+                  onchange="filterTOC()">
+            {{ tag }}
+          </label>
+        {%- endfor -%}
+
+        <!-- Support Level -->
+        <strong>Support Level:</strong>
+        {%- assign levels = "" | split: "" -%}
+        {%- for grp in nav_group -%}
+          {%- for item in grp.children -%}
+            {%- for lvl in item["support-level"] -%}
+              {%- unless levels contains lvl -%}
+                {%- assign levels = levels | push: lvl -%}
+              {%- endunless -%}
+            {%- endfor -%}
+          {%- endfor -%}
+        {%- endfor -%}
+        {%- for lvl in levels -%}
+          <label>
+            <input type="checkbox"
+                  class="filter-checkbox"
+                  data-category="support-level"
+                  value="{{ lvl }}"
+                  onchange="filterTOC()">
+            {{ lvl }}
+          </label>
+        {%- endfor -%}
+      </div>
     {%- endif -%}
+    <script>
+      function toggleFilters() {
+        const box = document.querySelector('.sidebar-filters');
+        const chevron = document.querySelector('.filter-toggle .chevron');
+        box.classList.toggle('collapsed');
+        chevron.classList.toggle('rotated');
+      }
+
+      function filterTOC() {
+        // Gather checked filters
+        const checks = Array.from(document.querySelectorAll('.filter-checkbox:checked'));    
+        if (checks.length === 0) {
+          // Show all if none selected
+          document.querySelectorAll('.toc--navigator .toc-h2').forEach(li => li.style.display = '');
+          return;
+        }
+
+        const activeFilters = checks.map(cb => ({
+          cat: cb.dataset.category,
+          val: cb.value
+        }));
+
+        document.querySelectorAll('.toc--navigator .toc-h2').forEach(li => {
+          const plats   = JSON.parse(li.dataset.platforms    || '[]');
+          const subs    = JSON.parse(li.dataset.subjects     || '[]');
+          const swhws   = JSON.parse(li.dataset.swhw         || '[]');
+          const levels  = JSON.parse(li.dataset.supportLevel || '[]');
+
+          // All filters must pass (AND across categories, OR within)
+          const ok = activeFilters.every(f => {
+            switch(f.cat) {
+              case 'platform':     return plats.includes(f.val);
+              case 'subject':      return subs.includes(f.val);
+              case 'sw-hw':        return swhws.includes(f.val);
+              case 'support-level':return levels.includes(f.val);
+              default:             return true;
+            }
+          });
+
+          li.style.display = ok ? '' : 'none';
+        });
+      }
+    </script>
   </div>
 
 
