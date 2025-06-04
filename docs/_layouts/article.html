@@ -134,7 +134,7 @@ type: article
         
         {%- for category in nav_root -%}
           <h2 class="project-group-title">{{ category.title }}</h2>
-          <ul class="project-list">
+          <li class="project-list">
             {%- for _child in category.children -%}
               {%- include snippets/get-nav-url.html path=_child.url -%}
               {%- assign _nav_url = __return -%}
@@ -147,7 +147,7 @@ type: article
                 <a href="{{ _nav_url }}">{{ _child.title }}</a>
               </li>
             {%- endfor -%}
-          </ul>
+          </li>
         {%- endfor -%}
       </div>
 
