@@ -58,7 +58,7 @@
 /* ─── Filter Container ───────────────────────────────────────────────────── */
 .subjects {
   padding: 1rem;
-  border-bottom: 3px solid #7336f7;
+  border: 4px solid #7336f7;
   border-radius: 25px;
   max-height: 300px;
   overflow-y: auto;
@@ -67,7 +67,8 @@
 
 /* Each individual filter group (Platform, Subject, SW/HW, Support Level) */
 .subjects .filter {
-  margin-bottom: 1rem;
+  width: 33.33%;
+  float:inline-start;
 }
 
 .subjects .filter strong {
