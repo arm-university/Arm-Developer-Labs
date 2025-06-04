@@ -29,7 +29,7 @@ article_header:
 """
 
 def clean() :
-    clean_lst = [docs_projects_dir,docs_projects_projects_dir, docs_research_dir, docs_extended_project_dir]
+    clean_lst = [docs_projects_dir,docs_projects_projects_dir, docs_research_dir, docs_extended_project_dir, docs_filter_list_dir]
     for dirpath in clean_lst:
         if os.path.exists(dirpath) and os.path.isdir(dirpath):
             shutil.rmtree(dirpath)
@@ -100,16 +100,12 @@ def format_content(pathlist, academic_level, docs_path):
             post.metadata["article_header"] = {
                 "type": "cover",
                 "image": {
-                    "src": "/images/DeveloperLabs_Header.png",
+                    "src": "/images/Research_on_arm_banner.png",
                 },
             }
         
         post.metadata["layout"] = "article"
-        
-        if path.name == "projects.md":
-            pass
-        
-        elif academic_level == "projects":
+        if academic_level == "projects":
             post.metadata["sidebar"] = {
                 "nav": academic_level,
             }

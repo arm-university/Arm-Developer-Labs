@@ -1,10 +1,12 @@
 ---
 article_header:
   image:
-    src: /images/DeveloperLabs_Header.png
+    src: /images/Research_on_arm_banner.png
   type: cover
-filter: project
 layout: article
+filter: project
+sidebar:
+  nav: projects
 title: 'Find industry relevant challenges on Arm '
 ---
 
