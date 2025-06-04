@@ -1,7 +1,7 @@
 ---
 article_header:
   image:
-    src: /images/Research_on_arm_banner.png
+    src: /images/DeveloperLabs_Header.png
   type: cover
 layout: article
 title: Submit or Propose a Project
