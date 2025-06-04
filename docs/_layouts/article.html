@@ -34,7 +34,7 @@ type: article
                     class="filter-checkbox"
                     data-category="platform"
                     value="{{ platform }}"
-                    onchange="filterProjects()">
+                    onchange="filterTOC()">
               {{ platform }}
             </label>
           {%- endfor -%}
@@ -58,7 +58,7 @@ type: article
                     class="filter-checkbox"
                     data-category="subject"
                     value="{{ subject }}"
-                    onchange="filterProjects()">
+                    onchange="filterTOC()">
               {{ subject }}
             </label>
           {%- endfor -%}
@@ -84,7 +84,7 @@ type: article
                     class="filter-checkbox"
                     data-category="sw-hw"
                     value="{{ tag }}"
-                    onchange="filterProjects()">
+                    onchange="filterTOC()">
               {{ tag }}
             </label>
           {%- endfor -%}
@@ -108,7 +108,7 @@ type: article
                     class="filter-checkbox"
                     data-category="support-level"
                     value="{{ lvl }}"
-                    onchange="filterProjects()">
+                    onchange="filterTOC()">
               {{ lvl }}
             </label>
           {%- endfor -%}
