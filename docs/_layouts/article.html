@@ -115,7 +115,7 @@ type: article
         </div>
       </div>
       <div class="project-results">
-        <ul class="project-list">
+        <div class="project-list">
           {%- assign _sidebar_nav = site.data.navigation[page.sidebar.nav] -%}
           {%- for _item in _sidebar_nav -%}
             {%- if _item.children -%}
@@ -154,7 +154,7 @@ type: article
               {%- endfor -%}
             {%- endif -%}
           {%- endfor -%}
-        </ul>
+        </div>
       </div>
       <script>
         function filterProjects() {

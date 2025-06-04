@@ -18,14 +18,6 @@ docs_research_dir = "../docs/Research"
 docs_extended_project_dir = "../docs/Projects/Extended-Team-Projects"
 docs_img_dir = "../docs/images"
 
-contents_frontmatter = """---
-layout: article
-title: "{title}"
-sidebar:
-  nav: {level}
----
-"""
-
 index_frontmatter = """---
 title: Academic Projects Repository
 tags: TeXt

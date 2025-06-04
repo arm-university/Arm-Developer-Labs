@@ -1,5 +1,6 @@
 ---
 title: "Find industry relevant challenges on Arm "
+filter: project
 ---
 
 **Arm Developer Labs** is a repository of software and hardware project suggestions sourced from internal Arm teams and our network of eco-system partners but framed in way to be immediately accessible and useful to both academics and professional developers alike. 
