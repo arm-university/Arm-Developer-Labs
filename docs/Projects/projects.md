@@ -3,7 +3,7 @@ article_header:
   image:
     src: /images/Research_on_arm_banner.png
   type: cover
-layout: article
+layout: article_project
 sidebar:
   nav: projects
 title: 'Find industry relevant challenges on Arm '
