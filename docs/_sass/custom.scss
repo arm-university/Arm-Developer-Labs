@@ -55,6 +55,13 @@
   height: 1.5em;
 }
 
+.subjects {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border-color,#ddd);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
 /* ─── Sidebar Tag Filters ─────────────────────────────────────────────────── */
 .sidebar-subjects.collapsed {
   display: none;
