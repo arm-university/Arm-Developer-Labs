@@ -15,97 +15,106 @@ type: article
     {{ content }}
     {%- if page.filter == "project" -%}
       <div class="subjects">
-        <strong>Platform:</strong>
-        {%- assign platforms = "" | split: "" -%}
-        {%- assign nav_group = site.data.navigation[page.sidebar.nav] -%}
-        {%- for grp in nav_group -%}
-          {%- for item in grp.children -%}
-            {%- for p in item.platform -%}
-              {%- unless platforms contains p -%}
-                {%- assign platforms = platforms | push: p -%}
-              {%- endunless -%}
+        <div class="filter">
+          <strong>Platform:</strong>
+          {%- assign platforms = "" | split: "" -%}
+          {%- assign nav_group = site.data.navigation[page.sidebar.nav] -%}
+          {%- for grp in nav_group -%}
+            {%- for item in grp.children -%}
+              {%- for p in item.platform -%}
+                {%- unless platforms contains p -%}
+                  {%- assign platforms = platforms | push: p -%}
+                {%- endunless -%}
+              {%- endfor -%}
             {%- endfor -%}
           {%- endfor -%}
-        {%- endfor -%}
-        {%- for platform in platforms -%}
-          <label>
-            <input type="checkbox"
-                  class="filter-checkbox"
-                  data-category="platform"
-                  value="{{ platform }}"
-                  onchange="filterTOC()">
-            {{ platform }}
-          </label>
-        {%- endfor -%}
-
-        <!-- Subject -->
-        <strong>Subject:</strong>
-        {%- assign subjects = "" | split: "" -%}
-        {%- for grp in nav_group -%}
-          {%- for item in grp.children -%}
-            {%- for s in item.subjects -%}
-              {%- unless subjects contains s -%}
-                {%- assign subjects = subjects | push: s -%}
-              {%- endunless -%}
+        </div>
+        <div class="filter">
+          {%- for platform in platforms -%}
+            <label>
+              <input type="checkbox"
+                    class="filter-checkbox"
+                    data-category="platform"
+                    value="{{ platform }}"
+                    onchange="filterTOC()">
+              {{ platform }}
+            </label>
+          {%- endfor -%}
+        </div>
+        <div class="filter">
+          <!-- Subject -->
+          <strong>Subject:</strong>
+          {%- assign subjects = "" | split: "" -%}
+          {%- for grp in nav_group -%}
+            {%- for item in grp.children -%}
+              {%- for s in item.subjects -%}
+                {%- unless subjects contains s -%}
+                  {%- assign subjects = subjects | push: s -%}
+                {%- endunless -%}
+              {%- endfor -%}
             {%- endfor -%}
           {%- endfor -%}
-        {%- endfor -%}
-        {%- for subject in subjects -%}
-          <label>
-            <input type="checkbox"
-                  class="filter-checkbox"
-                  data-category="subject"
-                  value="{{ subject }}"
-                  onchange="filterTOC()">
-            {{ subject }}
-          </label>
-        {%- endfor -%}
-
-        <!-- SW/HW -->
-        <strong>SW/HW:</strong>
-        {%- assign swhw_items = "" | split: "" -%}
-        {%- for grp in nav_group -%}
-          {%- for item in grp.children -%}
-            {%- for tag in item["sw-hw"] -%}
-              {%- unless swhw_items contains tag -%}
-                {%- assign swhw_items = swhw_items | push: tag -%}
-              {%- endunless -%}
+          {%- for subject in subjects -%}
+            <label>
+              <input type="checkbox"
+                    class="filter-checkbox"
+                    data-category="subject"
+                    value="{{ subject }}"
+                    onchange="filterTOC()">
+              {{ subject }}
+            </label>
+          {%- endfor -%}
+        </div>
+        <div class="filter">
+          <!-- SW/HW -->
+          <strong>SW/HW:</strong>
+          {%- assign swhw_items = "" | split: "" -%}
+          {%- for grp in nav_group -%}
+            {%- for item in grp.children -%}
+              {%- for tag in item["sw-hw"] -%}
+                {%- unless swhw_items contains tag -%}
+                  {%- assign swhw_items = swhw_items | push: tag -%}
+                {%- endunless -%}
+              {%- endfor -%}
             {%- endfor -%}
           {%- endfor -%}
-        {%- endfor -%}
-        {%- for tag in swhw_items -%}
-          <label>
-            <input type="checkbox"
-                  class="filter-checkbox"
-                  data-category="sw-hw"
-                  value="{{ tag }}"
-                  onchange="filterTOC()">
-            {{ tag }}
-          </label>
-        {%- endfor -%}
-
-        <!-- Support Level -->
-        <strong>Support Level:</strong>
-        {%- assign levels = "" | split: "" -%}
-        {%- for grp in nav_group -%}
-          {%- for item in grp.children -%}
-            {%- for lvl in item["support-level"] -%}
-              {%- unless levels contains lvl -%}
-                {%- assign levels = levels | push: lvl -%}
-              {%- endunless -%}
+        </div>
+        <div class="filter">
+          {%- for tag in swhw_items -%}
+            <label>
+              <input type="checkbox"
+                    class="filter-checkbox"
+                    data-category="sw-hw"
+                    value="{{ tag }}"
+                    onchange="filterTOC()">
+              {{ tag }}
+            </label>
+          {%- endfor -%}
+        </div>
+        <div class="filter">
+          <!-- Support Level -->
+          <strong>Support Level:</strong>
+          {%- assign levels = "" | split: "" -%}
+          {%- for grp in nav_group -%}
+            {%- for item in grp.children -%}
+              {%- for lvl in item["support-level"] -%}
+                {%- unless levels contains lvl -%}
+                  {%- assign levels = levels | push: lvl -%}
+                {%- endunless -%}
+              {%- endfor -%}
             {%- endfor -%}
           {%- endfor -%}
-        {%- endfor -%}
-        {%- for lvl in levels -%}
-          <label>
-            <input type="checkbox"
-                  class="filter-checkbox"
-                  data-category="support-level"
-                  value="{{ lvl }}"
-                  onchange="filterTOC()">
-            {{ lvl }}
-          </label>
-        {%- endfor -%}
+          {%- for lvl in levels -%}
+            <label>
+              <input type="checkbox"
+                    class="filter-checkbox"
+                    data-category="support-level"
+                    value="{{ lvl }}"
+                    onchange="filterTOC()">
+              {{ lvl }}
+            </label>
+          {%- endfor -%}
+        </div>
       </div>
     {%- endif -%}
     <script>
