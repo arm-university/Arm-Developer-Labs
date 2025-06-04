@@ -1,8 +1,7 @@
 ---
-title: "Welcome to Developer Labs Projects"
+title: "Find industry relevant challenges on Arm "
 ---
 
-Welcome to the hub for industry relevant projects centered around Arm technologies! Whether you're a seasoned developer or a newcomer eager to dive into the world of Arm, you'll find a wealth of opportunities to challenge yourself and showcase your skills. Use the left-hand navigation bar to find a challenge that matches your skills and interests.
+**Arm Developer Labs** is a repository of software and hardware project suggestions sourced from internal Arm teams and our network of eco-system partners but framed in way to be immediately accessible and useful to both academics and professional developers alike. 
 
-# Submit Your Project
-<iframe width="640px" height="480px" src="https://forms.office.com/e/VZnJQLeRhD?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+Filter or keyword search below.  You can take a project as is, adapt it to your circumstances or simply take inspiration from it.  Each project link shows what contextual collateral and resources are available.  To get benefits from Arm, you need to tell us about your work.  Read more on the [homepage](https://arm-university.github.io/Arm-Developer-Labs/). 
