@@ -121,10 +121,6 @@ type: article
             {%- if _item.children -%}
               {%- for _child in _item.children -%}
 
-                {%- comment -%}
-                Build all four “filter‐class” strings:
-                {% endcomment -%}
-
                 {%- assign platform_classes = "" -%}
                 {%- for p in _child.platform -%}
                   {%- assign platform_classes = platform_classes | append: " platform-" | append: p -%}
@@ -145,22 +141,14 @@ type: article
                   {%- assign support_classes = support_classes | append: " support-" | append: lvl -%}
                 {%- endfor -%}
 
-                {%- comment -%}
-                Compute _nav_url and _page_url exactly as in your sidebar snippet:
-                {% endcomment -%}
                 {%- include snippets/get-nav-url.html path=_child.url -%}
                 {%- assign _nav_url = __return -%}
-                {%- include snippets/get-nav-url.html path=page.url -%}
-                {%- assign _page_url = __return -%}
-                {%- assign active = (_nav_url == _page_url) -%}
 
-                <li
-                  class="project-item{{ platform_classes }}{{ subject_classes }}{{ swhw_classes }}{{ support_classes }}{% if active %} active{% endif %}"
+                <li class="project-item"
                   data-platforms='{{ _child.platform | jsonify }}'
                   data-subjects='{{ _child.subjects | jsonify }}'
                   data-swhw='{{ _child["sw-hw"] | jsonify }}'
-                  data-support-level='{{ _child["support-level"] | jsonify }}'
-                >
+                  data-support-level='{{ _child["support-level"] | jsonify }}'>
                   <a href="{{ _nav_url }}">{{ _child.title }}</a>
                 </li>
               {%- endfor -%}
