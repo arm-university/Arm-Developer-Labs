@@ -15,10 +15,11 @@ type: article
     {{ content }}
 
     {%- if page.filter == "project" -%}
-      <!-- Checkbox filters -->
+      <!-- 1) Checkbox filters exactly as before -->
       <div class="subjects">
         {%- assign nav_group = site.data.navigation["projects"] -%}
 
+        <!-- Platform -->
         <div class="filter">
           <strong>Platform:</strong>
           {%- assign platforms = "" | split: "" -%}
@@ -45,6 +46,7 @@ type: article
           {%- endfor -%}
         </div>
 
+        <!-- Subject -->
         <div class="filter">
           <strong>Subject:</strong>
           {%- assign subjects = "" | split: "" -%}
@@ -71,6 +73,7 @@ type: article
           {%- endfor -%}
         </div>
 
+        <!-- SW/HW -->
         <div class="filter">
           <strong>SW/HW:</strong>
           {%- assign swhw_items = "" | split: "" -%}
@@ -97,6 +100,7 @@ type: article
           {%- endfor -%}
         </div>
 
+        <!-- Support Level -->
         <div class="filter">
           <strong>Support Level:</strong>
           {%- assign levels = "" | split: "" -%}
@@ -124,31 +128,30 @@ type: article
         </div>
       </div>
 
-      <!-- Project list (pulled from site.data.navigation["projects"]) -->
+      <!-- 2) Two‐section project list -->
       <div class="project-results">
-        <ul class="project-list">
-          {%- assign _sidebar_nav = site.data.navigation["projects"] -%}
-          {%- for _item in _sidebar_nav -%}
-            {%- if _item.children -%}
-              {%- for _child in _item.children -%}
-                {%- include snippets/get-nav-url.html path=_child.url -%}
-                {%- assign _nav_url = __return -%}
+        {%- assign nav_root = site.data.navigation["projects"] -%}
+        
+        {%- for category in nav_root -%}
+          <h2 class="project-group-title">{{ category.title }}</h2>
+          <ul class="project-list">
+            {%- for _child in category.children -%}
+              {%- include snippets/get-nav-url.html path=_child.url -%}
+              {%- assign _nav_url = __return -%}
 
-                <li
-                  class="project-item"
+              <li class="project-item"
                   data-platforms='{{ _child.platform | jsonify }}'
                   data-subjects='{{ _child.subjects | jsonify }}'
                   data-swhw='{{ _child["sw-hw"] | jsonify }}'
-                  data-support-level='{{ _child["support-level"] | jsonify }}'
-                >
-                  <a href="{{ _nav_url }}">{{ _child.title }}</a>
-                </li>
-              {%- endfor -%}
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
+                  data-support-level='{{ _child["support-level"] | jsonify }}'>
+                <a href="{{ _nav_url }}">{{ _child.title }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endfor -%}
       </div>
 
+      <!-- 3) Filtering script (unchanged) -->
       <script>
         function filterProjects() {
           const checks = Array.from(document.querySelectorAll('.filter-checkbox:checked'));
@@ -165,7 +168,6 @@ type: article
             const subs    = JSON.parse(li.dataset.subjects     || '[]');
             const swhws   = JSON.parse(li.dataset.swhw         || '[]');
             const levels  = JSON.parse(li.dataset.supportLevel || '[]');
-
             const ok = activeFilters.every(f => {
               switch (f.cat) {
                 case 'platform':      return plats.includes(f.val);
@@ -175,7 +177,6 @@ type: article
                 default:              return true;
               }
             });
-
             li.style.display = ok ? '' : 'none';
           });
         }
@@ -184,16 +185,10 @@ type: article
   </div>
 
   {%- if _sharing -%}
-    <section class="article__sharing d-print-none">
-      {%- include sharing.html -%}
-    </section>
+    <section class="article__sharing d-print-none">{%- include sharing.html -%}</section>
   {%- endif -%}
 
   <div class="d-print-none">
     {%- include article-footer.html -%}
   </div>
 </div>
-
-<script>
-  {%- include scripts/article.js -%}
-</script>
