@@ -13,9 +13,9 @@ projects_extended_project_pathlist = Path(extended_projects_dir).rglob('*.md')
 research_pathlist = [Path("../Research/research.md")]
 
 docs_projects_dir = "../docs/Projects"
-docs_projects_projects_dir = "../docs/Projects/Projects"
+docs_projects_projects_dir = "../docs/Projects/Projects/_posts"
 docs_research_dir = "../docs/Research"
-docs_extended_project_dir = "../docs/Projects/Extended-Team-Projects"
+docs_extended_project_dir = "../docs/Projects/Extended-Team-Projects/_posts"
 docs_img_dir = "../docs/images"
 
 index_frontmatter = """---
