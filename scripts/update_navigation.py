@@ -24,7 +24,7 @@ def process_yml(pathlist, level: str, tab: str):
         yam_tab[tab][0]['children'].clear()
     
         for path in pathlist:
-            path_in_str = str(path)[2:].replace(".md", ".html")
+            path_in_str = "_posts" + str(path)[2:].replace(".md", ".html")
             title = path_in_str.rsplit('/')[-1].replace(".html", "")
             post = frontmatter.load(path)  
             platform = post.metadata.get("platform")
@@ -43,7 +43,7 @@ def process_yml(pathlist, level: str, tab: str):
         yam_tab[tab][1]['children'].clear()
     
         for path in pathlist:
-            path_in_str = str(path)[2:].replace(".md", ".html")
+            path_in_str = "_posts" + str(path)[2:].replace(".md", ".html")
             title = path_in_str.rsplit('/')[-1].replace(".html", "")
             post = frontmatter.load(path)  
             platform = post.metadata.get("platform")
