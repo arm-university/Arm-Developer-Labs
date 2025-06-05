@@ -3,12 +3,12 @@ header:
       # @start locale config
       en      : &EN       Projects
       # @end locale config
-    url: /Projects/projects.html
+    url: _posts/Projects/projects.html
 projects:
 - title: Projects
   children:
   - title: Academic-Trends-Dashboard
-    url: /Projects/Projects/Academic-Trends-Dashboard.html
+    url: _posts/Projects/Projects/Academic-Trends-Dashboard.html
     subjects:
     - Web
     - Databases
@@ -23,7 +23,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: AI-Agents
-    url: /Projects/Projects/AI-Agents.html
+    url: _posts/Projects/Projects/AI-Agents.html
     subjects:
     - ML
     platform:
@@ -36,7 +36,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: AI-Powered-Porting-Tool
-    url: /Projects/Projects/AI-Powered-Porting-Tool.html
+    url: _posts/Projects/Projects/AI-Powered-Porting-Tool.html
     subjects:
     - CI-CD
     - ML
@@ -52,7 +52,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: AMBA-Simulator-Framework
-    url: /Projects/Projects/AMBA-Simulator-Framework.html
+    url: _posts/Projects/Projects/AMBA-Simulator-Framework.html
     subjects:
     - Virtual Hardware
     - Performance and Architecture
@@ -64,7 +64,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: Architecture-Insight-Dashboard
-    url: /Projects/Projects/Architecture-Insight-Dashboard.html
+    url: _posts/Projects/Projects/Architecture-Insight-Dashboard.html
     subjects:
     - Performance and Architecture
     - Web
@@ -79,7 +79,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: Arduino-IDE-Windows-on-Arm
-    url: /Projects/Projects/Arduino-IDE-Windows-on-Arm.html
+    url: _posts/Projects/Projects/Arduino-IDE-Windows-on-Arm.html
     subjects:
     - Performance and Architecture
     - Migration to Arm
@@ -93,7 +93,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: Bioinformatic-Pipeline-Analysis
-    url: /Projects/Projects/Bioinformatic-Pipeline-Analysis.html
+    url: _posts/Projects/Projects/Bioinformatic-Pipeline-Analysis.html
     subjects:
     - Performance and Architecture
     - Databases
@@ -106,7 +106,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: FPGA-Accellerator-with-DDR
-    url: /Projects/Projects/FPGA-Accellerator-with-DDR.html
+    url: _posts/Projects/Projects/FPGA-Accellerator-with-DDR.html
     subjects:
     - Virtual Hardware
     - Performance and Architecture
@@ -119,7 +119,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: Haskell-Compiler-Windows-on-Arm
-    url: /Projects/Projects/Haskell-Compiler-Windows-on-Arm.html
+    url: _posts/Projects/Projects/Haskell-Compiler-Windows-on-Arm.html
     subjects:
     - Migration to Arm
     - Performance and Architecture
@@ -133,7 +133,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: HPC-Algorithm
-    url: /Projects/Projects/HPC-Algorithm.html
+    url: _posts/Projects/Projects/HPC-Algorithm.html
     subjects:
     - Performance and Architecture
     platform:
@@ -146,7 +146,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: LLM-Benchmark-on-Arm-Server
-    url: /Projects/Projects/LLM-Benchmark-on-Arm-Server.html
+    url: _posts/Projects/Projects/LLM-Benchmark-on-Arm-Server.html
     subjects:
     - ML
     - Performance and Architecture
@@ -160,7 +160,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: Machine-Learning-on-AWS-Graviton
-    url: /Projects/Projects/Machine-Learning-on-AWS-Graviton.html
+    url: _posts/Projects/Projects/Machine-Learning-on-AWS-Graviton.html
     subjects:
     - ML
     - Migration to Arm
@@ -174,7 +174,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: Processor-in-the-Loop-Automotive
-    url: /Projects/Projects/Processor-in-the-Loop-Automotive.html
+    url: _posts/Projects/Projects/Processor-in-the-Loop-Automotive.html
     subjects:
     - Embedded Linux
     - RTOS Fundamentals
@@ -190,7 +190,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: Quantisation-Aware-Training
-    url: /Projects/Projects/Quantisation-Aware-Training.html
+    url: _posts/Projects/Projects/Quantisation-Aware-Training.html
     subjects:
     - ML
     - Performance and Architecture
@@ -205,7 +205,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: R-Arm-Community-Support
-    url: /Projects/Projects/R-Arm-Community-Support.html
+    url: _posts/Projects/Projects/R-Arm-Community-Support.html
     subjects:
     - Performance and Architecture
     - Migration to Arm
@@ -218,7 +218,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: Real-Time-Image-Classification
-    url: /Projects/Projects/Real-Time-Image-Classification.html
+    url: _posts/Projects/Projects/Real-Time-Image-Classification.html
     subjects:
     - ML
     - Performance and Architecture
@@ -233,7 +233,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: Sentiment-Analysis-Dashboard
-    url: /Projects/Projects/Sentiment-Analysis-Dashboard.html
+    url: _posts/Projects/Projects/Sentiment-Analysis-Dashboard.html
     subjects:
     - ML
     - Web
@@ -249,7 +249,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: Smart-Voice-Assistant
-    url: /Projects/Projects/Smart-Voice-Assistant.html
+    url: _posts/Projects/Projects/Smart-Voice-Assistant.html
     subjects:
     - ML
     platform:
@@ -263,7 +263,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: SpecINT2017-benchmarking-on-Arm64
-    url: /Projects/Projects/SpecINT2017-benchmarking-on-Arm64.html
+    url: _posts/Projects/Projects/SpecINT2017-benchmarking-on-Arm64.html
     subjects:
     - Performance and Architecture
     - Migration to Arm
@@ -278,7 +278,7 @@ projects:
     - Self-Service
     - Arm Ambassador Support
   - title: Write-A-Learning-Path
-    url: /Projects/Projects/Write-A-Learning-Path.html
+    url: _posts/Projects/Projects/Write-A-Learning-Path.html
     subjects:
     - Libraries
     - Web
@@ -299,7 +299,7 @@ projects:
 - title: Extended Team Projects
   children:
   - title: Compliance-Ready-Smart-Camera-System
-    url: /Projects/Extended-Team-Projects/Compliance-Ready-Smart-Camera-System.html
+    url: _posts/Projects/Extended-Team-Projects/Compliance-Ready-Smart-Camera-System.html
     subjects:
     - Security
     - Embedded Linux
@@ -319,7 +319,7 @@ projects:
     - Arm Ambassador Support
     - Direct Support from Arm
   - title: Human-Centric-Robotics
-    url: /Projects/Extended-Team-Projects/Human-Centric-Robotics.html
+    url: _posts/Projects/Extended-Team-Projects/Human-Centric-Robotics.html
     subjects:
     - ML
     - Embedded Linux
