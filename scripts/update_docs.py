@@ -129,7 +129,6 @@ def format_content(pathlist, academic_level, docs_path):
 def format_index():
     src = "../README.md"
     docs_path = "../docs"
-    submit_project = '\n\r# Submit Your Project\n<iframe width="640px" height="480px" src="https://forms.office.com/e/VZnJQLeRhD?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>'
     with open(src, 'r', encoding='utf-8') as f:
         formatted_content = convert_md(index_frontmatter + f.read())
         converted_content = convert_md_images_to_html(
@@ -140,7 +139,6 @@ def format_index():
         out_file = os.path.join(docs_path, "index.md")
         with open(out_file, 'w', encoding='utf-8') as out_f:
             out_f.write(converted_content)
-            out_f.write(submit_project)
 
 
 def main():

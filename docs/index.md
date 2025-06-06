@@ -44,5 +44,3 @@ Yes!  If you’ve already been working on something that you believe is relevant
 Please get in touch via [our online form](https://forms.office.com/e/597pKN2JBW). Someone from Arm education will be in contact to discuss how we can support. 
 
 ### [Show me the projects](https://arm-university.github.io/Arm-Developer-Labs/Projects/projects.html)
-# Submit Your Project
-<iframe width="640px" height="480px" src="https://forms.office.com/e/VZnJQLeRhD?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
