@@ -5,22 +5,38 @@ header:
 projects:
 - title: Projects
   children:
-  - title: AI-Powered-Porting-Tool
-    description: "This self-service project creates an AI-driven porting engine that\
-      \ analyzes package dependencies, auto-generates fixes, and submits pull requests\u2014\
-      accelerating native macOS and Windows-on-Arm support for bioinformatics and\
-      \ R software so researchers can run demanding workflows directly on modern Arm\
-      \ devices."
-    url: /2025/05/30/AI-Powered-Porting-Tool.html
+  - title: Processor-in-the-Loop-Automotive
+    description: "This self-service project has students design, auto-generate, and\
+      \ processor-in-the-loop verify a safety-critical automotive control algorithm\
+      \ on an Arm Cortex-M7 Fast Model\u2014gaining hands-on mastery of Simulink,\
+      \ Embedded Coder, and rigorous V-Model validation."
+    url: /2025/05/30/Processor-in-the-Loop-Automotive.html
     subjects:
-    - CI-CD
-    - ML
-    - Migration to Arm
+    - Embedded Linux
+    - RTOS Fundamentals
+    - Virtual Hardware
     platform:
-    - Servers and Cloud Computing
     - Laptops and Desktops
-    - Mobile, Graphics, and Gaming
-    - AI
+    - Automotive
+    - Embedded and Microcontrollers
+    sw-hw:
+    - Software
+    - Hardware
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: C-Based-Application-from-Scratch
+    description: This self-service project goes back to the fundamentals. The challenge
+      is to develop an application of your choice but your are only permitted to use
+      the C language with as few dependencies as possible.
+    url: /2025/07/11/C-Based-Application-from-Scratch.html
+    subjects:
+    - Performance and Architecture
+    - Libraries
+    platform:
+    - IoT
     sw-hw:
     - Software
     support-level:
@@ -36,6 +52,24 @@ projects:
     url: /2025/05/30/HPC-Algorithm.html
     subjects:
     - Performance and Architecture
+    platform:
+    - Servers and Cloud Computing
+    - Laptops and Desktops
+    - AI
+    sw-hw:
+    - Software
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: Responsible-AI-and-Yellow-Teaming
+    description: "This self-service project equips teams with a YellowTeamGPT workflow\
+      \ that probes Arm-based AI products for unintended impacts\u2014turning responsible-AI\
+      \ stress-testing into a core step of the development cycle."
+    url: /2025/05/30/Responsible-AI-and-Yellow-Teaming.html
+    subjects:
+    - ML
     platform:
     - Servers and Cloud Computing
     - Laptops and Desktops
@@ -87,6 +121,49 @@ projects:
     - Arm Ambassador Support
     status:
     - Published
+  - title: AI-Powered-Porting-Tool
+    description: "This self-service project creates an AI-driven porting engine that\
+      \ analyzes package dependencies, auto-generates fixes, and submits pull requests\u2014\
+      accelerating native macOS and Windows-on-Arm support for bioinformatics and\
+      \ R software so researchers can run demanding workflows directly on modern Arm\
+      \ devices."
+    url: /2025/05/30/AI-Powered-Porting-Tool.html
+    subjects:
+    - CI-CD
+    - ML
+    - Migration to Arm
+    platform:
+    - Servers and Cloud Computing
+    - Laptops and Desktops
+    - Mobile, Graphics, and Gaming
+    - AI
+    sw-hw:
+    - Software
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: Arduino-IDE-Windows-on-Arm
+    description: "This self-service project ports and optimizes the Arduino IDE\u2014\
+      patching its lzma-native dependency\u2014to run natively and efficiently on\
+      \ Windows on Arm, giving developers hands-on experience with cross-platform\
+      \ builds, Arm64 performance tuning, and upstream open-source contributions."
+    url: /2025/05/30/Arduino-IDE-Windows-on-Arm.html
+    subjects:
+    - Performance and Architecture
+    - Migration to Arm
+    - Libraries
+    platform:
+    - Laptops and Desktops
+    sw-hw:
+    - Software
+    - Hardware
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
   - title: R-Arm-Community-Support
     description: "This self-service project boosts the R ecosystem on Windows on Arm\
       \ by identifying unsupported packages, upstreaming fixes, and automating builds\u2014\
@@ -106,27 +183,6 @@ projects:
     - Arm Ambassador Support
     status:
     - Published
-  - title: SpecINT2017-benchmarking-on-Arm64
-    description: "This self-service project profiles SPEC CPU2017 on Arm64 servers\u2014\
-      using GCC, Clang, and Arm Compiler with top-down analysis\u2014to reveal how\
-      \ compiler choices and Arm micro-architectural features impact execution time,\
-      \ energy efficiency, and performance bottlenecks."
-    url: /2025/05/30/SpecINT2017-benchmarking-on-Arm64.html
-    subjects:
-    - Performance and Architecture
-    - Migration to Arm
-    platform:
-    - Servers and Cloud Computing
-    - Laptops and Desktops
-    - AI
-    sw-hw:
-    - Software
-    - Hardware
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
   - title: AI-Agents
     description: "This self-service project builds a sandboxed AI agent on Arm hardware\
       \ that harnesses appropriately sized LLMs to safely automate complex workflows\u2014\
@@ -138,26 +194,6 @@ projects:
     platform:
     - Servers and Cloud Computing
     - Laptops and Desktops
-    - AI
-    sw-hw:
-    - Software
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
-  - title: Machine-Learning-on-AWS-Graviton
-    description: "This self-service project ports and tunes OpenSora text-to-video\
-      \ transformers on AWS Graviton CPUs\u2014showcasing cost-efficient, quantized,\
-      \ CPU-only inference pipelines and guiding best-practice optimization for Arm-based\
-      \ cloud AI workloads."
-    url: /2025/05/30/Machine-Learning-on-AWS-Graviton.html
-    subjects:
-    - ML
-    - Migration to Arm
-    - Performance and Architecture
-    platform:
-    - Servers and Cloud Computing
     - AI
     sw-hw:
     - Software
@@ -187,56 +223,42 @@ projects:
     - Arm Ambassador Support
     status:
     - Published
-  - title: C-Based-Application-from-Scratch
-    description: This self-service project goes back to the fundamentals. The challenge
-      is to develop an application of your choice but your are only permitted to use
-      the C language with as few dependencies as possible.
-    url: /2025/07/11/C-Based-Application-from-Scratch.html
+  - title: SpecINT2017-benchmarking-on-Arm64
+    description: "This self-service project profiles SPEC CPU2017 on Arm64 servers\u2014\
+      using GCC, Clang, and Arm Compiler with top-down analysis\u2014to reveal how\
+      \ compiler choices and Arm micro-architectural features impact execution time,\
+      \ energy efficiency, and performance bottlenecks."
+    url: /2025/05/30/SpecINT2017-benchmarking-on-Arm64.html
     subjects:
     - Performance and Architecture
-    - Libraries
-    platform:
-    - IoT
-    sw-hw:
-    - Software
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
-  - title: Responsible-AI-and-Yellow-Teaming
-    description: "This self-service project equips teams with a YellowTeamGPT workflow\
-      \ that probes Arm-based AI products for unintended impacts\u2014turning responsible-AI\
-      \ stress-testing into a core step of the development cycle."
-    url: /2025/05/30/Responsible-AI-and-Yellow-Teaming.html
-    subjects:
-    - ML
+    - Migration to Arm
     platform:
     - Servers and Cloud Computing
     - Laptops and Desktops
     - AI
     sw-hw:
     - Software
+    - Hardware
     support-level:
     - Self-Service
     - Arm Ambassador Support
     status:
     - Published
-  - title: Arduino-IDE-Windows-on-Arm
-    description: "This self-service project ports and optimizes the Arduino IDE\u2014\
-      patching its lzma-native dependency\u2014to run natively and efficiently on\
-      \ Windows on Arm, giving developers hands-on experience with cross-platform\
-      \ builds, Arm64 performance tuning, and upstream open-source contributions."
-    url: /2025/05/30/Arduino-IDE-Windows-on-Arm.html
+  - title: Machine-Learning-on-AWS-Graviton
+    description: "This self-service project ports and tunes OpenSora text-to-video\
+      \ transformers on AWS Graviton CPUs\u2014showcasing cost-efficient, quantized,\
+      \ CPU-only inference pipelines and guiding best-practice optimization for Arm-based\
+      \ cloud AI workloads."
+    url: /2025/05/30/Machine-Learning-on-AWS-Graviton.html
     subjects:
-    - Performance and Architecture
+    - ML
     - Migration to Arm
-    - Libraries
+    - Performance and Architecture
     platform:
-    - Laptops and Desktops
+    - Servers and Cloud Computing
+    - AI
     sw-hw:
     - Software
-    - Hardware
     support-level:
     - Self-Service
     - Arm Ambassador Support
@@ -262,30 +284,30 @@ projects:
     - Arm Ambassador Support
     status:
     - Published
-  - title: Processor-in-the-Loop-Automotive
-    description: "This self-service project has students design, auto-generate, and\
-      \ processor-in-the-loop verify a safety-critical automotive control algorithm\
-      \ on an Arm Cortex-M7 Fast Model\u2014gaining hands-on mastery of Simulink,\
-      \ Embedded Coder, and rigorous V-Model validation."
-    url: /2025/05/30/Processor-in-the-Loop-Automotive.html
+- title: Extended Team Projects
+  children:
+  - title: Human-Centric-Robotics
+    description: "This team project will build and test an Arm-based urban service\
+      \ robot\u2014merging real-time navigation, vision-guided manipulation, and human\
+      \ interaction\u2014and model its socioeconomic impact to show how Arm platforms\
+      \ can transform last-mile delivery, eldercare, or other city services."
+    url: /2025/05/30/Human-Centric-Robotics.html
     subjects:
+    - ML
     - Embedded Linux
     - RTOS Fundamentals
-    - Virtual Hardware
     platform:
-    - Laptops and Desktops
     - Automotive
+    - IoT
     - Embedded and Microcontrollers
+    - AI
     sw-hw:
     - Software
     - Hardware
     support-level:
     - Self-Service
     - Arm Ambassador Support
-    status:
-    - Published
-- title: Extended Team Projects
-  children:
+    - Direct Support from Arm
   - title: Compliance-Ready-Smart-Camera-System
     description: "This challenge will create and validate an Arm-based, smart camera\
       \ pipeline on virtual automotive hardware\u2014advancing safer, more developer-friendly\
@@ -298,28 +320,6 @@ projects:
     - Virtual Hardware
     platform:
     - Mobile, Graphics, and Gaming
-    - Automotive
-    - IoT
-    - Embedded and Microcontrollers
-    - AI
-    sw-hw:
-    - Software
-    - Hardware
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    - Direct Support from Arm
-  - title: Human-Centric-Robotics
-    description: "This team project will build and test an Arm-based urban service\
-      \ robot\u2014merging real-time navigation, vision-guided manipulation, and human\
-      \ interaction\u2014and model its socioeconomic impact to show how Arm platforms\
-      \ can transform last-mile delivery, eldercare, or other city services."
-    url: /2025/05/30/Human-Centric-Robotics.html
-    subjects:
-    - ML
-    - Embedded Linux
-    - RTOS Fundamentals
-    platform:
     - Automotive
     - IoT
     - Embedded and Microcontrollers
