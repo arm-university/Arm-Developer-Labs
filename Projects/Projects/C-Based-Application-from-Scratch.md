@@ -59,3 +59,4 @@ To receive the benefits, you must show us your project through our [online form]
 
 ### Previous Submissions
 1. [Plant Health Analysis System, Arnav Gupta et al. Imperial College London](https://github.com/Arg2006/ARM_Presentation.git).
+2. [VR Voxel Game. Imperial College London](https://github.com/lxkast/vr-voxel-game).
