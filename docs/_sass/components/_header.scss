@@ -121,3 +121,36 @@
     @include split-line(bottom, 4px, $main-color-1);
   }
 }
+
+.button--secondary {
+  /*&::after {
+    display: block;
+    margin-bottom: -4px;
+    content: "";
+    @include split-line(bottom, 4px, transparent);
+  }*/
+  font-weight: normal;
+  &:hover {
+    color: $main-color-1 !important;
+    box-shadow: none !important;
+  }
+}
+
+.mission-button {
+  &:hover {
+    color: $main-color-1 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
+}
+
+.blog {
+  padding: map-get($spacers, 2) map-get($spacers, 3);
+  &:hover {
+    color: $main-color-1 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
+}

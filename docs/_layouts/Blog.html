@@ -1,0 +1,124 @@
+---
+layout: page
+title: Bloge
+show_title: false
+---
+
+<h2> Blogs </h2>
+
+<!-- Sort Dropdown -->
+<div style="margin-bottom: 20px; display: flex; justify-content: flex-end;">
+    <div style="display: inline-block; position: relative;">
+        <button id="sortBtn" style="padding: 10px 20px; background-color: #f0f0f0; color: #333; border: 1px solid #ddd; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.2s; display: flex; align-items: center; gap: 8px; font-size: 14px;">
+            Sort by Date <span>▼</span>
+        </button>
+        <div id="sortDropdown" style="position: absolute; top: 100%; right: 0; margin-top: 6px; background: #fff; border: 1px solid #ccc; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); min-width: 160px; display: none; z-index: 100;">
+            <button class="sort-option" data-value="newest" style="display: block; width: 100%; text-align: left; padding: 10px 14px; border: none; background: transparent; cursor: pointer; font-size: 13px; transition: background 0.1s; color: #000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                <span class="sort-tick">✓</span> Latest First
+            </button>
+            <button class="sort-option" data-value="oldest" style="display: block; width: 100%; text-align: left; padding: 10px 14px; border: none; background: transparent; cursor: pointer; font-size: 13px; transition: background 0.1s; color: #000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                <span class="sort-tick" style="visibility: hidden;">✓</span> Oldest First
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="blog-grid-container" id="blogGrid">
+    {%- for blog in site.data.blogsData -%}
+    <a href="{{ blog.url }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;" data-date="{{ blog.published_date }}">
+        <div class="blog-grid-item">
+            {%- if blog.image -%}
+            <img src="{{ blog.image }}" alt="{{ blog.headline }}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 15px;">
+            {%- endif -%}
+            <h3 style="margin: 10px 0; font-size: 16px; font-weight: 600; line-height: 1.4;">{{ blog.headline }}</h3>
+            <p style="font-size: 14px; color: #666; margin: 8px 0; line-height: 1.5;">{{ blog.description }}</p>
+            <div style="margin-top: 12px; font-size: 12px; color: #999;">
+                <p style="margin: 4px 0;"><strong>Published:</strong> {{ blog.published_date }}</p>
+                <p style="margin: 4px 0;"><strong>By:</strong> {{ blog.publisher_name }}</p>
+            </div>
+        </div>
+    </a>
+    {%- endfor -%}
+</div>
+
+
+<!-- this section handel the sort button for the blog-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const blogGrid = document.getElementById('blogGrid');
+    const sortBtn = document.getElementById('sortBtn');
+    const sortSelect = document.getElementById('sortSelect');
+    
+    function parseDate(dateStr) {
+        const months = {
+            'January': 1, 'February': 2, 'March': 3, 'April': 4,
+            'May': 5, 'June': 6, 'July': 7, 'August': 8,
+            'September': 9, 'October': 10, 'November': 11, 'December': 12
+        };
+        
+        const [month, day, year] = dateStr.match(/(\w+)\s(\d+),\s(\d+)/).slice(1, 4);
+        return new Date(year, months[month] - 1, day);
+    }
+    
+    // Sort blogs
+    function sortBlogs(order) {
+        const blogs = Array.from(blogGrid.children);
+        
+        blogs.sort((a, b) => {
+            const dateA = parseDate(a.getAttribute('data-date'));
+            const dateB = parseDate(b.getAttribute('data-date'));
+            
+            return order === 'newest' ? dateB - dateA : dateA - dateB;
+        });
+        
+        // Remove all children and re-append in sorted order
+        blogs.forEach(blog => {
+            blogGrid.appendChild(blog);
+        });
+    }
+    
+    // Get dropdown element
+    const sortDropdown = document.getElementById('sortDropdown');
+    
+    // Toggle dropdown when button is clicked
+    sortBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        sortDropdown.style.display = sortDropdown.style.display === 'none' ? 'block' : 'none';
+    });
+    
+    // Handle sort option clicks
+    document.querySelectorAll('.sort-option').forEach(option => {
+        // Add hover effects matching browser
+        option.addEventListener('mouseenter', function() {
+            this.style.background = '#e8f0fe';
+        });
+        
+        option.addEventListener('mouseleave', function() {
+            this.style.background = 'transparent';
+        });
+        
+        option.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+
+            document.querySelectorAll('.sort-tick').forEach(tick => {
+                tick.style.visibility = 'hidden';
+            });
+            this.querySelector('.sort-tick').style.visibility = 'visible';
+            
+            const sortOrder = this.getAttribute('data-value');
+            sortBlogs(sortOrder);
+            sortDropdown.style.display = 'none';
+        });
+    });
+    
+    document.addEventListener('click', function() {
+        sortDropdown.style.display = 'none';
+    });
+    
+    // Set default to newest first
+    sortBlogs('newest');
+});
+</script>
+
+{{ content }} 
