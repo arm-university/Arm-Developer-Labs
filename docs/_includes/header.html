@@ -22,7 +22,7 @@
         {%- if page.url == "/" or page.url == "/index.html" -%}
         <button class="button button--secondary mission-button" onclick="document.querySelector('.grid.grid--reverse')?.scrollIntoView({behavior: 'smooth', block: 'start'})">Mission Statement</button>
         {%- else -%}
-        <a class="button button--secondary mission-button" href="/Arm-Developer-Labs/#mission">Mission Statement</a>
+        <a class="button button--secondary mission-button" href="{{ "/#mission" | relative_url }}">Mission Statement</a>
         {%- endif -%}
         {%- if site.search.provider -%}
           <button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button>
@@ -51,7 +51,7 @@
           </li>
         </ul>
       </nav>
+      <!--<button class="blog" onclick="window.location.href ='{{"Blog.html" | relative_url }}'">Community</button> -->
       {%- endif -%}
     </div>
   </header> 
-
