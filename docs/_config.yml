@@ -19,7 +19,7 @@
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl : # does not include hostname
+baseurl : /Arm-Developer-labs-Staging
 title   : 
 description: > # this means to ignore newlines until "Language & timezone"
   Developer Labs
@@ -223,3 +223,4 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
