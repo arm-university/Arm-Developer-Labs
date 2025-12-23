@@ -5,8 +5,23 @@ layout: none
 {%- include snippets/get-lang.html -%}
 <html lang="{{ __return }}">
   <head>
+
     {%- include analytics.html -%}
     {%- include head.html -%}
+
+    <!-- Open Graph metadata for link previews (Teams, Slack, LinkedIn, etc.) -->
+    <meta property="og:title" content="Arm Developer Labs" />
+    <meta property="og:description" content="Hands-on labs, tools, and learning resources from Arm Developer Labs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:image" content="{{ '/assets/DevLabs_Logo.png' | absolute_url }}" />
+
+    <!-- Twitter Card metadata (fallback for some platforms) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arm Developer Labs" />
+    <meta name="twitter:description" content="Hands-on labs, tools, and learning resources from Arm Developer Labs." />
+    <meta name="twitter:image" content="{{ '/assets/DevLabs_Logo.png' | absolute_url }}" />
+
     <script>
       {%- include scripts/utils/utils.js -%}
       {%- include scripts/lib/throttle.js -%}
@@ -23,3 +38,5 @@ layout: none
     </script>
   </body>
 </html>
+
+

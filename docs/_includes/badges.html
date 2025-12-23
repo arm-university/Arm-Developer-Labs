@@ -1,0 +1,17 @@
+{%- assign _items = include.items -%}
+{%- if _items and _items != empty -%}
+  <span class="badges">
+    {%- for key in _items -%}
+      {%- assign b = site.data.badges[key] -%}
+      {%- if b and b.file -%}
+        <img class="badge badge--project"
+             src="{{ '/assets/badges/' | append: b.file | relative_url }}"
+             alt="{{ b.alt | default: key | escape }}"
+             loading="lazy"
+             decoding="async">
+      {%- else -%}
+        {#- Unknown badge key, ignore -#}
+      {%- endif -%}
+    {%- endfor -%}
+  </span>
+{%- endif -%}

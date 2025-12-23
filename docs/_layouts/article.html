@@ -15,9 +15,10 @@ type: article
     {{ content }}
 
     {%- if page.filter == "project" -%}
-      <!-- 1) Checkbox filters exactly as before -->
+      <!-- 1) Checkbox filters -->
       <div class="subjects">
         {%- assign nav_group = site.data.navigation["projects"] -%}
+
         <div class="search search--bright">
           <div class="main">
             <div class="search-bar">
@@ -32,6 +33,7 @@ type: article
             <div class="search-result js-search-result"></div>
           </div>
         </div>
+
         <!-- Platform -->
         <div class="filter">
           <strong>Platform:</strong>
@@ -47,13 +49,7 @@ type: article
           {%- endfor -%}
           {%- for platform in platforms -%}
             <label>
-              <input
-                type="checkbox"
-                class="filter-checkbox"
-                data-category="platform"
-                value="{{ platform }}"
-                onchange="filterProjects()"
-              >
+              <input type="checkbox" class="filter-checkbox" data-category="platform" value="{{ platform }}" onchange="filterProjects()">
               {{ platform }}
             </label>
           {%- endfor -%}
@@ -74,13 +70,7 @@ type: article
           {%- endfor -%}
           {%- for subject in subjects -%}
             <label>
-              <input
-                type="checkbox"
-                class="filter-checkbox"
-                data-category="subject"
-                value="{{ subject }}"
-                onchange="filterProjects()"
-              >
+              <input type="checkbox" class="filter-checkbox" data-category="subject" value="{{ subject }}" onchange="filterProjects()">
               {{ subject }}
             </label>
           {%- endfor -%}
@@ -101,13 +91,7 @@ type: article
           {%- endfor -%}
           {%- for tag in swhw_items -%}
             <label>
-              <input
-                type="checkbox"
-                class="filter-checkbox"
-                data-category="sw-hw"
-                value="{{ tag }}"
-                onchange="filterProjects()"
-              >
+              <input type="checkbox" class="filter-checkbox" data-category="sw-hw" value="{{ tag }}" onchange="filterProjects()">
               {{ tag }}
             </label>
           {%- endfor -%}
@@ -128,22 +112,16 @@ type: article
           {%- endfor -%}
           {%- for lvl in levels -%}
             <label>
-              <input
-                type="checkbox"
-                class="filter-checkbox"
-                data-category="support-level"
-                value="{{ lvl }}"
-                onchange="filterProjects()"
-              >
+              <input type="checkbox" class="filter-checkbox" data-category="support-level" value="{{ lvl }}" onchange="filterProjects()">
               {{ lvl }}
             </label>
           {%- endfor -%}
         </div>
       </div>
+
       <!-- 2) Two‐section project list -->
       <div class="project-results">
         {%- assign nav_root = site.data.navigation["projects"] -%}
-        
         {%- for category in nav_root -%}
           <h2 class="project-group-title">{{ category.title }}</h2>
           <ul class="project-list">
@@ -151,18 +129,48 @@ type: article
               {%- include snippets/get-nav-url.html path=_child.url -%}
               {%- assign _nav_url = __return -%}
 
+              {%- comment -%}
+              Normalize URL so it matches how site.posts/pages store .url
+              (no site.url, no baseurl)
+              {%- endcomment -%}
+              {%- assign _nav_url_rel = _nav_url
+                   | replace: site.url, ''
+                   | replace: site.baseurl, '' -%}
+
+              {%- comment -%}
+              Resolve badges:
+              1) Prefer badges from navigation data (_child.badges)
+              2) If not present, look up the matching post/page by URL
+                 and read its front-matter badges
+              {%- endcomment -%}
+              {%- assign _badges = _child.badges -%}
+              {%- if _badges == nil or _badges == empty -%}
+                {%- assign _doc = site.posts | where: "url", _nav_url_rel | first -%}
+                {%- unless _doc -%}{%- assign _doc = site.pages | where: "url", _nav_url_rel | first -%}{%- endunless -%}
+                {%- if _doc and _doc.badges -%}{%- assign _badges = _doc.badges -%}{%- endif -%}
+              {%- endif -%}
+
               <li class="project-item"
                   data-platforms='{{ _child.platform | jsonify }}'
                   data-subjects='{{ _child.subjects | jsonify }}'
                   data-swhw='{{ _child["sw-hw"] | jsonify }}'
-                  data-support-level='{{ _child["support-level"] | jsonify }}'>
-                <a href="{{ _nav_url }}">{{ _child.title }}</a>
-                  <p class="project-desc">
-                    {{ _child.description }}
-                  </p>
+                  data-support-level='{{ _child["support-level"] | jsonify }}'
+                  {%- if _badges -%} data-badges='{{ _badges | jsonify }}'{%- endif -%}
+                  data-url-rel='{{ _nav_url_rel }}'>
+
+                <header class="project-header">
+                  <a class="project-title" href="{{ _nav_url }}">{{ _child.title }}</a>
+                  {%- if _badges -%}
+                    {% include badges.html items=_badges %}
+                  {%- endif -%}
+                </header>
+
+                <p class="project-desc">
+                  {{ _child.description }}
+                </p>
               </li>
             {%- endfor -%}
-            </ul>
+          </ul>
         {%- endfor -%}
       </div>
 
@@ -174,10 +182,7 @@ type: article
             document.querySelectorAll('.project-item').forEach(el => el.style.display = '');
             return;
           }
-          const activeFilters = checks.map(cb => ({
-            cat: cb.dataset.category,
-            val: cb.value
-          }));
+          const activeFilters = checks.map(cb => ({ cat: cb.dataset.category, val: cb.value }));
           document.querySelectorAll('.project-item').forEach(li => {
             const plats   = JSON.parse(li.dataset.platforms    || '[]');
             const subs    = JSON.parse(li.dataset.subjects     || '[]');
