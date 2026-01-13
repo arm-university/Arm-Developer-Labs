@@ -162,126 +162,14 @@ share_image: images/c2s_meity_logo.jpg
         </table>
       </section>
 
-     <section class="ch-section">
+      <section class="ch-section">
         <h2>Support & Queries</h2>
-
-        <p>For general support, email:</p>
-        <p>
-          <a href="mailto:support@armbharatchallenge.com" class="ch-email">
-            support@armbharatchallenge.com
-          </a>
-        </p>
-
-        <p class="ch-tech-note">
-          For any technical queries with regards to the problem statements, please mail your queries to
-          <a href="mailto:tech-queries@armbharatchallenge.com">
-            tech-queries@armbharatchallenge.com
-          </a>
-          clearly mentioning the problem statement number in the subject line.
-        </p>
-
+        <p>For support, email:</p>
+        <p><a href="mailto:support@armbharatchallenge.com" class="ch-email">support@armbharatchallenge.com</a></p>
         <p class="ch-small">All updates will be posted on this page.</p>
-     </section>
-
-      <section class="ch-section ch-faq-card" id="faqCard" style="cursor: pointer;">
-        <h2>Frequently Asked Questions (FAQ)</h2>
-        <p>Find answers to common questions about the Bharat AI-SoC Student Challenge.</p>
-        <p class="ch-small" style="color: #7c3aed; font-weight: 500;">Click here to view FAQs →</p>
       </section>
     </div>
   </main>
-</div>
-
-<!-- FAQ Popup Modal -->
-<div id="faqPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1100; justify-content:center; align-items:center;">
-  <div style="background:#fff; padding:30px; border-radius:16px; max-width:700px; width:90%; max-height:85vh; overflow-y:auto; position:relative; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
-    <button id="closeFaqBtn" style="position:absolute; top:15px; right:20px; background:none; border:none; font-size:28px; cursor:pointer; color:#6b7280;">&times;</button>
-    <h2 style="color:#7c3aed; margin:0 0 10px; font-size:24px;">Frequently Asked Questions</h2>
-    <p style="color:#6b7280; margin:0 0 25px; font-size:14px;">Click on a question to expand and view the answer.</p>
-    
-    <div class="faq-list">
-      <details class="ch-accordion">
-        <summary>
-          <span class="ch-acc-title">Q1: Who can participate in this Challenge?</span>
-        </summary>
-        <div class="ch-acc-body">
-          <p>Any undergrad or postgrad student currently enrolled in a regular course from an Indian institute or Indian University having some basic understanding of AI, ML, SoC & Digital logic design.</p>
-        </div>
-      </details>
-
-      <details class="ch-accordion">
-        <summary>
-          <span class="ch-acc-title">Q2: Can a team have members from different institutions?</span>
-        </summary>
-        <div class="ch-acc-body">
-          <p>No, all team members should be from the same institution & same campus.</p>
-        </div>
-      </details>
-
-      <details class="ch-accordion">
-        <summary>
-          <span class="ch-acc-title">Q3: Can a team have members from different branches & different semesters from the same institution?</span>
-        </summary>
-        <div class="ch-acc-body">
-          <p>Yes.</p>
-        </div>
-      </details>
-
-      <details class="ch-accordion">
-        <summary>
-          <span class="ch-acc-title">Q4: Can a team make changes in its team members or problem statement allocated?</span>
-        </summary>
-        <div class="ch-acc-body">
-          <p>Yes, but only 1 time within 15 days after registration. The team has to inform the organizers through email <a href="mailto:support@armbharatchallenge.com">support@armbharatchallenge.com</a> regarding the same.</p>
-        </div>
-      </details>
-
-      <details class="ch-accordion">
-        <summary>
-          <span class="ch-acc-title">Q5: Can a college mentor/faculty mentor provide mentoring to more than 1 participating team of the same institution?</span>
-        </summary>
-        <div class="ch-acc-body">
-          <p>Yes, but needs to make sure that the respective college mentor is not overloaded.</p>
-        </div>
-      </details>
-
-      <details class="ch-accordion">
-        <summary>
-          <span class="ch-acc-title">Q6: If one is pursuing distance/part-time course & also currently engaged as a working professional, can they participate?</span>
-        </summary>
-        <div class="ch-acc-body">
-          <p>No, the students/participants should be pursuing and enrolled in a regular course from an Indian institute or Indian University.</p>
-        </div>
-      </details>
-
-      <details class="ch-accordion">
-        <summary>
-          <span class="ch-acc-title">Q7: What is the prize money of the winning team?</span>
-        </summary>
-        <div class="ch-acc-body">
-          <p>There is prize money for 1st, 2nd & 3rd winning teams for each of the 5 problem statements. It's an attractive amount but we are not disclosing it now.</p>
-        </div>
-      </details>
-
-      <details class="ch-accordion">
-        <summary>
-          <span class="ch-acc-title">Q8: Will this hackathon be organized digitally or in-person mode?</span>
-        </summary>
-        <div class="ch-acc-body">
-          <p>Digitally/Virtually.</p>
-        </div>
-      </details>
-
-      <details class="ch-accordion">
-        <summary>
-          <span class="ch-acc-title">Q9: Will the hardware needed for the challenge be provided to the participants by the organizers of the Challenge?</span>
-        </summary>
-        <div class="ch-acc-body">
-          <p>No, the participants have to arrange it by their own or with the support of their respective colleges.</p>
-        </div>
-      </details>
-    </div>
-  </div>
 </div>
 
 <!--Project Section-->
@@ -727,31 +615,6 @@ share_image: images/c2s_meity_logo.jpg
     var formWrapper = document.getElementById("formWrapper");
     var closeFormBtn = document.getElementById("closeFormBtn");
     var thankYouPopup = document.getElementById("thankYouPopup");
-
-    // FAQ Popup handlers
-    var faqCard = document.getElementById("faqCard");
-    var faqPopup = document.getElementById("faqPopup");
-    var closeFaqBtn = document.getElementById("closeFaqBtn");
-
-    if (faqCard) {
-      faqCard.addEventListener("click", function() {
-        faqPopup.style.display = "flex";
-      });
-    }
-
-    if (closeFaqBtn) {
-      closeFaqBtn.addEventListener("click", function() {
-        faqPopup.style.display = "none";
-      });
-    }
-
-    if (faqPopup) {
-      faqPopup.addEventListener("click", function(e) {
-        if (e.target === this) {
-          this.style.display = "none";
-        }
-      });
-    }
 
     if (registerBtn) {
       registerBtn.addEventListener("click", function (e) {
