@@ -3,8 +3,23 @@
 .brand_logo svg {
     display: block;
     height: auto;
-    width: 325px;
+    width: clamp(220px, 42vw, 325px);
+    max-width: 100%;
     margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .brand_logo svg {
+    width: clamp(180px, 52vw, 240px);
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand_logo svg {
+    width: clamp(150px, 60vw, 200px);
+    margin-right: 8px;
+  }
 }
 
 .crop_image--cover {
@@ -23,10 +38,10 @@
 
 .carousel {
   position: absolute;
-  top: 0;                   
-  height: 100%;             
+  top: 0;
+  height: 100%;
   display: flex;
-  align-items: center;    
+  align-items: center;
   justify-content: flex-start;
   white-space: nowrap;
   animation: scroll-horizontal 40s linear infinite;
@@ -35,7 +50,7 @@
 .carousel img {
   height: 9vh;
   width: auto;
-  margin-left: 50px; 
+  margin-left: 50px;
   flex-shrink: 0;
 }
 
@@ -110,7 +125,7 @@ h2.project-group-title {
   text-align: center;
   font-size: 1.7rem;
   font-weight: 600;
-  clear: both; 
+  clear: both;
   border-bottom: 2px solid #ccc;
   padding-bottom: 0.25rem;
 }
@@ -175,6 +190,12 @@ li.project-item {
 @media (max-width: 600px) {
   li.project-item {
     flex: 1 1 100%;
+    padding: 1rem 1.1rem;
+  }
+
+  li.project-item a {
+    font-size: 1.05rem;
+    line-height: 1.45;
   }
 }
 
@@ -264,20 +285,20 @@ li.project-item {
 }
 
 .donation-notice {
-  background-color: #E5FCFC;        
-  border-left: 4px solid #02EAEA;   
-  padding: 16px;                    
-  margin: 20px 0;                  
-  border-radius: 4px;             
-  line-height: 1.5;              
-  position: relative;           
+  background-color: #E5FCFC;
+  border-left: 4px solid #02EAEA;
+  padding: 16px;
+  margin: 20px 0;
+  border-radius: 4px;
+  line-height: 1.5;
+  position: relative;
 }
 
 .project-desc {
   margin: 0.25rem 0 0;
-  font-size: 0.875rem;
-  line-height: 1.4;
-  color: #666;        
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #666;
 }
 
 .footer {
@@ -301,6 +322,19 @@ li.project-item {
 
   .footer__section {
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .footer__section {
+    width: 100%;
+    line-height: 1.6;
   }
 }
 /* end custom scss snippet */
