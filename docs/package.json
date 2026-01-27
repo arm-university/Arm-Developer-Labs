@@ -57,5 +57,10 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "bundle": "^2.1.0",
+    "ruby": "^0.6.1",
+    "jekyll": "^4.2.0"
   }
 }
