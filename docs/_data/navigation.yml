@@ -5,19 +5,19 @@ header:
 projects:
 - title: Projects
   children:
-  - title: Machine-Learning-on-AWS-Graviton
-    description: "This self-service project ports and tunes OpenSora text-to-video\
-      \ transformers on AWS Graviton CPUs\u2014showcasing cost-efficient, quantized,\
-      \ CPU-only inference pipelines and guiding best-practice optimization for Arm-based\
-      \ cloud AI workloads."
-    url: /2025/05/30/Machine-Learning-on-AWS-Graviton.html
+  - title: Academic-Trends-Dashboard
+    description: "This self-service project creates a web-scraping, database-driven\
+      \ dashboard that visualizes how computer-science research topics shift over\
+      \ time\u2014helping Arm partners and chip architects align future hardware designs\
+      \ with emerging algorithmic trends."
+    url: /2025/05/30/Academic-Trends-Dashboard.html
     subjects:
-    - ML
-    - Migration to Arm
-    - Performance and Architecture
-    - Cloud AI
+    - Web
+    - Databases
     platform:
     - Servers and Cloud Computing
+    - Laptops and Desktops
+    - Mobile, Graphics, and Gaming
     - AI
     sw-hw:
     - Software
@@ -26,120 +26,27 @@ projects:
     - Arm Ambassador Support
     status:
     - Published
-  - title: R-Arm-Community-Support
-    description: "This self-service project boosts the R ecosystem on Windows on Arm\
-      \ by identifying unsupported packages, upstreaming fixes, and automating builds\u2014\
-      so data scientists can run their workflows natively on fast, efficient Arm64\
-      \ laptops and desktops."
-    url: /2025/05/30/R-Arm-Community-Support.html
-    subjects:
-    - Performance and Architecture
-    - Migration to Arm
-    - Libraries
-    platform:
-    - Laptops and Desktops
-    sw-hw:
-    - Software
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
-  - title: Video-&-Audio-Provenance-In-The-Age-of-AI
-    description: Integrating transparent provenance - disclosing whether media is
-      AI-generated or AI-edited, and what other AI processing has occurred on any
-      media - is fundamental for accountability in domains like journalism, security,
-      and regulated industries. This project uses C2PA specification (www.c2pa.org)
-      revision 2.3 to record such actions as signed, machine-verifiable assertions
-      attached to the asset.
-    url: /2026/02/12/Video-&-Audio-Provenance-In-The-Age-of-AI.html
+  - title: Always-On-AI-with-Ethos-U85-NPU
+    description: The vision of Edge AI compute is to embed low-power intelligent sensing,
+      perception, and decision systems everywhere. A low-power always-on-AI island
+      continuously monitors sensory inputs to detect triggers. When a trigger is detected,
+      it wakes up a more capable processor to carry out high-value inference, interaction,
+      or control tasks.
+    url: /2025/11/27/Always-On-AI-with-Ethos-U85-NPU.html
     subjects:
     - ML
-    - Security
+    - Performance and Architecture
+    - Embedded Linux
+    - RTOS Fundamentals
     - Edge AI
+    - Physical AI
     platform:
+    - IoT
+    - Embedded and Microcontrollers
     - AI
-    - Laptops and Desktops
-    sw-hw:
-    - Software
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
-  - title: AI-Agents
-    description: "This self-service project builds a sandboxed AI agent on Arm hardware\
-      \ that harnesses appropriately sized LLMs to safely automate complex workflows\u2014\
-      from DevOps pipelines to e-commerce tasks\u2014demonstrating secure, efficient\
-      \ automation on accessible Arm platforms."
-    url: /2025/05/30/AI-Agents.html
-    subjects:
-    - ML
-    - Edge AI
-    - Cloud AI
-    platform:
-    - Servers and Cloud Computing
-    - Laptops and Desktops
-    - AI
-    sw-hw:
-    - Software
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
-  - title: Haskell-Compiler-Windows-on-Arm
-    description: "This self-service project brings native Glasgow Haskell Compiler\
-      \ support to Windows on Arm\u2014unlocking efficient Arm-laptop builds, extending\
-      \ Haskell\u2019s reach, and giving contributors hands-on experience with Arm64\
-      \ code generation and runtime integration."
-    url: /2025/05/30/Haskell-Compiler-Windows-on-Arm.html
-    subjects:
-    - Migration to Arm
-    - Performance and Architecture
-    platform:
-    - Servers and Cloud Computing
-    - Laptops and Desktops
     sw-hw:
     - Software
     - Hardware
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
-  - title: C-Based-Application-from-Scratch
-    description: This self-service project goes back to the fundamentals. The challenge
-      is to develop an application of your choice but your are only permitted to use
-      the C language with as few dependencies as possible.
-    url: /2025/07/11/C-Based-Application-from-Scratch.html
-    subjects:
-    - Performance and Architecture
-    - Libraries
-    platform:
-    - IoT
-    sw-hw:
-    - Software
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
-  - title: NPC-LLM-Runtime
-    description: This self-service project explores novel ways of integrating Large
-      Language Models (LLMs) into real-time gameplay to drive dynamic Non-Playable
-      Character (NPC) interactions.
-    url: /2025/08/28/NPC-LLM-Runtime.html
-    subjects:
-    - ML
-    - Gaming
-    - Graphics
-    - Edge AI
-    platform:
-    - AI
-    - Mobile, Graphics, and Gaming
-    sw-hw:
-    - Software
     support-level:
     - Self-Service
     - Arm Ambassador Support
@@ -164,62 +71,19 @@ projects:
     - Arm Ambassador Support
     status:
     - Published
-  - title: AI-Powered-Porting-Tool
-    description: "This self-service project creates an AI-driven porting engine that\
-      \ analyzes package dependencies, auto-generates fixes, and submits pull requests\u2014\
-      accelerating native macOS and Windows-on-Arm support for bioinformatics and\
-      \ R software so researchers can run demanding workflows directly on modern Arm\
-      \ devices."
-    url: /2025/05/30/AI-Powered-Porting-Tool.html
+  - title: Machine-Learning-on-AWS-Graviton
+    description: "This self-service project ports and tunes OpenSora text-to-video\
+      \ transformers on AWS Graviton CPUs\u2014showcasing cost-efficient, quantized,\
+      \ CPU-only inference pipelines and guiding best-practice optimization for Arm-based\
+      \ cloud AI workloads."
+    url: /2025/05/30/Machine-Learning-on-AWS-Graviton.html
     subjects:
-    - CI-CD
     - ML
     - Migration to Arm
-    - Edge AI
-    platform:
-    - Servers and Cloud Computing
-    - Laptops and Desktops
-    - Mobile, Graphics, and Gaming
-    - AI
-    sw-hw:
-    - Software
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
-  - title: Architecture-Insight-Dashboard
-    description: "This self-service project develops a data-rich dashboard that visualizes\
-      \ the popularity of Arm CPU/OS combinations and pinpoints software-stack support\
-      \ for specific extensions\u2014giving developers an instant, validated view\
-      \ of where their workloads will run best."
-    url: /2025/05/30/Architecture-Insight-Dashboard.html
-    subjects:
     - Performance and Architecture
-    - Web
-    platform:
-    - Servers and Cloud Computing
-    - Laptops and Desktops
-    - Mobile, Graphics, and Gaming
-    - AI
-    sw-hw:
-    - Software
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
-  - title: Responsible-AI-and-Yellow-Teaming
-    description: "This self-service project equips teams with a YellowTeamGPT workflow\
-      \ that probes Arm-based AI products for unintended impacts\u2014turning responsible-AI\
-      \ stress-testing into a core step of the development cycle."
-    url: /2025/05/30/Responsible-AI-and-Yellow-Teaming.html
-    subjects:
-    - ML
     - Cloud AI
     platform:
     - Servers and Cloud Computing
-    - Laptops and Desktops
     - AI
     sw-hw:
     - Software
@@ -249,6 +113,44 @@ projects:
     - Arm Ambassador Support
     status:
     - Published
+  - title: R-Arm-Community-Support
+    description: "This self-service project boosts the R ecosystem on Windows on Arm\
+      \ by identifying unsupported packages, upstreaming fixes, and automating builds\u2014\
+      so data scientists can run their workflows natively on fast, efficient Arm64\
+      \ laptops and desktops."
+    url: /2025/05/30/R-Arm-Community-Support.html
+    subjects:
+    - Performance and Architecture
+    - Migration to Arm
+    - Libraries
+    platform:
+    - Laptops and Desktops
+    sw-hw:
+    - Software
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: Bioinformatic-Pipeline-Analysis
+    description: "This self-service project benchmarks Arm64 Bioconda packages in\
+      \ real nf-core workflows\u2014measuring performance, diagnosing build failures,\
+      \ and proposing fixes that accelerate truly native bioinformatics on the expanding\
+      \ fleet of Arm-powered machines."
+    url: /2025/05/30/Bioinformatic-Pipeline-Analysis.html
+    subjects:
+    - Performance and Architecture
+    - Databases
+    platform:
+    - Servers and Cloud Computing
+    - Laptops and Desktops
+    sw-hw:
+    - Software
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
   - title: Processor-in-the-Loop-Automotive
     description: Verify a Simulink automotive controller by running processor-in-the-loop
       (PIL) tests on a virtual Arm Cortex M7 processor.
@@ -261,6 +163,110 @@ projects:
     - Laptops and Desktops
     - Automotive
     - Embedded and Microcontrollers
+    sw-hw:
+    - Software
+    - Hardware
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: AI-Agents
+    description: "This self-service project builds a sandboxed AI agent on Arm hardware\
+      \ that harnesses appropriately sized LLMs to safely automate complex workflows\u2014\
+      from DevOps pipelines to e-commerce tasks\u2014demonstrating secure, efficient\
+      \ automation on accessible Arm platforms."
+    url: /2025/05/30/AI-Agents.html
+    subjects:
+    - ML
+    - Edge AI
+    - Cloud AI
+    platform:
+    - Servers and Cloud Computing
+    - Laptops and Desktops
+    - AI
+    sw-hw:
+    - Software
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: Architecture-Insight-Dashboard
+    description: "This self-service project develops a data-rich dashboard that visualizes\
+      \ the popularity of Arm CPU/OS combinations and pinpoints software-stack support\
+      \ for specific extensions\u2014giving developers an instant, validated view\
+      \ of where their workloads will run best."
+    url: /2025/05/30/Architecture-Insight-Dashboard.html
+    subjects:
+    - Performance and Architecture
+    - Web
+    platform:
+    - Servers and Cloud Computing
+    - Laptops and Desktops
+    - Mobile, Graphics, and Gaming
+    - AI
+    sw-hw:
+    - Software
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: C-Based-Application-from-Scratch
+    description: This self-service project goes back to the fundamentals. The challenge
+      is to develop an application of your choice but your are only permitted to use
+      the C language with as few dependencies as possible.
+    url: /2025/07/11/C-Based-Application-from-Scratch.html
+    subjects:
+    - Performance and Architecture
+    - Libraries
+    platform:
+    - IoT
+    sw-hw:
+    - Software
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: Game-Dev-Using-Neural-Graphics-&-Unreal-Engine
+    description: "Build a playable Unreal Engine 5 game demo that utilises Arm\u2019\
+      s Neural Graphics SDK UE plugin for features such as Neural Super Sampling (NSS).\
+      \ Showcase near-identical image quality at lower resolution by driving neural\
+      \ rendering directly in the graphics pipeline."
+    url: /2025/11/27/Game-Dev-Using-Neural-Graphics-&-Unreal-Engine.html
+    subjects:
+    - ML
+    - Gaming
+    - Libraries
+    - Graphics
+    - Edge AI
+    platform:
+    - Mobile, Graphics, and Gaming
+    - Laptops and Desktops
+    - AI
+    sw-hw:
+    - Software
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: Ethos-U85-NPU-Applications
+    description: Push the limits of Edge AI by deploying the heaviest inference applications
+      possible on Ethos-U85. Students will explore transformer-based and TOSA-optimized
+      workloads that demonstrate performance levels on the next-gen of Ethos NPUs.
+    url: /2025/11/27/Ethos-U85-NPU-Applications.html
+    subjects:
+    - ML
+    - Performance and Architecture
+    - Edge AI
+    - Physical AI
+    platform:
+    - IoT
+    - Embedded and Microcontrollers
+    - AI
     sw-hw:
     - Software
     - Hardware
@@ -293,67 +299,6 @@ projects:
     - Arm Ambassador Support
     status:
     - Published
-  - title: Bioinformatic-Pipeline-Analysis
-    description: "This self-service project benchmarks Arm64 Bioconda packages in\
-      \ real nf-core workflows\u2014measuring performance, diagnosing build failures,\
-      \ and proposing fixes that accelerate truly native bioinformatics on the expanding\
-      \ fleet of Arm-powered machines."
-    url: /2025/05/30/Bioinformatic-Pipeline-Analysis.html
-    subjects:
-    - Performance and Architecture
-    - Databases
-    platform:
-    - Servers and Cloud Computing
-    - Laptops and Desktops
-    sw-hw:
-    - Software
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
-  - title: Ethos-U85-NPU-Applications
-    description: Push the limits of Edge AI by deploying the heaviest inference applications
-      possible on Ethos-U85. Students will explore transformer-based and TOSA-optimized
-      workloads that demonstrate performance levels on the next-gen of Ethos NPUs.
-    url: /2025/11/27/Ethos-U85-NPU-Applications.html
-    subjects:
-    - ML
-    - Performance and Architecture
-    - Edge AI
-    - Physical AI
-    platform:
-    - IoT
-    - Embedded and Microcontrollers
-    - AI
-    sw-hw:
-    - Software
-    - Hardware
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
-  - title: Arduino-IDE-Windows-on-Arm
-    description: "This self-service project ports and optimizes the Arduino IDE\u2014\
-      patching its lzma-native dependency\u2014to run natively and efficiently on\
-      \ Windows on Arm, giving developers hands-on experience with cross-platform\
-      \ builds, Arm64 performance tuning, and upstream open-source contributions."
-    url: /2025/05/30/Arduino-IDE-Windows-on-Arm.html
-    subjects:
-    - Performance and Architecture
-    - Migration to Arm
-    - Libraries
-    platform:
-    - Laptops and Desktops
-    sw-hw:
-    - Software
-    - Hardware
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
-    status:
-    - Published
   - title: Computational-Photography
     description: This project creates and implements a novel computational photography
       pipeline that is optimized for Arm-based mobile devices using SME2 and neural
@@ -373,27 +318,6 @@ projects:
     - Self-Service
     - Arm Ambassador Support
     - Direct Support from Arm
-    status:
-    - Published
-  - title: Academic-Trends-Dashboard
-    description: "This self-service project creates a web-scraping, database-driven\
-      \ dashboard that visualizes how computer-science research topics shift over\
-      \ time\u2014helping Arm partners and chip architects align future hardware designs\
-      \ with emerging algorithmic trends."
-    url: /2025/05/30/Academic-Trends-Dashboard.html
-    subjects:
-    - Web
-    - Databases
-    platform:
-    - Servers and Cloud Computing
-    - Laptops and Desktops
-    - Mobile, Graphics, and Gaming
-    - AI
-    sw-hw:
-    - Software
-    support-level:
-    - Self-Service
-    - Arm Ambassador Support
     status:
     - Published
   - title: Edge-AI-On-Mobile
@@ -439,6 +363,90 @@ projects:
     - Arm Ambassador Support
     status:
     - Published
+  - title: Arduino-IDE-Windows-on-Arm
+    description: "This self-service project ports and optimizes the Arduino IDE\u2014\
+      patching its lzma-native dependency\u2014to run natively and efficiently on\
+      \ Windows on Arm, giving developers hands-on experience with cross-platform\
+      \ builds, Arm64 performance tuning, and upstream open-source contributions."
+    url: /2025/05/30/Arduino-IDE-Windows-on-Arm.html
+    subjects:
+    - Performance and Architecture
+    - Migration to Arm
+    - Libraries
+    platform:
+    - Laptops and Desktops
+    sw-hw:
+    - Software
+    - Hardware
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: Haskell-Compiler-Windows-on-Arm
+    description: "This self-service project brings native Glasgow Haskell Compiler\
+      \ support to Windows on Arm\u2014unlocking efficient Arm-laptop builds, extending\
+      \ Haskell\u2019s reach, and giving contributors hands-on experience with Arm64\
+      \ code generation and runtime integration."
+    url: /2025/05/30/Haskell-Compiler-Windows-on-Arm.html
+    subjects:
+    - Migration to Arm
+    - Performance and Architecture
+    platform:
+    - Servers and Cloud Computing
+    - Laptops and Desktops
+    sw-hw:
+    - Software
+    - Hardware
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: AI-Powered-Porting-Tool
+    description: "This self-service project creates an AI-driven porting engine that\
+      \ analyzes package dependencies, auto-generates fixes, and submits pull requests\u2014\
+      accelerating native macOS and Windows-on-Arm support for bioinformatics and\
+      \ R software so researchers can run demanding workflows directly on modern Arm\
+      \ devices."
+    url: /2025/05/30/AI-Powered-Porting-Tool.html
+    subjects:
+    - CI-CD
+    - ML
+    - Migration to Arm
+    - Edge AI
+    platform:
+    - Servers and Cloud Computing
+    - Laptops and Desktops
+    - Mobile, Graphics, and Gaming
+    - AI
+    sw-hw:
+    - Software
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
+  - title: NPC-LLM-Runtime
+    description: This self-service project explores novel ways of integrating Large
+      Language Models (LLMs) into real-time gameplay to drive dynamic Non-Playable
+      Character (NPC) interactions.
+    url: /2025/08/28/NPC-LLM-Runtime.html
+    subjects:
+    - ML
+    - Gaming
+    - Graphics
+    - Edge AI
+    platform:
+    - AI
+    - Mobile, Graphics, and Gaming
+    sw-hw:
+    - Software
+    support-level:
+    - Self-Service
+    - Arm Ambassador Support
+    status:
+    - Published
   - title: Humanoid-&-Quadruped-Robotics-&-AI
     description: Design and implement original software systems for low-cost Arm-based
       quadruped or humanoid robots, demonstrating physical AI through on-device perception,
@@ -461,48 +469,40 @@ projects:
     - Arm Ambassador Support
     status:
     - Published
-  - title: Always-On-AI-with-Ethos-U85-NPU
-    description: The vision of Edge AI compute is to embed low-power intelligent sensing,
-      perception, and decision systems everywhere. A low-power always-on-AI island
-      continuously monitors sensory inputs to detect triggers. When a trigger is detected,
-      it wakes up a more capable processor to carry out high-value inference, interaction,
-      or control tasks.
-    url: /2025/11/27/Always-On-AI-with-Ethos-U85-NPU.html
+  - title: Responsible-AI-and-Yellow-Teaming
+    description: "This self-service project equips teams with a YellowTeamGPT workflow\
+      \ that probes Arm-based AI products for unintended impacts\u2014turning responsible-AI\
+      \ stress-testing into a core step of the development cycle."
+    url: /2025/05/30/Responsible-AI-and-Yellow-Teaming.html
     subjects:
     - ML
-    - Performance and Architecture
-    - Embedded Linux
-    - RTOS Fundamentals
-    - Edge AI
-    - Physical AI
+    - Cloud AI
     platform:
-    - IoT
-    - Embedded and Microcontrollers
+    - Servers and Cloud Computing
+    - Laptops and Desktops
     - AI
     sw-hw:
     - Software
-    - Hardware
     support-level:
     - Self-Service
     - Arm Ambassador Support
     status:
     - Published
-  - title: Game-Dev-Using-Neural-Graphics-&-Unreal-Engine
-    description: "Build a playable Unreal Engine 5 game demo that utilises Arm\u2019\
-      s Neural Graphics SDK UE plugin for features such as Neural Super Sampling (NSS).\
-      \ Showcase near-identical image quality at lower resolution by driving neural\
-      \ rendering directly in the graphics pipeline."
-    url: /2025/11/27/Game-Dev-Using-Neural-Graphics-&-Unreal-Engine.html
+  - title: Video-&-Audio-Provenance-In-The-Age-of-AI
+    description: Integrating transparent provenance - disclosing whether media is
+      AI-generated or AI-edited, and what other AI processing has occurred on any
+      media - is fundamental for accountability in domains like journalism, security,
+      and regulated industries. This project uses C2PA specification (www.c2pa.org)
+      revision 2.3 to record such actions as signed, machine-verifiable assertions
+      attached to the asset.
+    url: /2026/02/12/Video-&-Audio-Provenance-In-The-Age-of-AI.html
     subjects:
     - ML
-    - Gaming
-    - Libraries
-    - Graphics
+    - Security
     - Edge AI
     platform:
-    - Mobile, Graphics, and Gaming
-    - Laptops and Desktops
     - AI
+    - Laptops and Desktops
     sw-hw:
     - Software
     support-level:
