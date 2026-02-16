@@ -29,8 +29,7 @@ donation:
 ### Why is this important? 
 
 Generative AI has created a trust gap: 
-- Images, videos, and audio may be AI-generated or heavily manipulated 
-- this can lead to deepfakes, and fraud. 
+- Images, videos, and audio may be AI-generated or heavily manipulated - this can lead to deepfakes, and fraud. 
 - This AI-enhancement or editing can occur in real-time - i.e. a person can live stream themselves but use ML to change their appearance and voice. 
 - Moreover, the use of AI models to scan images, video, and audio (e.g. facial or voice recognition) is often opaque, with no actual changes to the underlying data. 
 - Viewers rarely know whether AI analysis was performed, or what conclusion was reached. Such seamless content transformation, does not require much specialized skills and hence within the reach of common masses. 
