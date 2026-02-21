@@ -1,0 +1,567 @@
+// =============================================================================
+// RESPONSIVE.SCSS - Fluid Responsive Framework (No Hardcoded Breakpoints)
+// =============================================================================
+// This partial implements a truly fluid responsive design using:
+//   - CSS Custom Properties for dynamic spacing and typography
+//   - clamp(), min(), max() functions for fluid scaling
+//   - Viewport units (vw, vh, vi, vb) for proportional sizing
+//   - Container queries where beneficial
+//
+// NO MEDIA QUERIES WITH PIXEL BREAKPOINTS - Everything scales fluidly
+// from 320px mobile to 2560px+ ultrawide displays.
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// 1. FLUID SPACING SYSTEM - CSS Custom Properties
+// -----------------------------------------------------------------------------
+// These scale fluidly based on viewport width using clamp()
+// Formula: clamp(min, preferred, max)
+// Preferred uses viewport units for fluid scaling between min and max
+:root {
+  // Spacing scale - fluid from mobile to desktop
+  --space-3xs: clamp(0.125rem, 0.5vw, 0.25rem);
+  --space-2xs: clamp(0.25rem, 0.75vw, 0.5rem);
+  --space-xs: clamp(0.375rem, 1vw, 0.75rem);
+  --space-sm: clamp(0.5rem, 1.5vw, 1rem);
+  --space-md: clamp(0.75rem, 2vw, 1.5rem);
+  --space-lg: clamp(1rem, 3vw, 2rem);
+  --space-xl: clamp(1.5rem, 4vw, 3rem);
+  --space-2xl: clamp(2rem, 5vw, 4rem);
+  --space-3xl: clamp(3rem, 6vw, 6rem);
+
+  // Typography scale - fluid sizing
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.8125rem, 0.75rem + 0.3vw, 0.9375rem);
+  --text-base: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
+  --text-md: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.6vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1rem + 1.25vw, 1.75rem);
+  --text-2xl: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+  --text-3xl: clamp(1.75rem, 1rem + 3vw, 3rem);
+  --text-4xl: clamp(2rem, 1rem + 4vw, 4rem);
+  --text-5xl: clamp(2.5rem, 1rem + 5vw, 5rem);
+
+  // Line heights - tighter on mobile, relaxed on desktop
+  --leading-tight: clamp(1.1, 1 + 0.1vw, 1.25);
+  --leading-normal: clamp(1.4, 1.3 + 0.15vw, 1.6);
+  --leading-relaxed: clamp(1.5, 1.4 + 0.2vw, 1.75);
+
+  // Container widths - percentage based with max
+  --container-width: min(100% - var(--space-md) * 2, 1400px);
+  --content-width: min(100% - var(--space-sm) * 2, 900px);
+  --narrow-width: min(100% - var(--space-sm) * 2, 650px);
+}
+
+// -----------------------------------------------------------------------------
+// 2. GLOBAL SAFETY NET - Prevent Horizontal Overflow
+// -----------------------------------------------------------------------------
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  // Fluid base font size
+  font-size: clamp(14px, 0.875rem + 0.25vw, 18px);
+}
+
+body {
+  overflow-x: hidden;
+  min-width: 280px; // Absolute minimum for very small devices
+  line-height: var(--leading-normal);
+}
+
+// Universal media scaling - always fluid
+img,
+svg,
+video,
+iframe,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+}
+
+// Prevent fixed-width elements from causing overflow
+pre,
+code,
+table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+// -----------------------------------------------------------------------------
+// 3. LAYOUT CONTAINERS - Fluid Width System
+// -----------------------------------------------------------------------------
+.root,
+.layout--page,
+.layout--home,
+.layout--landing,
+.layout--article,
+.layout--articles,
+.page__main,
+.page__main-inner,
+.page__content,
+.page__viewport {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-inline: var(--space-sm);
+}
+
+// Main content container
+.main {
+  width: var(--container-width);
+  margin-inline: auto;
+}
+
+// -----------------------------------------------------------------------------
+// 4. HERO SECTION - Fluid Typography and Spacing
+// -----------------------------------------------------------------------------
+.hero {
+  position: relative;
+  min-height: auto;
+  padding: var(--space-lg);
+
+  // Flex layout for alignment
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__content {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: var(--space-sm);
+  padding: var(--space-sm);
+  box-sizing: border-box;
+
+  // Center text
+  text-align: center;
+
+  // Stack children vertically
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // Remove any transforms that could cause bleeding
+  transform: none;
+  left: auto;
+  right: auto;
+}
+
+// Hero typography - fully fluid with clamp()
+.hero,
+.hero__content {
+  h1 {
+    font-size: var(--text-4xl);
+    line-height: var(--leading-tight);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    margin-bottom: var(--space-sm);
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-xs);
+  }
+
+  h3 {
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-xs);
+  }
+
+  p {
+    font-size: var(--text-md);
+    line-height: var(--leading-normal);
+    max-width: var(--narrow-width);
+  }
+}
+
+.heros {
+  width: 100%;
+  max-width: 100%;
+
+  & > .hero {
+    margin-block: var(--space-sm);
+  }
+}
+
+.hero__cover {
+  max-width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+// Cover image - fluid height based on viewport
+.crop_image--cover {
+  height: clamp(180px, 35vh, 500px);
+  width: 100%;
+  object-fit: cover;
+}
+
+// -----------------------------------------------------------------------------
+// 5. HEADER - Fluid Navigation
+// -----------------------------------------------------------------------------
+.header {
+  padding: var(--space-xs) var(--space-sm);
+
+  .main {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: var(--space-xs);
+  }
+}
+
+.header__title {
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-right: 0;
+}
+
+.header__brand {
+  flex: 1 1 auto;
+  min-width: 0; // Allow shrinking below content size
+  overflow: hidden;
+}
+
+// Brand logo - fluid sizing
+.brand_logo svg {
+  width: clamp(100px, 25vw, 200px);
+  height: auto;
+}
+
+// -----------------------------------------------------------------------------
+// 6. FOOTER - Fluid Layout
+// -----------------------------------------------------------------------------
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-lg);
+  gap: var(--space-md);
+}
+
+.footer__section {
+  width: 100%;
+  max-width: 100%;
+}
+
+.footer .site-info {
+  width: 100%;
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-xs);
+  }
+}
+
+// Partner logo carousel - fluid sizing
+.scroll-container {
+  height: clamp(50px, 10vh, 120px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: clamp(35px, 7vh, 80px);
+    width: auto;
+    margin-inline: clamp(15px, 3vw, 40px);
+    object-fit: contain;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// 7. GRID SYSTEM - Fluid Columns
+// -----------------------------------------------------------------------------
+// Use CSS grid with auto-fit for fluid column behavior
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.grid > .cell,
+[class*="cell--"] {
+  // Fluid width using min() - fills available space, minimum 280px
+  width: min(100%, max(280px, 100%));
+  flex: 1 1 min(100%, 300px);
+  box-sizing: border-box;
+}
+
+// -----------------------------------------------------------------------------
+// 8. NAVIGATION - Fluid Menu
+// -----------------------------------------------------------------------------
+.navigation > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  padding: var(--space-xs) 0;
+  gap: var(--space-xs);
+}
+
+.navigation__item {
+  margin: var(--space-2xs);
+
+  a {
+    font-size: var(--text-sm);
+    padding: var(--space-2xs) var(--space-xs);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// 9. BUTTONS & INTERACTIVE ELEMENTS - Fluid Sizing
+// -----------------------------------------------------------------------------
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+
+  > li {
+    margin: var(--space-3xs);
+  }
+}
+
+.button,
+.button--lg,
+.button--md,
+.button--sm {
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}
+
+.button--lg {
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--text-base);
+}
+
+// -----------------------------------------------------------------------------
+// 10. ARTICLE CONTENT - Fluid Typography and Spacing
+// -----------------------------------------------------------------------------
+.article__content,
+.article-list,
+.items {
+  padding-inline: var(--space-sm);
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+
+.article__content {
+  h1 { font-size: var(--text-3xl); }
+  h2 { font-size: var(--text-2xl); }
+  h3 { font-size: var(--text-xl); }
+  h4 { font-size: var(--text-lg); }
+  h5 { font-size: var(--text-md); }
+  h6 { font-size: var(--text-base); }
+
+  p,
+  li {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// 11. CARDS AND ITEMS - Fluid Layout
+// -----------------------------------------------------------------------------
+.item {
+  padding: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.item__image {
+  width: 100%;
+  height: clamp(150px, 20vh, 300px);
+  object-fit: cover;
+}
+
+.item__content {
+  padding: var(--space-sm);
+}
+
+.item__title {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.item__description {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+// -----------------------------------------------------------------------------
+// 12. UTILITY CLASSES - Fluid Spacing Overrides
+// -----------------------------------------------------------------------------
+// Margin utilities
+.m-auto { margin: auto; }
+.mx-auto { margin-inline: auto; }
+.my-auto { margin-block: auto; }
+
+.mt-1 { margin-top: var(--space-3xs); }
+.mt-2 { margin-top: var(--space-2xs); }
+.mt-3 { margin-top: var(--space-xs); }
+.mt-4 { margin-top: var(--space-sm); }
+.mt-5 { margin-top: var(--space-md); }
+.mt-6 { margin-top: var(--space-lg); }
+
+.mb-1 { margin-bottom: var(--space-3xs); }
+.mb-2 { margin-bottom: var(--space-2xs); }
+.mb-3 { margin-bottom: var(--space-xs); }
+.mb-4 { margin-bottom: var(--space-sm); }
+.mb-5 { margin-bottom: var(--space-md); }
+.mb-6 { margin-bottom: var(--space-lg); }
+
+// Padding utilities
+.p-1 { padding: var(--space-3xs); }
+.p-2 { padding: var(--space-2xs); }
+.p-3 { padding: var(--space-xs); }
+.p-4 { padding: var(--space-sm); }
+.p-5 { padding: var(--space-md); }
+.p-6 { padding: var(--space-lg); }
+
+.px-1 { padding-inline: var(--space-3xs); }
+.px-2 { padding-inline: var(--space-2xs); }
+.px-3 { padding-inline: var(--space-xs); }
+.px-4 { padding-inline: var(--space-sm); }
+.px-5 { padding-inline: var(--space-md); }
+
+.py-1 { padding-block: var(--space-3xs); }
+.py-2 { padding-block: var(--space-2xs); }
+.py-3 { padding-block: var(--space-xs); }
+.py-4 { padding-block: var(--space-sm); }
+.py-5 { padding-block: var(--space-md); }
+
+// -----------------------------------------------------------------------------
+// 13. FORMS - Fluid Input Sizing
+// -----------------------------------------------------------------------------
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: 100%;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--text-base);
+  box-sizing: border-box;
+}
+
+// Search input
+.search-input {
+  width: min(100%, 400px);
+  padding: var(--space-xs) var(--space-sm);
+}
+
+// -----------------------------------------------------------------------------
+// 14. TABLES - Responsive Fluid Tables
+// -----------------------------------------------------------------------------
+table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+
+  th,
+  td {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--text-sm);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// 15. CODE BLOCKS - Fluid with Scroll
+// -----------------------------------------------------------------------------
+pre {
+  padding: var(--space-sm);
+  font-size: var(--text-sm);
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+code {
+  font-size: var(--text-xs);
+  padding: var(--space-3xs) var(--space-2xs);
+}
+
+// -----------------------------------------------------------------------------
+// 16. SIDEBAR & ASIDE - Fluid Behavior
+// -----------------------------------------------------------------------------
+.aside,
+.sidebar {
+  width: min(100%, 300px);
+  padding: var(--space-sm);
+}
+
+// TOC (Table of Contents)
+.toc {
+  padding: var(--space-sm);
+
+  li {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-2xs);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// 17. MODALS & OVERLAYS - Fluid Sizing
+// -----------------------------------------------------------------------------
+.modal,
+.overlay {
+  width: min(95vw, 800px);
+  max-height: 90vh;
+  padding: var(--space-md);
+  overflow-y: auto;
+}
+
+// -----------------------------------------------------------------------------
+// 18. BADGES & TAGS - Fluid Sizing
+// -----------------------------------------------------------------------------
+.badge,
+.tag {
+  padding: var(--space-3xs) var(--space-xs);
+  font-size: var(--text-xs);
+}
+
+// -----------------------------------------------------------------------------
+// 19. PRINT STYLES - Clean Printing (Only Media Query)
+// -----------------------------------------------------------------------------
+@media print {
+
+  .hero {
+    min-height: auto;
+    page-break-inside: avoid;
+  }
+
+  .scroll-container,
+  .carousel {
+    display: none;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  // Reset fluid values for print
+  :root {
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --text-base: 12pt;
+    --text-sm: 10pt;
+  }
+}

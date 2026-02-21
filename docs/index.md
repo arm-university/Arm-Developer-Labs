@@ -1,4 +1,5 @@
 ---
+layout: home
 title: Academic Projects Repository
 tags: TeXt
 article_header:

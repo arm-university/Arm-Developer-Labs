@@ -2,3 +2,7 @@ source "https://rubygems.org"
 
 # gem "github-pages", group: :jekyll_plugins
 gemspec
+
+gem "ostruct", "~> 0.6.3"
+
+gem "tzinfo-data", "~> 1.2025"

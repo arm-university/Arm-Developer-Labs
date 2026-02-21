@@ -1,13 +1,15 @@
+@use "sass:math";
+
 ul.toc {
   display: block;
   margin: 0;
   color: $text-color;
   list-style-type: none;
   & > li {
-    margin: map-get($spacers, 1) / 2 0;
+    margin: math.div(map-get($spacers, 1), 2) 0;
     a {
       display: inline-block;
-      margin: map-get($spacers, 1) / 4 0;
+      margin: math.div(map-get($spacers, 1), 4) 0;
       text-decoration: none !important;
     }
   }
