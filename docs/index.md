@@ -14,7 +14,7 @@ The state of the art of in software development is changing more rapidly than ev
 
 You can take a project as is, adapt it to your circumstances or simply take inspiration from it eg. for selecting student projects, writing research proposals, or building idea demonstrators. Arm helps by providing contextual collateral and resources (including, where relevant, letters of support) and projects include meta-data tags to help you search and find the right one for you.
 
-### [Show me the projects](https://arm-university.github.io/Arm-Developer-Labs/2025/05/30/projects.html)
+### [Show me the projects](https://arm-education.github.io/Arm-Developer-Labs/2025/05/30/projects.html)
 
 ## What are the benefits?
 
@@ -37,4 +37,4 @@ Yes!  If you’ve already been working on something that you believe is relevant
 
 Please get in touch via [our online form](https://forms.office.com/e/597pKN2JBW). Someone from Arm education will be in contact to discuss how we can support. 
 
-### [Show me the projects](https://arm-university.github.io/Arm-Developer-Labs/2025/05/30/projects.html)
+### [Show me the projects](https://arm-education.github.io/Arm-Developer-Labs/2025/05/30/projects.html)
