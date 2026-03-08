@@ -61,6 +61,7 @@ Utilise the resources and learning paths below and create an exciting and challe
 ## Resources from Arm and our partners
 
 - Arm Developer: [Launchpad - Mobile AI](https://developer.arm.com/mobile-graphics-and-gaming/ai-mobile)
+- Learning Path: [Profile ExecuTorch models with SME2 on Arm](https://learn.arm.com/learning-paths/cross-platform/sme-executorch-profiling/)
 - Learning Path: [Mobile AI/ML Performance Profiling](https://learn.arm.com/learning-paths/mobile-graphics-and-gaming/profiling-ml-on-arm/)
 - Learning Path: [Build an Android chat app with Llama, KleidiAI, ExecuTorch, and XNNPACK](https://learn.arm.com/learning-paths/mobile-graphics-and-gaming/build-llama3-chat-android-app-using-executorch-and-xnnpack/)
 - Learning Path: [Vision LLM Inference on Android with KleidiAI](https://learn.arm.com/learning-paths/mobile-graphics-and-gaming/vision-llm-inference-on-android-with-kleidiai-and-mnn/)

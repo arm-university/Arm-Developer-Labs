@@ -233,7 +233,7 @@ projects:
   - title: Game-Dev-Using-Neural-Graphics-&-Unreal-Engine
     description: "Build a playable Unreal Engine 5 game demo that utilises Arm\u2019\
       s Neural Graphics SDK UE plugin for features such as Neural Super Sampling (NSS).\
-      \ Showcase near-identical image quality at lower resolution by driving neural\
+      \ Showcase improved graphical fidelity at lower resolution by driving neural\
       \ rendering directly in the graphics pipeline."
     url: /2025/11/27/Game-Dev-Using-Neural-Graphics-&-Unreal-Engine.html
     subjects:

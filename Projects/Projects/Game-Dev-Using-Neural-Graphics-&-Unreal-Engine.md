@@ -1,6 +1,6 @@
 ---
 title: "Game development using Arm Neural Graphics with Unreal Engine"
-description: "Build a playable Unreal Engine 5 game demo that utilises Arm’s Neural Graphics SDK UE plugin for features such as Neural Super Sampling (NSS). Showcase near-identical image quality at lower resolution by driving neural rendering directly in the graphics pipeline."
+description: "Build a playable Unreal Engine 5 game demo that utilises Arm’s Neural Graphics SDK UE plugin for features such as Neural Super Sampling (NSS). Showcase improved graphical fidelity at lower resolution by driving neural rendering directly in the graphics pipeline."
 subjects:
   - "ML"
   - "Gaming"
@@ -28,7 +28,7 @@ badges:
 donation:
 ---
 
-![educate_on_arm](../../images/Educate_on_Arm_banner.png)
+![learn_on_arm](../../images/Learn_on_Arm_banner.png)
 
 ## Description
 
@@ -47,7 +47,7 @@ Future SDK support will be provided for Neural Frame Rate Upscaling (NFRU) - so 
 ### Project Summary
 
 Create a small game scene utilising the Arm Neural Graphics UE plugin to demonstrate:
-- **Near-identical visuals at lower resolution** (render low → upscale with NSS)  
+- **Improved graphical fidelity despite lower resolution** (render low → upscale with NSS)  
 
 Document your progress and findings and consider alternative applications of the neural technology within games development.
 
@@ -60,7 +60,9 @@ Attempt different environments and objects. For example:
 
 Make your scenes dynamic with particle effects, shadows, physics and motion.
 
----
+**Beyond the plugin**
+
+Want to go further and start experimenting more with Neural Graphics? After building your game with the NSS Unreal plugin, try-out the [Vulkan ML Extensions learning path](https://learn.arm.com/learning-paths/mobile-graphics-and-gaming/vulkan-ml-sample/) to explore how neural inference runs directly through the Vulkan API. This provides lower-level control over ML workloads in the graphics pipeline, and allows for prototyping custom neural effects or optimising performance beyond what’s exposed through the engine plugin. You may also want to explore [fine-tuning your own neural models with the Arm Neural Graphics Model Gym](https://learn.arm.com/learning-paths/mobile-graphics-and-gaming/model-training-gym/) and how to [apply different quantization strategies](https://learn.arm.com/learning-paths/mobile-graphics-and-gaming/quantize-neural-upscaling-models/) for optimisation of memory and latency.
 
 ## Pre-requisites
 - Laptop/PC/Mobile for Android Unreal Engine game development
@@ -72,11 +74,11 @@ Make your scenes dynamic with particle effects, shadows, physics and motion.
 - Get Started Blog: [Start experimenting with NSS today](https://developer.arm.com/community/arm-community-blogs/b/mobile-graphics-and-gaming-blog/posts/how-to-access-arm-neural-super-sampling)
 - Deep Dive Blog: [How NSS works](https://developer.arm.com/community/arm-community-blogs/b/mobile-graphics-and-gaming-blog/posts/how-arm-neural-super-sampling-works)
 - Arm Developer: [Neural Graphics Development Kit](https://developer.arm.com/mobile-graphics-and-gaming/neural-graphics)
-- Learning Path: [Fine-tuning neural graphics models with Model Gym](https://learn.arm.com/learning-paths/mobile-graphics-and-gaming/model-training-gym/)
 - Learning Path: [Neural Super Sampling in Unreal Engine](https://learn.arm.com/learning-paths/mobile-graphics-and-gaming/nss-unreal/)
 - Learning Path: [Getting started with Arm Accuracy Super Resolution (Arm ASR)](https://learn.arm.com/learning-paths/mobile-graphics-and-gaming/get-started-with-arm-asr/)
 - Unreal Engine Intro by Epic Games: [Understanding the basics](https://dev.epicgames.com/documentation/en-us/unreal-engine/understanding-the-basics-of-unreal-engine)
 - Repo: [Arm Neural Graphics SDK](https://github.com/arm/neural-graphics-sdk-for-game-engines)
+- Repo: [Arm Neural Geraphics for Unreal](https://github.com/arm/neural-graphics-for-unreal)
 - Repo: [Arm Neural Graphics Model Gym](https://github.com/arm/neural-graphics-model-gym)
 - Documentation: [Arm Neural Graphics SDK for Game Engines Developer guide](https://developer.arm.com/documentation/111167/latest/)
 
@@ -88,7 +90,7 @@ This project is designed to be self-serve but comes with opportunity of some com
 
 ## Benefits 
 
-Standout project contributions to the community will earn digital badges. These badges can support CV or resumé building and demonstrate earned recognition.
+Standout project contributions to the community will earn digital badges. These badges can support CV or resumé building and demonstrate earned recognition. Contributions may also be highlighted in case studies or newsletters.
 
 
 To receive the benefits, you must show us your project through our [online form](https://forms.office.com/e/VZnJQLeRhD). Please do not include any confidential information in your contribution. Additionally if you are affiliated with an academic institution, please ensure you have the right to share your material.

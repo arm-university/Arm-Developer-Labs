@@ -69,10 +69,16 @@ full_description: |-
 
   ## Resources from Arm and our partners
   - Arm Developer: [Edge AI](https://developer.arm.com/edge-ai)
-  - Learning Path: [Navigating Machine Learning with Ethos-U processors](https://learn.arm.com/learning-paths/microcontrollers/nav-mlek/)    
+  - Arm Alif Code-along: [Advanced AI on Arm Embedded Systems](https://developer.arm.com/code-along/advanced-ai-on-arm-embedded-systems)
+  - Code-along repo: [Ethos-U Workshop](https://github.com/ArmDeveloperEcosystem/workshop-ethos-u)
+  - Learning Path: [Navigating Machine Learning with Ethos-U processors](https://learn.arm.com/learning-paths/microcontrollers/nav-mlek/)  
+  - Learning Path: [Visualize Ethos-U NPU performance with ExecuTorch on Arm FVPs](https://learn.arm.com/learning-paths/embedded-and-microcontrollers/visualizing-ethos-u-performance)  
   - Repository: [AI on Arm course](https://github.com/arm-university/AI-on-Arm)  
   - Example Board: [Alif Ensemble DevKit E8](https://www.keil.arm.com/boards/alif-semiconductor-devkit-e8-gen-1-2558a7b/features/)  
+  - Documentation: [TOSA Specification](https://www.mlplatform.org/tosa/), [TOSA Model Explorer](https://github.com/arm/tosa-adapter-model-explorer), and [TOSA Reference Model](https://gitlab.arm.com/tosa/tosa-reference-model)
+  - [Model Explorer](https://ai.google.dev/edge/model-explorer)
   - PyTorch Blog: [ExecuTorch support for Ethos-U85](https://pytorch.org/blog/pt-executorch-ethos-u85/)
+  - PyTorch Tutorial: [Arm Ethos-U NPU Backend Tutorial](https://docs.pytorch.org/executorch/1.0/tutorial-arm-ethos-u.html)
 
   ## Support Level
 
@@ -124,10 +130,16 @@ You should either be familiar with, or willing to learn about, the following:
 
 ## Resources from Arm and our partners
 - Arm Developer: [Edge AI](https://developer.arm.com/edge-ai)
-- Learning Path: [Navigating Machine Learning with Ethos-U processors](https://learn.arm.com/learning-paths/microcontrollers/nav-mlek/)    
+- Arm Alif Code-along: [Advanced AI on Arm Embedded Systems](https://developer.arm.com/code-along/advanced-ai-on-arm-embedded-systems)
+- Code-along repo: [Ethos-U Workshop](https://github.com/ArmDeveloperEcosystem/workshop-ethos-u)
+- Learning Path: [Navigating Machine Learning with Ethos-U processors](https://learn.arm.com/learning-paths/microcontrollers/nav-mlek/)  
+- Learning Path: [Visualize Ethos-U NPU performance with ExecuTorch on Arm FVPs](https://learn.arm.com/learning-paths/embedded-and-microcontrollers/visualizing-ethos-u-performance)  
 - Repository: [AI on Arm course](https://github.com/arm-university/AI-on-Arm)  
 - Example Board: [Alif Ensemble DevKit E8](https://www.keil.arm.com/boards/alif-semiconductor-devkit-e8-gen-1-2558a7b/features/)  
+- Documentation: [TOSA Specification](https://www.mlplatform.org/tosa/), [TOSA Model Explorer](https://github.com/arm/tosa-adapter-model-explorer), and [TOSA Reference Model](https://gitlab.arm.com/tosa/tosa-reference-model)
+- [Model Explorer](https://ai.google.dev/edge/model-explorer)
 - PyTorch Blog: [ExecuTorch support for Ethos-U85](https://pytorch.org/blog/pt-executorch-ethos-u85/)
+- PyTorch Tutorial: [Arm Ethos-U NPU Backend Tutorial](https://docs.pytorch.org/executorch/1.0/tutorial-arm-ethos-u.html)
 
 ## Support Level
 

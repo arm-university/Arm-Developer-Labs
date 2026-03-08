@@ -42,74 +42,67 @@ This project challenges you to explore the boundaries of what’s possible on Et
 
 **Project Summary**
 
-Using hardware such as the Alif Ensemble E4/E6/E8 DevKits (all include Ethos-U85) or a comparable platform or Arm Fixed Virtual Platform Corstone-320, your task is to design and benchmark an advanced edge inference application that exploits the Ethos-U85’s compute and transformer capabilities.
+Using hardware such as the Alif Ensemble E4/E6/E8 DevKits (all include Ethos-U85), your task is to design and benchmark an advanced edge inference application that exploits the Ethos-U85’s compute and transformer capabilities.
+
+You can utilise the Arm Fixed Virtual Platform Corstone-320 to prototype and test your application functionally, without access to Alif hardware. You can use this to prove functional correctness - and can then later test performance on actual silicon. We are interested to see projects both in simulation, and on final hardware.
 
 Your project should include:
 
-1. Model Deployment and Optimization  
+**Model Deployment and Optimization**  
    Select a computationally intensive model — ideally transformer-based or multi-branch convolutional — and deploy it on the Ethos-U85 using:
-   - The TOSA Model Explorer extension to inspect and adapt unsupported or experimental models for TOSA compliance.  
+   - Model Explorer to inspect models and identify problem layers that reduce optimal delegation to the Ethos-U backend
    - The Vela compiler for optimization.  
 
    These tools can be used to:
    - Convert and visualize model graphs in TOSA format.  
    - Identify unsupported operators.  
-   - Modify or substitute layers for compatibility using the Flatbuffers schema before re-exporting.  
-   - Run Vela for optimized compilation targeting Ethos-U85.
 
-2. Application Demonstration 
+**Application Demonstration**
    Implement a working example that highlights the Ethos-U85’s strengths in real-world inference. Possible categories include:  
    - Transformers on Edge: lightweight BERT, ViT, or audio transformers (e.g. speech or sound event classification).  
    - High-resolution Vision: semantic segmentation, object detection on large input sizes, or multi-head perception networks.  
    - Multi-modal Fusion: combining audio, image, or sensor streams for contextual understanding.  
 
-3. Analysis and Benchmarking 
+**Analysis and Benchmarking**
    Report quantitative results on:
    - Inference latency, throughput (FPS or tokens/s), and memory footprint.  
    - Power efficiency under load (optional).  
    - Comparative performance versus Ethos-U55/U65 (use available benchmarks for reference or utilise the other Ethos-U NPUs provided in the Alif DevKits).  
-   - The effect of TOSA optimization — demonstrate measurable improvements from graph conversion and operator fusion.
-
----
 
 ## What kind of projects should you target?
 
 To clearly demonstrate the leap from Ethos-U55/U65 to U85, choose projects that meet at least one of the following criteria:
 
 - Transformer-heavy architectures: e.g. attention blocks, transformer encoders, ViTs, or hybrid CNN+transformer models.  
-  - *Example:* an audio event detection transformer that must process longer sequences or higher-resolution spectrograms.  
-- High-resolution or multi-branch networks: models with high input dimensionality or multiple processing paths that saturate NPU throughput.  
-  - *Example:* 512×512 semantic segmentation or multi-object detection.  
+- High-resolution or multi-branch networks: models with high input dimensionality or multiple processing paths that saturate NPU throughput.   
 - Dense post-processing or large fully connected layers: cases where U55/U65 memory limits or MAC bandwidth previously restricted performance.  
-  - *Example:* large MLP heads or transformer token mixers.  
 - Multi-modal pipelines: combining multiple sensor inputs (e.g. image + IMU + audio) where the NPU must maintain concurrency or shared intermediate representations.  
 
 The Ethos-U85 is ideal for projects where model performance is constrained by attention layers, large activations, or operator types that previously required fallback to the CPU. Use the Ethos-U85 to eliminate those fallbacks and achieve full-NPU execution of advanced topologies.
 
----
-
 ## What will you use?
 You should be familiar with, or willing to learn about:
 - Programming: Python, C/C++  
-- ExecuTorch or TensorFlow Lite (Micro/LiteRT)
+- ExecuTorch or LiteRT
 - Techniques for optimising AI models for the edge (quantization, pruning, etc.)
 - Optimization Tools: 
-  - TOSA Model Explorer
-  - .tflite to .tosa converter (if using Tensorflow rather than ExecuTorch)
+  - Model Explorer with TOSA adapter (and PTE adapter for ExecuTorch)
   - Vela compiler for Ethos-U  
 - Bare-metal or RTOS (e.g., Zephyr)  
 
----
-
 ## Resources from Arm and our partners
 - Arm Developer: [Edge AI](https://developer.arm.com/edge-ai)
-- Learning Path: [Navigating Machine Learning with Ethos-U processors](https://learn.arm.com/learning-paths/microcontrollers/nav-mlek/)    
+- Arm Alif Code-along: [Advanced AI on Arm Embedded Systems](https://developer.arm.com/code-along/advanced-ai-on-arm-embedded-systems)
+- Code-along repo: [Ethos-U Workshop](https://github.com/ArmDeveloperEcosystem/workshop-ethos-u)
+- Learning Path: [Navigating Machine Learning with Ethos-U processors](https://learn.arm.com/learning-paths/microcontrollers/nav-mlek/)  
+- Learning Path: [Visualize Ethos-U NPU performance with ExecuTorch on Arm FVPs](https://learn.arm.com/learning-paths/embedded-and-microcontrollers/visualizing-ethos-u-performance)  
 - Repository: [AI on Arm course](https://github.com/arm-university/AI-on-Arm)  
 - Example Board: [Alif Ensemble DevKit E8](https://www.keil.arm.com/boards/alif-semiconductor-devkit-e8-gen-1-2558a7b/features/)  
 - Documentation: [TOSA Specification](https://www.mlplatform.org/tosa/), [TOSA Model Explorer](https://github.com/arm/tosa-adapter-model-explorer), and [TOSA Reference Model](https://gitlab.arm.com/tosa/tosa-reference-model)
+- [Model Explorer](https://ai.google.dev/edge/model-explorer)
 - PyTorch Blog: [ExecuTorch support for Ethos-U85](https://pytorch.org/blog/pt-executorch-ethos-u85/)
+- PyTorch Tutorial: [Arm Ethos-U NPU Backend Tutorial](https://docs.pytorch.org/executorch/1.0/tutorial-arm-ethos-u.html)
 
----
 
 ## Support Level
 
