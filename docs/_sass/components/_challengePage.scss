@@ -1898,6 +1898,20 @@ html {
   outline-offset: 3px;
 }
 
+.bharat-2026-challenge span.ch-register-button[aria-disabled="true"] {
+  background: #DC171B;
+  color: #FFFFFF !important;
+  border: 2px solid #850000;
+  font-weight: 700;
+  // Override the existing inline opacity without changing page markup.
+  opacity: 1 !important;
+  filter: none;
+  cursor: default;
+  pointer-events: none;
+  transform: none;
+  transition: none;
+}
+
 @media (max-width: 820px) {
   .bharat-2026-challenge .bharat-hero-partners {
     flex-direction: row !important;
